@@ -1,38 +1,41 @@
 //トップ画面
 
 import { ScrollView, TextInput, View, Text, Pressable } from "react-native"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 import { s } from "../src/screens/home.styles"
 
 
 const TILES = [
-    { key: "equip", emoji: "🛡️", title: "装備シミュレータ" },
-    { key: "damage", emoji: "⚔️", title: "ダメージ計算" },
-    { key: "monster", emoji: "🐲", title: "モンスター図鑑" },
+    { key: "equip", emoji: "🛡️", title: "装備シミュレータ", to: "/equip" },
+    { key: "damage", emoji: "⚔️", title: "ダメージ計算", to: "/placeholder?title= ダメージ計算" },
+    { key: "monster", emoji: "🐲", title: "モンスター図鑑", to: "/placeholder?title= モンスター図鑑" },
     // { key: "material", emoji: "🧪", title: "素材逆引き" },
 ];
 
 
-const Tile = ({ emoji, title }) => {
+const Tile = ({ emoji, title, to }) => {
+    return (
+        <Pressable
+            onPress={() => router.push(to)}
+            style={({ hovered, pressed }) => [
+                s.card,
+                hovered && s.cardHover,
+                pressed && s.cardPressed
+            ]}
+        >
+            <Text style={s.emoji}>{emoji}</Text>
 
-    <Pressable
-        style={({ hovered, pressed }) => [
-            s.card,
-            hovered && s.cardHover,
-            pressed && s.cardPressed
-        ]}
-    >
-        <Text style={s.emoji}>{emoji}</Text>
+            <Text style={s.cardTitle}>{title}</Text>
 
-        <Text style={s.cardTitle}>{title}</Text>
+            <Text style={s.badge}> 準備中 </Text>
 
-        <Text style={s.badge}> 準備中 </Text>
-        
-    </Pressable>
+        </Pressable>
+    )
 
 }
 
 const Home = () => {
+    // debugger
 
     // 縦スク内
     return (
@@ -54,15 +57,18 @@ const Home = () => {
             />
 
             <View style={s.grid}>
-                {TILES.map(t => (
-                    <Link
-                        key={t.key}
-                        href={`/placeholder?title=${encodeURIComponent(t.title)}`}
-                        asChild
-                    >
-                        <Tile emoji={t.emoji} title={t.title} />
-                    </Link>
-                ))}
+
+                {TILES.map(t => {
+                    return (
+                        <Link key={t.key} href={t.to} asChild>
+
+                            <Tile emoji={t.emoji} title={t.title} to={t.to}></Tile>
+
+                        </Link>
+                    )
+                })}
+
+
             </View>
 
             {/* フッター */}

@@ -1,5 +1,3 @@
-//張りぼて画面
-
 import { View, Text } from "react-native"
 import { Link, useLocalSearchParams } from "expo-router"
 
