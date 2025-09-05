@@ -1,162 +1,185 @@
-import { Stack, router } from "expo-router"
-import { Pressable, View, Text, TextInput, ScrollView, useWindowDimensions, Platform } from "react-native"
-import { s } from "../../src/screens/equip.styles"
-import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { useMemo, useState, useCallback } from "react";
+import { Stack, router } from "expo-router";
+import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform } from "react-native";
+import { s } from "../../src/screens/equip.styles";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+// データ & 検索
+import catalog from "../../src/domains/skills/catalog";
+import { filterSkills } from "../../src/domains/skills/search";
 
-const TAGS = ["攻撃力", "会心率", "シリーズスキル"]
-const atkSkills = Array.from({ length: 9 }, () => "スキル名")
-const critSkills = Array.from({ length: 9 }, () => "スキル名")
+// 機能群
+import SkillCard from "../../src/features/equip/SkillCard";
+import TagsBar from "../../src/features/equip/TagsBar";
+import RightPanel from "../../src/features/equip/RightPanel";
+import { useSkillSelection } from "../../src/features/equip/useSkillSelection";
 
-const Chip = ({ label, selected }) => (
-    <Pressable style={[s.chip, selected && s.chipSel]}>
+// 全カテゴリ/全タイプを対象
+const ALL_CATS = ["attack", "crit", "utility"];
+const ALL_TYPES = ["normal", "series", "group"];
 
-        <Text style={[s.chipText, selected && s.chipTextSel]}>{label}</Text>
+// 共通整形
+const normalizeList = (arr, type) =>
+    (arr ?? []).map(sk => ({
+        id: sk.id ?? sk.name,
+        type,
+        name: sk.name,
+        maxLevel: sk.maxLevel ?? (Array.isArray(sk.levels) ? sk.levels.length : 1),
+        levels: sk.levels ?? [],
+        tags: (() => {
+            const t = Array.isArray(sk.tags) ? sk.tags.filter(Boolean) : [];
+            if (!t.length && type === "series") return ["シリーズ"];
+            if (!t.length && type === "group") return ["グループ"];
+            return t;
+        })(),
+        category: sk.category ?? "utility",
+        info: (sk.info ?? "").trim(),
+    }));
 
-    </Pressable>
-)
+export default function EquipScreen() {
+    // === データ整形（normal / series / group を合体） ===
+    const normal = catalog?.normal ?? catalog?.normalSkills ?? [];
+    const series = catalog?.series ?? catalog?.seriesSkills ?? [];
+    const group = catalog?.group ?? catalog?.groupSkills ?? [];
 
-const SkillBox = ({ label }) => (
-    <Pressable style={s.skillBox}>
+    const listNormal = useMemo(() => normalizeList(normal, "normal"), [normal]);
+    const listSeries = useMemo(() => normalizeList(series, "series"), [series]);
+    const listGroup = useMemo(() => normalizeList(group, "group"), [group]);
+    const allList = useMemo(() => [...listNormal, ...listSeries, ...listGroup], [listNormal, listSeries, listGroup]);
 
-        <Text style={s.skillBoxText}>{label}</Text>
+    const byId = useMemo(() => new Map(allList.map(x => [x.id, x])), [allList]);
 
-    </Pressable>
-)
+    // === レベル選択状態 ===
+    const getMaxLevel = useCallback((id) => byId.get(id)?.maxLevel ?? 1, [byId]);
+    const { selected, setLevel, inc, dec, clearAll } = useSkillSelection(getMaxLevel);
 
-const RightPanel = () => (
-    <View style={s.rightPanel}>
-        <Text style={s.panelTitle}>選択中スキル</Text>
+    // === 検索・タグ ===
+    const [keyword, setKeyword] = useState("");
+    const [activeTags, setActiveTags] = useState([]);
+    const toggleTag = (t, on) =>
+        setActiveTags(on ? activeTags.filter(x => x !== t) : [...activeTags, t]);
 
-        {/* 選択スキルのリスト（いまはダミー行） */}
-        {Array.from({ length: 10 }).map((_, i) => (
-            <View key={i} style={s.rowThin}>
-                <Text style={s.rowThinText}>~~~</Text>
-            </View>
-        ))}
+    // すべてのカテゴリ・タイプでフィルタ
+    const filteredCommon = useMemo(
+        () => filterSkills(allList, keyword, activeTags, ALL_CATS, ALL_TYPES),
+        [allList, keyword, activeTags]
+    );
 
-        {/* 合計会心率（ダミー表示） */}
-        <View style={s.panelSection}>
-            <Text style={s.panelHeader}>合計会心率</Text>
-            <View style={s.kvRow}>
-                <Text style={s.kvKey}>最高値：</Text>
-                <Text style={s.kvVal}>~~~%</Text>
-            </View>
-            <View style={s.kvRow}>
-                <Text style={s.kvKey}>最低値：</Text>
-                <Text style={s.kvVal}>~~~%</Text>
-            </View>
-        </View>
+    // タグ抽出
+    const allTags = useMemo(() => {
+        const set = new Set();
+        for (const it of allList) {
+            for (const t of (it.tags ?? [])) {
+                const tag = String(t || "").trim();
+                if (tag) set.add(tag);
+            }
+        }
+        const prefer = [
+            "攻撃", "攻撃力", "会心", "会心率", "会心ダメ", "条件", "連撃",
+            "切れ味", "属性", "属性値", "耐性", "スタミナ",
+            "アイテム補助", "戦闘補助", "生存", "探索・その他", "追加ダメージ",
+            "シリーズ", "グループ"
+        ];
+        const arr = [...set];
+        arr.sort((a, b) => {
+            const ia = prefer.indexOf(a), ib = prefer.indexOf(b);
+            if (ia !== -1 || ib !== -1) return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+            return a.localeCompare(b, "ja");
+        });
+        return arr;
+    }, [allList]);
 
-        {/* 会心詳細（ダミーの表） */}
-        <View style={s.panelSection}>
-            <Text style={s.panelHeader}>会心詳細</Text>
-            <View style={s.tableRow}>
-                <Text style={s.cell}>~~~</Text>
-                <Text style={s.cell}>~~~%</Text>
-            </View>
-            <View style={s.tableRow}>
-                <Text style={s.cell}>~~~</Text>
-                <Text style={s.cell}>~~~%</Text>
-            </View>
-            <View style={s.tableRow}>
-                <Text style={s.cell}>~~~</Text>
-                <Text style={s.cell}>~~~%</Text>
-            </View>
-        </View>
-    </View>
-)
+    // タグ → アイテム
+    const groupsByTag = useMemo(() => {
+        const m = new Map(allTags.map(t => [t, []]));
+        for (const it of filteredCommon) {
+            for (const raw of (it.tags ?? [])) {
+                const t = String(raw || "").trim();
+                if (!t || !m.has(t)) continue;
+                m.get(t).push(it);
+            }
+        }
+        return m;
+    }, [allTags, filteredCommon]);
 
+    const tagsToShow = activeTags.length ? activeTags : allTags;
 
+    // === ドロップダウン開閉（常に1つだけ） ===
+    const [openMenuId, setOpenMenuId] = useState(null);
 
+    // === レイアウト ===
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
+    const headerOffset = Platform.select({ web: 64, default: insets.top + 8 });
+    const isWide = width >= 900;
+    const rightW = 320;
 
-const EquipScreen = () => {
+    const cols = width >= 1200 ? 3 : width >= 760 ? 2 : 1;
+    const cardW = cols === 3 ? '32%' : cols === 2 ? '48%' : '100%';
 
-    // 画面幅によって右パネルを“固定表示”にするかどうかを決める
-    const { width } = useWindowDimensions()
-    const insets = useSafeAreaInsets()
-    const headerOffset = Platform.select({ web: 64, default: insets.top + 8 })
-    const isWide = width >= 900 // 2カラム化の閾値（PC/タブレット想定）
-    const rightW = 320          // 右パネルの幅
-    const goBack = () => router.back()
-
-    
     return (
         <View style={s.container}>
-            
             <Stack.Screen options={{ title: "装備シミュレータ" }} />
 
-            
-            {isWide && (
-                <View style={[
-                    s.rightFixed,
-                    { right: 16, top: headerOffset, bottom: 16, width: rightW, zIndex: 2000 },
-                ]}
-                >
-                    <RightPanel />
-                </View>
+            {/* 外側クリックで閉じる透明オーバーレイ */}
+            {openMenuId && <Pressable style={s.backdrop} onPress={() => setOpenMenuId(null)} />}
 
+            {isWide && (
+                <View style={[s.rightFixed, { right: 16, top: headerOffset, bottom: 16, width: rightW, zIndex: 2000 }]}>
+                    <RightPanel selected={selected} skillMap={byId} onChange={setLevel} onClearAll={clearAll} />
+                </View>
             )}
 
-            
-            <ScrollView contentContainerStyle={[s.body, isWide && { paddingRight: rightW + 24, paddingTop: headerOffset }]}>
-                
-                <Text style={s.h1}>装備シミュレータ wip</Text>
-                <Pressable onPress={goBack} style={s.backBtn}>
-                    <Text>← トップへ戻る</Text>
-                </Pressable>
+            <ScrollView contentContainerStyle={[s.body, { paddingTop: headerOffset }, isWide && { paddingRight: rightW + 24 }]}>
+                <Text style={s.h1}>装備シミュレータ</Text>
+                <Pressable onPress={() => router.back()} style={s.backBtn}><Text>← トップへ戻る</Text></Pressable>
 
-                
-                <View style={s.topRow}>
-                    <Pressable style={s.topBtn}><Text>武器</Text></Pressable>
-                    <Pressable style={s.topBtn}><Text>護石</Text></Pressable>
-                </View>
-
-                
+                {/* 検索 */}
                 <View style={s.searchRow}>
                     <Text style={s.caption}>スキル検索</Text>
-                    <TextInput style={s.searchInput} placeholder="スキル名で検索" />
+                    <TextInput style={s.searchInput} placeholder="スキル名で検索" value={keyword} onChangeText={setKeyword} />
                 </View>
 
-                
+                {/* タグ */}
                 <View style={s.tagsRow}>
                     <Text style={s.caption}>タグ</Text>
-                    <View style={s.tagsWrap}>
-                        {TAGS.map((t, i) => (
-                            <Chip key={t} label={t} selected={i === 0} />
-                        ))}
-                    </View>
+                    <TagsBar tags={allTags} active={activeTags} onToggle={toggleTag} />
                 </View>
 
-                
-                <View style={s.groupBox}>
-                    <Text style={s.groupTitle}># 攻撃力系</Text>
-                    <View style={s.grid3}>
-                        {atkSkills.map((x, i) => (
-                            <SkillBox key={`a-${i}`} label={x} />
-                        ))}
-                    </View>
-                </View>
+                {/* タグごとに表示 */}
+                {tagsToShow.map(tag => {
+                    const items = groupsByTag.get(tag) ?? [];
+                    if (!items.length) return null;
+                    return (
+                        <View key={tag} style={s.groupBox}>
+                            <Text style={s.groupTitle}># {tag}</Text>
+                            <View style={s.grid3}>
+                                {items.map(it => (
+                                    <View key={it.id} style={[s.cardWrap, { width: cardW }]}>
+                                        <SkillCard
+                                            item={it}
+                                            curLv={selected[it.id] ?? 0}
+                                            onInc={() => inc(it.id)}
+                                            onDec={() => dec(it.id)}
+                                            onSet={(lv) => setLevel(it.id, lv)}
+                                            onMax={() => setLevel(it.id, it.maxLevel)}
+                                            menuOpen={openMenuId === it.id}
+                                            onToggleMenu={() => setOpenMenuId(prev => prev === it.id ? null : it.id)}
+                                            onCloseMenu={() => setOpenMenuId(null)}
+                                        />
+                                    </View>
+                                ))}
+                            </View>
+                        </View>
+                    );
+                })}
 
-                
-                <View style={s.groupBox}>
-                    <Text style={s.groupTitle}># 会心系</Text>
-                    <View style={s.grid3}>
-                        {critSkills.map((x, i) => (
-                            <SkillBox key={`c-${i}`} label={x} />
-                        ))}
-                    </View>
-                </View>
-
-                
                 {!isWide && (
                     <View style={{ marginTop: 12 }}>
-                        <RightPanel />
+                        <RightPanel selected={selected} skillMap={byId} onChange={setLevel} onClearAll={clearAll} />
                     </View>
                 )}
             </ScrollView>
         </View>
-    )
+    );
 }
-
-export default EquipScreen
