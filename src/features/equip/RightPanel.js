@@ -1,42 +1,46 @@
-import { View, Text, Pressable } from 'react-native';
-import { s } from '../../screens/equip.styles';
+// src/features/equip/RightPanel.js
 
-const RightPanel = ({ selected, skillMap, onChange, onClearAll }) => {
-  const rows = Object.entries(selected)
-    .map(([id, lv]) => ({ id, lv, name: skillMap.get(id)?.name ?? '' }))
-    .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+import { View, Text, Pressable, ScrollView } from "react-native";
+import { s } from "../../screens/equip.styles";
+
+export default function RightPanel({ selected, skillMap, onChange, onClearAll }) {
+  const rows = Object.entries(selected || {})
+    .filter(([, lv]) => lv > 0)
+    .map(([id, lv]) => {
+      const sk = skillMap?.get(id);
+      return { id, name: sk?.name || id, max: sk?.maxLevel ?? 1, lv };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+
+  const dec = (r) => onChange?.(r.id, Math.max(0, r.lv - 1));
+  const inc = (r) => onChange?.(r.id, Math.min(r.max, r.lv + 1));
+  const clr = (r) => onChange?.(r.id, 0);
 
   return (
     <View style={s.rightPanel}>
       <Text style={s.panelTitle}>選択中スキル</Text>
 
-      {rows.length === 0 ? (
-        <View style={[s.rowThin, { alignItems: 'center' }]}>
-          <Text style={s.rowThinText}>未選択</Text>
-        </View>
-      ) : (
-        rows.map(({ id, lv, name }) => (
-          <View key={id} style={s.rowSel}>
-            <Text style={s.rowSelName} numberOfLines={1}>{name}</Text>
-            <View style={s.rowSelCtrls}>
-              <Pressable style={s.stepMini} onPress={() => onChange(id, lv - 1)}><Text style={s.stepTxt}>-</Text></Pressable>
-              <Text style={s.lvBadge}>Lv.{lv}</Text>
-              <Pressable style={s.stepMini} onPress={() => onChange(id, lv + 1)}><Text style={s.stepTxt}>+</Text></Pressable>
-              <Pressable style={s.clearMini} onPress={() => onChange(id, 0)}><Text style={s.clearMiniTxt}>✕</Text></Pressable>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 8 }}>
+        {rows.length === 0 ? (
+          <View style={s.rowThin}><Text style={s.rowThinText}>未選択</Text></View>
+        ) : (
+          rows.map((r) => (
+            <View key={r.id} style={s.rowSel}>
+              <Text style={s.rowSelName}>{r.name}</Text>
+              <View style={s.rowSelCtrls}>
+                <Pressable style={s.stepMini} onPress={() => dec(r)}><Text style={s.stepTxtSm}>-</Text></Pressable>
+                <Text style={s.lvBadge}>{`Lv ${r.lv}/${r.max}`}</Text>
+                <Pressable style={s.stepMini} onPress={() => inc(r)}><Text style={s.stepTxtSm}>+</Text></Pressable>
+                <Pressable style={s.clearMini} onPress={() => clr(r)}><Text style={s.clearMiniTxt}>×</Text></Pressable>
+              </View>
             </View>
-          </View>
-        ))
-      )}
+          ))
+        )}
+      </ScrollView>
 
-      <View style={s.panelSection}>
-        <Text style={s.panelHeader}>合計</Text>
-        {/* ※合計の実装は後続（affinity 等の計算器で） */}
-        <Pressable onPress={onClearAll} style={s.clearAllBtn}>
-          <Text style={s.clearAllTxt}>すべてクリア</Text>
-        </Pressable>
-      </View>
+      <Pressable onPress={onClearAll} style={s.clearAllBtn}>
+        <Text style={s.clearAllTxt}>すべてクリア</Text>
+      </Pressable>
     </View>
   );
-};
-
-export default RightPanel;
+}
