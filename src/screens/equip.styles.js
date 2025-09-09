@@ -24,15 +24,20 @@ export const s = StyleSheet.create({
     gap: 8,
     borderWidth: 1,
     borderColor: "#eee",
+    flexDirection: "row",
+    alignItems: "center",
   },
   caption: { fontSize: 12, color: "#666" },
   searchInput: {
+    flex: 1,
     borderWidth: 1,
     borderColor: "#e5e5e5",
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 8,
     backgroundColor: "#fafafa",
+    fontSize: 16,
+    lineHeight: 20,
   },
 
   tagsRow: {
@@ -75,7 +80,7 @@ export const s = StyleSheet.create({
 
   // ===== Card =====
   skillBox: {
-    width: "100%",       // 親（カラム）に追従
+    width: "100%",
     minWidth: 0,
     paddingVertical: 10,
     alignItems: "center",
@@ -158,10 +163,20 @@ export const s = StyleSheet.create({
   kvKey: { color: "#666" },
   kvVal: { fontWeight: "700" },
   tableRow: { flexDirection: "row", gap: 8, marginBottom: 6, overflow: "visible", zIndex: 1 },
-  cell: { flex: 1, borderWidth: 1, borderColor: "#e6e6e6", borderRadius: 6, paddingVertical: 6, paddingHorizontal: 8, position:"relative" , overflow: "visible", zIndex: 1 },
+  cell: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "#e6e6e6",
+    borderRadius: 6,
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+    position: "relative",
+    overflow: "visible",
+    zIndex: 1,
+  },
 
   // ===== Controls =====
-  stepRow: { flexDirection: "row", gap: 6, marginTop: 8 , position:"relative" , overflow: "visible"},
+  stepRow: { flexDirection: "row", gap: 6, marginTop: 8, position: "relative", overflow: "visible" },
   stepBtnSm: {
     minWidth: 30,
     height: 26,
@@ -173,8 +188,6 @@ export const s = StyleSheet.create({
     backgroundColor: "#fff",
   },
   stepTxtSm: { fontSize: 12, fontWeight: "700" },
-
-  // 旧スタイル互換（未使用なら削除可）
   stepBtn: { minWidth: 36, height: 28, borderRadius: 8, borderWidth: 1, borderColor: "#d0d0d0", alignItems: "center", justifyContent: "center", backgroundColor: "#fff" },
   stepTxt: { fontSize: 14, fontWeight: "700" },
 
@@ -229,7 +242,51 @@ export const s = StyleSheet.create({
     zIndex: 12000,
   },
 
-  // --- 検索UI ---
+  // ===== Header link =====
+  headerLink: { fontSize: 14, color: "#2563eb", fontWeight: "600", paddingHorizontal: 6, paddingVertical: 4 },
+
+  // ===== 内部タブ（検索／結果） =====
+  tabsRow: { flexDirection: "row", gap: 8, marginTop: 4, marginBottom: 8 },
+  tabBtn: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, backgroundColor: "#ECECEC", borderWidth: 1, borderColor: "#E5E7EB" },
+  tabBtnActive: { backgroundColor: "#111", borderColor: "#111" },
+  tabBtnText: { fontSize: 13, color: "#111", fontWeight: "700" },
+  tabBtnTextActive: { color: "#fff" },
+
+  // ===== サブヘッダー（バッジ） =====
+  pageHeader: { marginTop: 4, marginBottom: 6 },
+  pageBadge: {
+    alignSelf: "flex-start",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#E5E7EB",
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.06,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  pageBadgeIcon: { fontSize: 14 },
+  pageBadgeText: { fontSize: 13, fontWeight: "700", color: "#111" },
+
+  // ===== 検索結果カード（ResultsTab用） =====
+  resultSectionTitle: { fontSize: 16, fontWeight: "600", marginBottom: 8, marginTop: 12 },
+  resultCard: {
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: "#eee",
+    marginBottom: 8,
+  },
+  resultName: { fontSize: 15, fontWeight: "700", marginBottom: 4 },
+  resultSub: { fontSize: 12, color: "#666", marginBottom: 2 },
+
+  // === Skill Search Bar: hotfix (override) ===
 searchRow: {
   flexDirection: "row",
   alignItems: "center",
@@ -267,43 +324,4 @@ searchMeta: {
   opacity: 0.7,
 },
 
-headerLink: { fontSize: 14, color: "#2563eb", fontWeight: "600", paddingHorizontal: 6, paddingVertical: 4 },
-
-// タブ切替（本文先頭）
-tabsRow: { flexDirection: "row", gap: 8, marginTop: 6 },
-tabBtn: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, backgroundColor: "#ececec", borderWidth: 1, borderColor: "#e3e3e3" },
-tabBtnActive: { backgroundColor: "#222" },
-tabBtnText: { fontSize: 13, color: "#222", fontWeight: "600" },
-tabBtnTextActive: { color: "#fff" },
-
-// サブヘッダー（バッジ）
-pageHeader: { marginTop: 4, marginBottom: 6 },
-pageBadge: {
-  alignSelf: "flex-start",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: 10,
-  backgroundColor: "#fff",
-  borderRadius: 12,
-  borderWidth: 1,
-  borderColor: "#E5E7EB",
-  paddingHorizontal: 10,
-  paddingVertical: 10,
-  shadowColor: "#000",
-  shadowOpacity: 0.06,
-  shadowRadius: 4,
-  elevation: 2,
-},
-pageBadgeIcon: { fontSize: 14 },
-pageBadgeText: { fontSize: 13, fontWeight: "700", color: "#111" },
-
-// タブ（既存のを少しだけ整えるなら）
-tabsRow: { flexDirection: "row", gap: 8, marginTop: 4, marginBottom: 8 },
-tabBtn: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, backgroundColor: "#ECECEC", borderWidth: 1, borderColor: "#E5E7EB" },
-tabBtnActive: { backgroundColor: "#111", borderColor: "#111" },
-tabBtnText: { fontSize: 13, color: "#111", fontWeight: "700" },
-tabBtnTextActive: { color: "#fff" },
-
-
 });
-

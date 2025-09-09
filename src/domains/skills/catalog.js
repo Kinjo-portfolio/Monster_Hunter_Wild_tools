@@ -1,4 +1,4 @@
-export const schemaVersion = 'wilds-full-tagsclean-infofilled-1';
+export const schemaVersion = 'wilds-full-tagsclean-infofilled-2-sergrpfix';
 export const normalSkills = [
   {
     "name": "環境利用の知識",
@@ -36,8 +36,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "体術",
@@ -93,8 +92,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "スタミナ急速回復",
@@ -132,8 +130,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "ライナー",
@@ -171,8 +168,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "腹減り耐性",
@@ -210,8 +206,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "威嚇",
@@ -249,8 +244,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "飛び込み",
@@ -270,8 +264,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "ジャンプ鉄人",
@@ -291,8 +284,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "クライマー",
@@ -312,8 +304,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "植生学",
@@ -360,8 +351,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "地質学",
@@ -399,8 +389,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "昆虫標本の達人",
@@ -420,8 +409,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "ハンター生活",
@@ -441,8 +429,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "体力回復量UP",
@@ -480,8 +467,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "生存"
-    ]
+      "生存", "通常スキル"]
   },
   {
     "name": "早食い",
@@ -519,8 +505,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "広域化",
@@ -576,8 +561,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "整備",
@@ -633,8 +617,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "ボマー",
@@ -672,8 +655,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "キノコ大好き",
@@ -711,8 +693,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "アイテム使用強化",
@@ -750,8 +731,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "満足感",
@@ -789,8 +769,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "閃光強化",
@@ -810,8 +789,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "アイテム補助"
-    ]
+      "アイテム補助", "通常スキル"]
   },
   {
     "name": "精霊の加護",
@@ -849,8 +827,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "生存"
-    ]
+      "生存", "通常スキル"]
   },
   {
     "name": "回復速度",
@@ -889,8 +866,7 @@ export const normalSkills = [
     ],
     "tags": [
       "生存",
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "回避性能",
@@ -946,8 +922,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "回避距離UP",
@@ -985,8 +960,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "納刀術",
@@ -1024,8 +998,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "ひるみ軽減",
@@ -1063,8 +1036,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "緩衝",
@@ -1084,8 +1056,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "毒耐性",
@@ -1123,8 +1094,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "麻痺耐性",
@@ -1162,8 +1132,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "睡眠耐性",
@@ -1201,8 +1170,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "防御力DOWN耐性",
@@ -1240,8 +1208,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "属性やられ耐性",
@@ -1279,8 +1246,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "気絶耐性",
@@ -1318,8 +1284,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "裂傷耐性",
@@ -1357,8 +1322,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "拘束耐性",
@@ -1396,8 +1360,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "爆破やられ耐性",
@@ -1435,8 +1398,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "悪臭耐性",
@@ -1465,8 +1427,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "環境適応",
@@ -1495,8 +1456,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "無我の境地",
@@ -1534,8 +1494,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "耳栓",
@@ -1573,8 +1532,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "風圧耐性",
@@ -1612,8 +1570,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "耐震",
@@ -1651,8 +1608,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "水場・油泥適応",
@@ -1681,8 +1637,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "防御",
@@ -1756,8 +1711,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "火耐性",
@@ -1795,8 +1749,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "水耐性",
@@ -1834,8 +1787,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "雷耐性",
@@ -1873,8 +1825,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "氷耐性",
@@ -1912,8 +1863,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "龍耐性",
@@ -1951,8 +1901,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "耐性"
-    ]
+      "耐性", "通常スキル"]
   },
   {
     "name": "オトモへの采配",
@@ -1990,8 +1939,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "研鑽",
@@ -2011,8 +1959,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "属性変換",
@@ -2050,8 +1997,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "鎖刃刺撃",
@@ -2107,8 +2053,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "破壊王",
@@ -2146,11 +2091,10 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
-    "name": "災禍天福",
+    "name": "災禍転福",
     "type": "normal",
     "category": "utility",
     "info": "（調査中）",
@@ -2185,8 +2129,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "属性吸収",
@@ -2224,8 +2167,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "逆恨み",
@@ -2281,8 +2223,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "巧撃",
@@ -2338,8 +2279,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "フルチャージ",
@@ -2395,8 +2335,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "逆襲",
@@ -2434,8 +2373,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "弱点特攻",
@@ -2491,8 +2429,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "渾身",
@@ -2530,8 +2467,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "挑戦者",
@@ -2588,8 +2524,7 @@ export const normalSkills = [
     ],
     "tags": [
       "会心率",
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "力の開放",
@@ -2646,8 +2581,7 @@ export const normalSkills = [
     ],
     "tags": [
       "会心率",
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "火事場力",
@@ -2703,8 +2637,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "連撃",
@@ -2761,8 +2694,7 @@ export const normalSkills = [
     ],
     "tags": [
       "攻撃力",
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "攻勢",
@@ -2819,8 +2751,7 @@ export const normalSkills = [
     ],
     "tags": [
       "攻撃力",
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "急襲",
@@ -2858,8 +2789,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "闘獣の力",
@@ -2879,388 +2809,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "火竜の力",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "追加ダメージ"
-    ]
-  },
-  {
-    "name": "暗器蛸の力",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "鎧竜の守護",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "生存"
-    ]
-  },
-  {
-    "name": "雪獅子の闘志",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "兇爪竜の力",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "雷顎竜の闘志",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "波衣竜の守護",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "生存"
-    ]
-  },
-  {
-    "name": "煌雷竜の力",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "獄焔蛸の反逆",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "追加ダメージ"
-    ]
-  },
-  {
-    "name": "凍峰竜の反逆",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "黒蝕竜の力",
-    "type": "normal",
-    "category": "crit",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力",
-      "会心率"
-    ]
-  },
-  {
-    "name": "鎖刃竜の飢餓",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "生存"
-    ]
-  },
-  {
-    "name": "護鎖刃竜の命脈",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "生存"
-    ]
-  },
-  {
-    "name": "泡狐竜の力",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "耐性"
-    ]
-  },
-  {
-    "name": "白熾龍の脈動",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "生存"
-    ]
-  },
-  {
-    "name": "花舞の祈り",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "海竜の渦雷",
-    "type": "normal",
-    "category": "crit",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "会心率",
-      "追加ダメージ"
-    ]
-  },
-  {
-    "name": "千刃竜の闘志",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "躍火の祈り",
@@ -3280,324 +2829,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "甲虫の知らせ",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "甲虫の擬態",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "鱗張りの技法",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "鱗重ねの工夫",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "革細工の柔性",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "革細工の滑性",
-    "type": "normal",
-    "category": "crit",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "会心率"
-    ]
-  },
-  {
-    "name": "毛皮の昂揚",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "ヌシの誇り",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "ヌシの憤激",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力"
-    ]
-  },
-  {
-    "name": "護竜の脈動",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "戦闘補助"
-    ]
-  },
-  {
-    "name": "護竜の守り",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "耐性"
-    ]
-  },
-  {
-    "name": "先達の導き",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "栄光の誉れ",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "祝祭の巡り",
-    "type": "normal",
-    "category": "utility",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "探索・その他"
-    ]
-  },
-  {
-    "name": "ヌシの魂",
-    "type": "normal",
-    "category": "attack",
-    "info": "（調査中）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": ""
-          }
-        ]
-      }
-    ],
-    "tags": [
-      "攻撃力",
-      "戦闘補助"
-    ]
+      "探索・その他", "通常スキル"]
   },
   {
     "name": "攻撃",
@@ -3653,8 +2885,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "攻めの守勢",
@@ -3692,8 +2923,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "攻撃力"
-    ]
+      "攻撃力", "通常スキル"]
   },
   {
     "name": "見切り",
@@ -3749,8 +2979,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "超会心",
@@ -3806,8 +3035,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "抜刀術【技】",
@@ -3845,8 +3073,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "会心率"
-    ]
+      "会心率", "通常スキル"]
   },
   {
     "name": "火属性攻撃強化",
@@ -3884,8 +3111,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "水属性攻撃強化",
@@ -3923,8 +3149,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "氷属性攻撃強化",
@@ -3962,8 +3187,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "雷属性攻撃強化",
@@ -4001,8 +3225,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "龍属性攻撃強化",
@@ -4040,8 +3263,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "毒属性攻撃強化",
@@ -4079,8 +3301,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "麻痺属性攻撃強化",
@@ -4118,8 +3339,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "睡眠属性攻撃強化",
@@ -4157,8 +3377,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "爆破属性攻撃強化",
@@ -4196,8 +3415,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "会心撃【属性】",
@@ -4235,8 +3453,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "会心撃【特殊】",
@@ -4274,8 +3491,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "チャージマスター",
@@ -4313,8 +3529,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "属性値"
-    ]
+      "属性値", "通常スキル"]
   },
   {
     "name": "匠",
@@ -4370,8 +3585,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "業物",
@@ -4409,8 +3623,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "剛刃研磨",
@@ -4448,8 +3661,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "心眼",
@@ -4487,8 +3699,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "鈍器使い",
@@ -4526,8 +3737,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "達人芸",
@@ -4547,8 +3757,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "通常弾・通常矢強化",
@@ -4568,8 +3777,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "貫通弾・竜の矢強化",
@@ -4589,8 +3797,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "散弾・剛射強化",
@@ -4610,8 +3817,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "弾道強化",
@@ -4649,8 +3855,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "速射強化",
@@ -4670,8 +3875,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "ファーストショット",
@@ -4709,8 +3913,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "フォースショット",
@@ -4748,8 +3951,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "特殊射撃強化",
@@ -4778,8 +3980,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "追加ダメージ"
-    ]
+      "追加ダメージ", "通常スキル"]
   },
   {
     "name": "毒ビン追加",
@@ -4799,8 +4000,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "麻痺ビン追加",
@@ -4820,8 +4020,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "睡眠ビン追加",
@@ -4841,8 +4040,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "爆破ビン追加",
@@ -4862,8 +4060,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "滅気ビン追加",
@@ -4883,8 +4080,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "集中",
@@ -4922,8 +4118,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "強化持続",
@@ -4961,8 +4156,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "抜刀術【力】",
@@ -5000,8 +4194,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "KO術",
@@ -5039,8 +4232,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "スタミナ奪取",
@@ -5078,8 +4270,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "砲術",
@@ -5117,8 +4308,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "高速変形",
@@ -5156,8 +4346,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "笛吹き名人",
@@ -5186,8 +4375,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "溜打強化",
@@ -5207,8 +4395,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "飛燕",
@@ -5228,8 +4415,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "毒ダメージ強化",
@@ -5249,8 +4435,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "ガード性能",
@@ -5288,8 +4473,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "ガード強化",
@@ -5327,8 +4511,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "砲弾装填",
@@ -5357,8 +4540,7 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   },
   {
     "name": "砥石使用高速化",
@@ -5387,16 +4569,16 @@ export const normalSkills = [
       }
     ],
     "tags": [
-      "戦闘補助"
-    ]
+      "戦闘補助", "通常スキル"]
   }
 ];
+
 export const seriesSkills = [
   {
-    "name": "闇鷹の力",
+    "name": "暗器蛸の力",
     "type": "series",
     "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
     "levels": [
       {
         "level": 2,
@@ -5417,7 +4599,64 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [
+      "攻撃力", "シリーズスキル"]
+  },
+  {
+    "name": "踊火の祈り",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [ "シリーズスキル" ]
+  },
+  {
+    "name": "海竜の渦雷",
+    "type": "series",
+    "category": "crit",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "会心率",
+      "追加ダメージ", "シリーズスキル"]
   },
   {
     "name": "火竜の力",
@@ -5444,88 +4683,7 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
-  },
-  {
-    "name": "暗霊魂の力",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "雷獣の守護",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "霊獣の勲志",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
+    "tags": [ "シリーズスキル" ]
   },
   {
     "name": "兇爪竜の力",
@@ -5552,283 +4710,13 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "シリーズスキル" ]
   },
   {
-    "name": "魚竜の恩赦",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "波友竜の守護",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "煌雷竜の志",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "赫耀竜の反逆",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "纏鎧竜の恩寵",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "黒蝕竜の血統",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "銀刃竜の律動",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "炎妃竜の誓約",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "泡狐竜の心気",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "白鎧竜の脈動",
-    "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
-    "levels": [
-      {
-        "level": 2,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "2部位で発動"
-          }
-        ]
-      },
-      {
-        "level": 4,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "4部位で強化"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "慈愛の祈り",
+    "name": "煌雷竜の力",
     "type": "series",
     "category": "utility",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
     "levels": [
       {
         "level": 2,
@@ -5849,13 +4737,14 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [
+      "戦闘補助", "シリーズスキル"]
   },
   {
-    "name": "清浄の誓約",
+    "name": "獄焔蛸の反逆",
     "type": "series",
     "category": "utility",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
     "levels": [
       {
         "level": 2,
@@ -5876,13 +4765,14 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [
+      "追加ダメージ", "シリーズスキル"]
   },
   {
-    "name": "千刃竜の志気",
+    "name": "黒蝕竜の力",
     "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
+    "category": "crit",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
     "levels": [
       {
         "level": 2,
@@ -5903,13 +4793,15 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [
+      "攻撃力",
+      "会心率", "シリーズスキル"]
   },
   {
-    "name": "震火竜の誓約",
+    "name": "護鎖刃竜の命脈",
     "type": "series",
-    "category": "attack",
-    "info": "シリーズ効果：2部位で発動、4部位で強化（内容は装備説明参照）",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
     "levels": [
       {
         "level": 2,
@@ -5930,16 +4822,325 @@ export const seriesSkills = [
         ]
       }
     ],
-    "tags": []
+    "tags": [
+      "生存", "シリーズスキル"]
+  },
+  {
+    "name": "鎖刃竜の飢餓",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "生存", "シリーズスキル"]
+  },
+  {
+    "name": "千刃竜の闘志",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "戦闘補助", "シリーズスキル"]
+  },
+  {
+    "name": "凍峰竜の反逆",
+    "type": "series",
+    "category": "attack",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "攻撃力", "シリーズスキル"]
+  },
+  {
+    "name": "波衣竜の守護",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "生存", "シリーズスキル"]
+  },
+  {
+    "name": "白熾龍の脈動",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "生存", "シリーズスキル"]
+  },
+  {
+    "name": "花舞の祈り",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "探索・その他", "シリーズスキル"]
+  },
+  {
+    "name": "闢獣の力",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [ "シリーズスキル" ]
+  },
+  {
+    "name": "泡狐竜の力",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "耐性", "シリーズスキル"]
+  },
+  {
+    "name": "雪獅子の闘志",
+    "type": "series",
+    "category": "attack",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "攻撃力", "シリーズスキル"]
+  },
+  {
+    "name": "鎧竜の守護",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "生存", "シリーズスキル"]
+  },
+  {
+    "name": "雷顎竜の闘志",
+    "type": "series",
+    "category": "utility",
+    "info": "シリーズ効果：2部位で発動、4部位で強化",
+    "levels": [
+      {
+        "level": 2,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "2部位で発動"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "4部位で強化"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "戦闘補助", "シリーズスキル"]
   }
 ];
-export const groupSkills  = [
+
+export const groupSkills = [
   {
-    "name": "甲虫の知らせ",
+    "name": "鱗重ねの工夫",
     "type": "group",
-    "category": "attack",
+    "category": "utility",
     "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
+    "info": "グループ効果：同系3部位で発動",
     "maxLevel": 1,
     "levels": [
       {
@@ -5952,7 +5153,127 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "鱗張りの技法",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "栄光の誉れ",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "革細工の滑性",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "革細工の柔性",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "毛皮の昂揚",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "毛皮の誘惑",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
   },
   {
     "name": "甲虫の擬態",
@@ -5972,10 +5293,10 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
   },
   {
-    "name": "纏鎧の技法",
+    "name": "甲虫の知らせ",
     "type": "group",
     "category": "attack",
     "threshold": 3,
@@ -5992,14 +5313,14 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
   },
   {
-    "name": "甲殻類の工夫",
+    "name": "拳を極めし者",
     "type": "group",
-    "category": "attack",
+    "category": "utility",
     "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
+    "info": "グループ効果：同系3部位で発動",
     "maxLevel": 1,
     "levels": [
       {
@@ -6012,127 +5333,7 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
-  },
-  {
-    "name": "翼竜工の柔性",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "草食の滑性",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "毛皮の居場所",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "ヌシの誇り",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "ヌシの諷諭",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
-  },
-  {
-    "name": "護竜の脈動",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
+    "tags": [ "グループスキル" ]
   },
   {
     "name": "護竜の守り",
@@ -6152,10 +5353,10 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
   },
   {
-    "name": "先達の導き",
+    "name": "護竜の脈動",
     "type": "group",
     "category": "attack",
     "threshold": 3,
@@ -6172,27 +5373,7 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
-  },
-  {
-    "name": "栄光のあかし",
-    "type": "group",
-    "category": "attack",
-    "threshold": 3,
-    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
-    "maxLevel": 1,
-    "levels": [
-      {
-        "level": 1,
-        "effects": [
-          {
-            "mods": {},
-            "notes": "同系3部位で発動"
-          }
-        ]
-      }
-    ],
-    "tags": []
+    "tags": [ "グループスキル" ]
   },
   {
     "name": "祝祭の巡り",
@@ -6212,7 +5393,27 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "先達の導き",
+    "type": "group",
+    "category": "attack",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
   },
   {
     "name": "ヌシの魂",
@@ -6232,7 +5433,47 @@ export const groupSkills  = [
         ]
       }
     ],
-    "tags": []
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "ヌシの憤激",
+    "type": "group",
+    "category": "utility",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
+  },
+  {
+    "name": "ヌシの誇り",
+    "type": "group",
+    "category": "attack",
+    "threshold": 3,
+    "info": "グループ効果：同系3部位で発動（内容は装備説明参照）",
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "mods": {},
+            "notes": "同系3部位で発動"
+          }
+        ]
+      }
+    ],
+    "tags": [ "グループスキル" ]
   }
 ];
 

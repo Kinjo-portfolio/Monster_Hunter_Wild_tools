@@ -3,7 +3,13 @@
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { s } from "../../screens/equip.styles";
 
-export default function RightPanel({ selected, skillMap, onChange, onClearAll }) {
+export default function RightPanel({
+  selected,
+  skillMap,
+  onChange,
+  onClearAll,
+  onSearch,       // ★ 装備検索コールバック（親から渡す）
+}) {
   const rows = Object.entries(selected || {})
     .filter(([, lv]) => lv > 0)
     .map(([id, lv]) => {
@@ -15,6 +21,8 @@ export default function RightPanel({ selected, skillMap, onChange, onClearAll })
   const dec = (r) => onChange?.(r.id, Math.max(0, r.lv - 1));
   const inc = (r) => onChange?.(r.id, Math.min(r.max, r.lv + 1));
   const clr = (r) => onChange?.(r.id, 0);
+
+  const canSearch = rows.length > 0;
 
   return (
     <View style={s.rightPanel}>
@@ -37,6 +45,24 @@ export default function RightPanel({ selected, skillMap, onChange, onClearAll })
           ))
         )}
       </ScrollView>
+
+      {/* 装備を検索（Resultsタブへ切替＆計算を親に依頼） */}
+      <Pressable
+        onPress={() => canSearch && onSearch?.()}
+        disabled={!canSearch}
+        style={[
+          s.clearAllBtn,
+          {
+            marginBottom: 8,
+            backgroundColor: canSearch ? "#2563EB" : "#efefef",
+            borderColor: canSearch ? "#2563EB" : "#efefef",
+          },
+        ]}
+      >
+        <Text style={[s.clearAllTxt, { color: canSearch ? "#fff" : "#999" }]}>
+          装備を検索
+        </Text>
+      </Pressable>
 
       <Pressable onPress={onClearAll} style={s.clearAllBtn}>
         <Text style={s.clearAllTxt}>すべてクリア</Text>
