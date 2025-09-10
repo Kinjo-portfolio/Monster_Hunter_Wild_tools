@@ -2527,7 +2527,7 @@ export const normalSkills = [
       "攻撃力", "通常スキル"]
   },
   {
-    "name": "力の開放",
+    "name": "力の解放",
     "type": "normal",
     "category": "crit",
     "info": "一定条件達成で一定時間、会心率上昇＆スタミナ消費軽減。",
