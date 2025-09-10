@@ -18,8 +18,6 @@ import { catalogArmor } from "../../src/domains/skills/catalog_armor";
 import { catalogDecorations } from "../../src/domains/skills/catalog_decorations";
 import { catalogTalismans } from "../../src/domains/skills/catalog_talismans";
 
-
-
 const ALL_CATS = ["attack", "crit", "utility"];
 const ALL_TYPES = ["normal", "series", "group"];
 
@@ -43,20 +41,12 @@ const normalizeList = (arr, type) =>
 const LevelMenu = ({ ctx, onPick, onClose }) => {
   if (!ctx) return null;
   const { x, y, cur, max } = ctx;
-  const posStyle = Platform.select({ web: { position: "fixed", left: x, top: y }, default: { position: "absolute", left: x, top: y } });
-    const runGearSearch = useCallback(() => {
-    const sets = computeTopSets(
-      selectedSkillsForCalc,
-      catalogArmor,
-      catalogDecorations,
-      catalogTalismans,
-      { kPerPart: 6, topN: 20 }
-    );
-    setGearSets(sets);
-    setTab("results");
-  }, [selectedSkillsForCalc]);
+  const posStyle = Platform.select({
+    web: { position: "fixed", left: x, top: y },
+    default: { position: "absolute", left: x, top: y }
+  });
 
-return (
+  return (
     <>
       <Pressable style={s.backdrop} onPress={onClose} />
       <View style={[s.selMenu, posStyle]}>
@@ -84,7 +74,6 @@ const EquipScreen = () => {
   const getMaxLevel = useCallback((id) => byId.get(id)?.maxLevel ?? 1, [byId]);
   const { selected, setLevel, inc, dec, clearAll } = useSkillSelection(getMaxLevel);
 
-  
   // 装備計算用: 選択スキルを { name, requiredLevel } に正規化
   const selectedSkillsForCalc = useMemo(() => {
     return Object.entries(selected)
@@ -95,7 +84,8 @@ const EquipScreen = () => {
       })
       .filter(Boolean);
   }, [selected, byId]);
-const [keyword, setKeyword] = useState("");
+
+  const [keyword, setKeyword] = useState("");
   const [activeTags, setActiveTags] = useState([]);
   const toggleTag = (t, on) => setActiveTags(on ? activeTags.filter(x => x !== t) : [...activeTags, t]);
 
@@ -147,8 +137,27 @@ const [keyword, setKeyword] = useState("");
   const [dd, setDd] = useState(null);
   const openDropdown = (id, x, y, cur, max) => setDd({ id, x, y, cur, max });
   const closeDropdown = () => setDd(null);
+
   const [tab, setTab] = useState("skills");
   const [gearSets, setGearSets] = useState([]);
+
+  // ★ 検索実行：ボタン押下 → 計算 → 結果タブへ
+  const runGearSearch = useCallback(() => {
+    if (selectedSkillsForCalc.length === 0) {
+      setGearSets([]);
+      setTab("results"); // 空の状態でもタブに遷移してガイド表示
+      return;
+    }
+    const sets = computeTopSets(
+      selectedSkillsForCalc,
+      catalogArmor,
+      catalogDecorations,
+      catalogTalismans,
+      { kPerPart: 6, topN: 20 }
+    );
+    setGearSets(sets);
+    setTab("results");
+  }, [selectedSkillsForCalc]);
 
   return (
     <View style={s.container}>
@@ -156,7 +165,13 @@ const [keyword, setKeyword] = useState("");
 
       {isWide && (
         <View style={[s.rightFixed, { right: 16, top: headerOffset, bottom: 16, width: rightW, zIndex: 2000 }]}>
-          <RightPanel selected={selected} skillMap={byId} onChange={setLevel} onClearAll={() => { closeDropdown(); clearAll(); }} />
+          <RightPanel
+            selected={selected}
+            skillMap={byId}
+            onChange={setLevel}
+            onClearAll={() => { closeDropdown(); clearAll(); }}
+            onSearch={runGearSearch}
+          />
         </View>
       )}
 
@@ -175,7 +190,7 @@ const [keyword, setKeyword] = useState("");
         <View style={s.tabsRow}>
           <Pressable style={[s.tabBtn, tab === "skills" && s.tabBtnActive]} onPress={() => setTab("skills")}><Text style={[s.tabBtnText, tab === "skills" && s.tabBtnTextActive]}>スキル一覧</Text></Pressable>
           <Pressable style={[s.tabBtn, tab === "weapon" && s.tabBtnActive]} onPress={() => setTab("weapon")}><Text style={[s.tabBtnText, tab === "weapon" && s.tabBtnTextActive]}>武器設定</Text></Pressable>
-                  <Pressable style={[s.tabBtn, tab === "results" && s.tabBtnActive]} onPress={() => setTab("results")}><Text style={[s.tabBtnText, tab === "results" && s.tabBtnTextActive]}>検索結果</Text></Pressable>
+          <Pressable style={[s.tabBtn, tab === "results" && s.tabBtnActive]} onPress={() => setTab("results")}><Text style={[s.tabBtnText, tab === "results" && s.tabBtnTextActive]}>検索結果</Text></Pressable>
         </View>
 
         {tab === "results" ? (
@@ -234,7 +249,13 @@ const [keyword, setKeyword] = useState("");
 
         {!isWide && (
           <View style={{ marginTop: 12 }}>
-            <RightPanel selected={selected} skillMap={byId} onChange={setLevel} onClearAll={() => { closeDropdown(); clearAll(); }} />
+            <RightPanel
+              selected={selected}
+              skillMap={byId}
+              onChange={setLevel}
+              onClearAll={() => { closeDropdown(); clearAll(); }}
+              onSearch={runGearSearch}
+            />
           </View>
         )}
       </ScrollView>
