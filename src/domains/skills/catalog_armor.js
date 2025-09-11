@@ -1,6 +1,6 @@
 export const catalogArmor = {
   "schemaVersion": "wilds-armor-v3",
-  "updated": "2025-09-09",
+  "updated": "2025-09-11",
   "series": [
     {
       "key": "lagiacrus",
@@ -89,26 +89,26 @@ export const catalogArmor = {
       ],
       "seriesName": "シュバルカ",
       "seriesSkill": {
-        "name": "鎖刃刺撃",
+        "name": "鎖刃竜の飢餓",
         "thresholds": [
           {
             "count": 2,
-            "name": "鎖刃刺撃Ⅰ"
+            "name": "鎖刃竜の飢餓Ⅰ"
           },
           {
             "count": 4,
-            "name": "鎖刃刺撃Ⅱ"
+            "name": "鎖刃竜の飢餓Ⅱ"
           }
         ]
       },
       "groupSkill": {
-        "alpha": "護竜の脈動",
-        "beta": "護竜の守り"
+        "alpha": "毛皮の昂揚",
+        "beta": "毛皮の誘惑"
       }
     },
     {
       "key": "guardian_arkveld",
-      "monster": "護鎖刃竜",
+      "monster": "護竜アルシュベルド",
       "variants": [
         "α",
         "β"
@@ -134,7 +134,7 @@ export const catalogArmor = {
     },
     {
       "key": "guardian_ebony",
-      "monster": "護兇爪竜",
+      "monster": "護竜オドガロン亜種",
       "variants": [
         "α",
         "β"
@@ -160,7 +160,7 @@ export const catalogArmor = {
     },
     {
       "key": "guardian_fulgur",
-      "monster": "護雷顎竜",
+      "monster": "護竜アンジャナフ亜種",
       "variants": [
         "α",
         "β"
@@ -186,23 +186,17 @@ export const catalogArmor = {
     },
     {
       "key": "zoshia",
-      "monster": "無垢ナル龍",
+      "monster": "ゾシア",
       "variants": [
         "α",
         "β"
       ],
       "seriesName": "無垢ナル龍",
       "seriesSkill": {
-        "name": "白熾龍の力",
+        "name": "白熾龍の脈動",
         "thresholds": [
-          {
-            "count": 2,
-            "name": "祝福Ⅰ"
-          },
-          {
-            "count": 4,
-            "name": "祝福Ⅱ"
-          }
+          { "count": 2, "name": "超回復力Ⅰ" },
+          { "count": 4, "name": "超回復力Ⅱ" }
         ]
       },
       "groupSkill": {
@@ -284,6 +278,73 @@ export const catalogArmor = {
         "gamma": "ヌシの魂"
       }
     }
+    ,
+    {
+      "key": "gypceros",
+      "monster": "ゲリョス",
+      "variants": [
+        "α",
+        "β"
+      ],
+      "seriesName": "ゲリョス",
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {}
+    },
+    {
+      "key": "yian_kut_ku",
+      "monster": "イャンクック",
+      "variants": [
+        "α",
+        "β"
+      ],
+      "seriesName": "イャンクック",
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {}
+    },
+    {
+      "key": "rathian",
+      "monster": "リオレイア",
+      "variants": ["α", "β"],
+      "seriesName": "リオレイア",
+      "seriesSkill": { "name": null, "thresholds": [] },
+      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+    },
+    {
+      "key": "blangonga",
+      "monster": "ドドブランゴ",
+      "variants": ["α", "β"],
+      "seriesName": "ドドブランゴ",
+      "seriesSkill": {
+        "name": "雪獅子の闘志",
+        "thresholds": [
+          { "count": 2, "name": "ウォークライⅠ" },
+          { "count": 4, "name": "ウォークライⅡ" }
+        ]
+      },
+      "groupSkill": { "alpha": "毛皮の昂揚", "beta": "毛皮の誘惑" }
+    },
+    {
+      "key": "gravios",
+      "monster": "グラビモス",
+      "variants": ["α", "β"],
+      "seriesName": "グラビモス",
+      "seriesSkill": {
+        "name": "鎧竜の守護",
+        "thresholds": [
+          { "count": 2, "name": "無傷の重装Ⅰ" },
+          { "count": 4, "name": "無傷の重装Ⅱ" }
+        ]
+      },
+      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+    }
+
+
   ],
   "armor": [
     {
@@ -3921,6 +3982,8014 @@ export const catalogArmor = {
           "level": 2
         }
       ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "α",
+      "part": "head",
+      "name": "トゥナムルヘルムα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "整備",
+          "level": 2
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の水玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "α",
+      "part": "chest",
+      "name": "トゥナムルメイルα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "整備",
+          "level": 2
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "波衣竜の上皮",
+          "qty": 6
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 3
+        },
+        {
+          "name": "大水袋",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "α",
+      "part": "arms",
+      "name": "トゥナムルアームα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 2
+        },
+        {
+          "name": "納刀術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 3
+        },
+        {
+          "name": "波衣竜の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "α",
+      "part": "waist",
+      "name": "トゥナムルコイルα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 2
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "波衣竜の艶触手",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の鋭爪",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の逆鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "α",
+      "part": "legs",
+      "name": "トゥナムルグリーヴα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "整備",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "波衣竜の上皮",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の艶触手",
+          "qty": 4
+        },
+        {
+          "name": "ピラギルの上ヒレ",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "β",
+      "part": "head",
+      "name": "トゥナムルヘルムβ",
+      "slots": [
+        3,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "整備",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の水玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "β",
+      "part": "chest",
+      "name": "トゥナムルメイルβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "整備",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "波衣竜の上皮",
+          "qty": 6
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 3
+        },
+        {
+          "name": "大水袋",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "β",
+      "part": "arms",
+      "name": "トゥナムルアームβ",
+      "slots": [
+        3,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "納刀術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の上繊毛",
+          "qty": 3
+        },
+        {
+          "name": "波衣竜の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "β",
+      "part": "waist",
+      "name": "トゥナムルコイルβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "波衣竜の艶触手",
+          "qty": 4
+        },
+        {
+          "name": "波衣竜の鋭爪",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の逆鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "uzutuna",
+      "variant": "β",
+      "part": "legs",
+      "name": "トゥナムルグリーヴβ",
+      "slots": [
+        3,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "波衣竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "波衣竜の上皮",
+          "qty": 5
+        },
+        {
+          "name": "波衣竜の艶触手",
+          "qty": 4
+        },
+        {
+          "name": "ピラギルの上ヒレ",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "α",
+      "part": "head",
+      "name": "レダゼルトヘルムα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 4
+        },
+        {
+          "name": "ブブラチカの堅殻",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "α",
+      "part": "chest",
+      "name": "レダゼルトメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 2
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の逆鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "α",
+      "part": "arms",
+      "name": "レダゼルトアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "煌雷竜の雷玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "α",
+      "part": "waist",
+      "name": "レダゼルトコイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "煌雷竜の堅殻",
+          "qty": 6
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 3
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "α",
+      "part": "legs",
+      "name": "レダゼルトグリーヴα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        },
+        {
+          "name": "渾身",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 4
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 3
+        },
+        {
+          "name": "ライトクリスタル",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "β",
+      "part": "head",
+      "name": "レダゼルトヘルムβ",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 4
+        },
+        {
+          "name": "ブブラチカの堅殻",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "β",
+      "part": "chest",
+      "name": "レダゼルトメイルβ",
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の逆鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "β",
+      "part": "arms",
+      "name": "レダゼルトアームβ",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 2
+        },
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "煌雷竜の雷玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "β",
+      "part": "waist",
+      "name": "レダゼルトコイルβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "煌雷竜の堅殻",
+          "qty": 6
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 3
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "redau",
+      "variant": "β",
+      "part": "legs",
+      "name": "レダゼルトグリーヴβ",
+      "slots": [
+        3,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "煌雷竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "煌雷竜の蒼雷晶爪",
+          "qty": 4
+        },
+        {
+          "name": "煌雷竜の雷電角",
+          "qty": 3
+        },
+        {
+          "name": "ライトクリスタル",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "α",
+      "part": "head",
+      "name": "エグゾルスヘルムα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 2
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 6
+        },
+        {
+          "name": "獄焔蛸の上棘",
+          "qty": 6
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 3
+        },
+        {
+          "name": "いにしえの龍骨",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "α",
+      "part": "chest",
+      "name": "エグゾルスメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証",
+          "qty": 2
+        },
+        {
+          "name": "獄焔蛸の暴触手",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の尖角",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の髄液",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "α",
+      "part": "arms",
+      "name": "エグゾルスアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 2
+        },
+        {
+          "name": "早食い",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "獄焔蛸の上棘",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の暴触手",
+          "qty": 4
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "α",
+      "part": "waist",
+      "name": "エグゾルスコイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 2
+        },
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 3
+        },
+        {
+          "name": "獄焔蛸の尖角",
+          "qty": 3
+        },
+        {
+          "name": "爆炎袋",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "α",
+      "part": "legs",
+      "name": "エグゾルスグリーヴα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "風圧耐性",
+          "level": 2
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の炎玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "β",
+      "part": "head",
+      "name": "エグゾルスヘルムβ",
+      "slots": [
+        2,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 6
+        },
+        {
+          "name": "獄焔蛸の上棘",
+          "qty": 6
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 3
+        },
+        {
+          "name": "いにしえの龍骨",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "β",
+      "part": "chest",
+      "name": "エグゾルスメイルβ",
+      "slots": [
+        3,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証",
+          "qty": 2
+        },
+        {
+          "name": "獄焔蛸の暴触手",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の尖角",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の髄液",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "β",
+      "part": "arms",
+      "name": "エグゾルスアームβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 2
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "獄焔蛸の上棘",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の暴触手",
+          "qty": 4
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "β",
+      "part": "waist",
+      "name": "エグゾルスコイルβ",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 3
+        },
+        {
+          "name": "獄焔蛸の尖角",
+          "qty": 3
+        },
+        {
+          "name": "爆炎袋",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "nuegudra",
+      "variant": "β",
+      "part": "legs",
+      "name": "エグゾルスグリーヴβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "獄焔蛸の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 4
+        },
+        {
+          "name": "獄焔蛸の炎玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dober",
+      "variant": "α",
+      "part": "head",
+      "name": "ドーベルヘルムα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 4
+        },
+        {
+          "name": "黒ずんだ油骨",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "dober",
+      "variant": "α",
+      "part": "chest",
+      "name": "ドーベルメイルα",
+      "slots": [
+        3,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 4
+        },
+        {
+          "name": "いにしえの龍骨",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dober",
+      "variant": "α",
+      "part": "arms",
+      "name": "ドーベルアームα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "堅竜骨",
+          "qty": 4
+        },
+        {
+          "name": "堅牢な骨",
+          "qty": 4
+        },
+        {
+          "name": "たくましい護骨",
+          "qty": 3
+        },
+        {
+          "name": "火竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dober",
+      "variant": "α",
+      "part": "waist",
+      "name": "ドーベルコイルα",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "堅竜骨",
+          "qty": 4
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 4
+        },
+        {
+          "name": "凍てついた氷骨",
+          "qty": 3
+        },
+        {
+          "name": "赫猿獣の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dober",
+      "variant": "α",
+      "part": "legs",
+      "name": "ドーベルグリーヴα",
+      "slots": [
+        2,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "堅竜骨",
+          "qty": 5
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 4
+        },
+        {
+          "name": "上質な堅骨",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "damascus",
+      "variant": "α",
+      "part": "head",
+      "name": "ダマスクヘルムα",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ユニオン鉱石",
+          "qty": 4
+        },
+        {
+          "name": "護竜の上毛皮",
+          "qty": 3
+        },
+        {
+          "name": "狂竜結晶の欠片",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "damascus",
+      "variant": "α",
+      "part": "chest",
+      "name": "ダマスクメイルα",
+      "slots": [
+        2,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ユニオン鉱石",
+          "qty": 5
+        },
+        {
+          "name": "護竜の浄血",
+          "qty": 2
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 5
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "damascus",
+      "variant": "α",
+      "part": "arms",
+      "name": "ダマスクアームα",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "精霊の加護",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ユニオン鉱石",
+          "qty": 4
+        },
+        {
+          "name": "護竜の上毛皮",
+          "qty": 4
+        },
+        {
+          "name": "グラシスメタル",
+          "qty": 4
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "damascus",
+      "variant": "α",
+      "part": "waist",
+      "name": "ダマスクコイルα",
+      "slots": [
+        3,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ユニオン鉱石",
+          "qty": 3
+        },
+        {
+          "name": "護竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "ノヴァクリスタル",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "damascus",
+      "variant": "α",
+      "part": "legs",
+      "name": "ダマスクグリーヴα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ユニオン鉱石",
+          "qty": 3
+        },
+        {
+          "name": "護竜の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "獄炎石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "guild_ace",
+      "variant": "α",
+      "part": "head",
+      "name": "ギルドエースピアスα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "guild_ace",
+      "variant": "α",
+      "part": "chest",
+      "name": "ギルドエースメイルα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "guild_ace",
+      "variant": "α",
+      "part": "arms",
+      "name": "ギルドエースアームα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "guild_ace",
+      "variant": "α",
+      "part": "waist",
+      "name": "ギルドエースコイルα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "guild_ace",
+      "variant": "α",
+      "part": "legs",
+      "name": "ギルドエースブーツα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sekigan",
+      "variant": "α",
+      "part": "head",
+      "name": "竜王の隻眼α",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆襲",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "歴戦狩猟の証Ⅲ",
+          "qty": 3
+        },
+        {
+          "name": "護竜の浄血",
+          "qty": 3
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "kunafa",
+      "variant": "α",
+      "part": "head",
+      "name": "クナファヘッドα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "オトモへの采配",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ダルトドンの毛織物",
+          "qty": 1
+        },
+        {
+          "name": "タリオスの上鱗",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "kunafa",
+      "variant": "α",
+      "part": "chest",
+      "name": "クナファケープα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 2
+        },
+        {
+          "name": "オトモへの采配",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ダルトドンの毛織物",
+          "qty": 1
+        },
+        {
+          "name": "鋭利な牙",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "kunafa",
+      "variant": "α",
+      "part": "waist",
+      "name": "クナファベルトα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 2
+        },
+        {
+          "name": "オトモへの采配",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ダルトドンの毛織物",
+          "qty": 1
+        },
+        {
+          "name": "鋭利な牙",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "kunafa",
+      "variant": "α",
+      "part": "legs",
+      "name": "クナファチャプスα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "オトモへの采配",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ダルトドンの毛織物",
+          "qty": 1
+        },
+        {
+          "name": "タリオスの上鱗",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "shild",
+      "variant": "α",
+      "part": "head",
+      "name": "シルドフードα",
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "シルドコットン",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "shild",
+      "variant": "α",
+      "part": "chest",
+      "name": "シルドコートα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 4
+        }
+      ],
+      "materials": [
+        {
+          "name": "シルドコットン",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "death_gear",
+      "variant": "α",
+      "part": "head",
+      "name": "デスギアゲヒルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "禍々しい布",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "death_gear",
+      "variant": "α",
+      "part": "chest",
+      "name": "デスギアムスケルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "禍々しい布",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "death_gear",
+      "variant": "α",
+      "part": "arms",
+      "name": "デスギアファオストα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "禍々しい布",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "death_gear",
+      "variant": "α",
+      "part": "waist",
+      "name": "デスギアナーベルα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 2
+        },
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "禍々しい布",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "death_gear",
+      "variant": "α",
+      "part": "legs",
+      "name": "デスギアフェルゼα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        },
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "禍々しい布",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "papimel",
+      "variant": "α",
+      "part": "head",
+      "name": "パピメルテスタα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "papimel",
+      "variant": "α",
+      "part": "chest",
+      "name": "パピメルペットα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "papimel",
+      "variant": "α",
+      "part": "arms",
+      "name": "パピメルマーノα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "回復速度",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "papimel",
+      "variant": "α",
+      "part": "waist",
+      "name": "パピメルアンカα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "papimel",
+      "variant": "α",
+      "part": "legs",
+      "name": "パピメルガンバα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "oubeat",
+      "variant": "α",
+      "part": "head",
+      "name": "オウビートテスタα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "oubeat",
+      "variant": "α",
+      "part": "chest",
+      "name": "オウビートペットα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "oubeat",
+      "variant": "α",
+      "part": "arms",
+      "name": "オウビートマーノα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "oubeat",
+      "variant": "α",
+      "part": "waist",
+      "name": "オウビートアンカα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "oubeat",
+      "variant": "α",
+      "part": "legs",
+      "name": "オウビートガンバα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "オオツノアゲハ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "high_metal",
+      "variant": "α",
+      "part": "head",
+      "name": "ハイメタヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 3
+        },
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "high_metal",
+      "variant": "α",
+      "part": "chest",
+      "name": "ハイメタメイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "防御力DOWN耐性",
+          "level": 3
+        },
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "high_metal",
+      "variant": "α",
+      "part": "arms",
+      "name": "ハイメタアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 3
+        },
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "high_metal",
+      "variant": "α",
+      "part": "waist",
+      "name": "ハイメタコイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ボマー",
+          "level": 3
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "high_metal",
+      "variant": "α",
+      "part": "legs",
+      "name": "ハイメタグリーヴα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "裂傷耐性",
+          "level": 3
+        },
+        {
+          "name": "ひるみ軽減",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "battle",
+      "variant": "α",
+      "part": "head",
+      "name": "バトルヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "スタミナ急速回復",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "戦傷のある鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "battle",
+      "variant": "α",
+      "part": "chest",
+      "name": "バトルメイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 3
+        },
+        {
+          "name": "睡眠耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "戦傷のある鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "battle",
+      "variant": "α",
+      "part": "arms",
+      "name": "バトルアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "戦傷のある鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "battle",
+      "variant": "α",
+      "part": "waist",
+      "name": "バトルコイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 3
+        },
+        {
+          "name": "拘束耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "戦傷のある鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "battle",
+      "variant": "α",
+      "part": "legs",
+      "name": "バトルグリーヴα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 3
+        },
+        {
+          "name": "体術",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "戦傷のある鱗",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "melhoa",
+      "variant": "α",
+      "part": "head",
+      "name": "メルホアフロールα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 3
+        },
+        {
+          "name": "毒耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ドスビスカス",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "melhoa",
+      "variant": "α",
+      "part": "chest",
+      "name": "メルホアトロンコα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "整備",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "ドスビスカス",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "melhoa",
+      "variant": "α",
+      "part": "arms",
+      "name": "メルホアラーマα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 3
+        },
+        {
+          "name": "麻痺耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ドスビスカス",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "melhoa",
+      "variant": "α",
+      "part": "waist",
+      "name": "メルホアオッハα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 3
+        },
+        {
+          "name": "裂傷耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ドスビスカス",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "melhoa",
+      "variant": "α",
+      "part": "legs",
+      "name": "メルホアライースα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "ドスビスカス",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "artia",
+      "variant": "α",
+      "part": "head",
+      "name": "アーティアヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "グラシスメタル",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "artia",
+      "variant": "α",
+      "part": "chest",
+      "name": "アーティアメイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "環境適応",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "グラシスメタル",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "artia",
+      "variant": "α",
+      "part": "arms",
+      "name": "アーティアアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "属性やられ耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "グラシスメタル",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "artia",
+      "variant": "α",
+      "part": "waist",
+      "name": "アーティアコイルα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "グラシスメタル",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "artia",
+      "variant": "α",
+      "part": "legs",
+      "name": "アーティアグリーヴα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "鎖刃刺撃",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "グラシスメタル",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "α",
+      "part": "head",
+      "name": "チャタヘルムα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "α",
+      "part": "chest",
+      "name": "チャタメイルα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        },
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "α",
+      "part": "arms",
+      "name": "チャタアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "α",
+      "part": "waist",
+      "name": "チャタコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "α",
+      "part": "legs",
+      "name": "チャタグリーヴα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "β",
+      "part": "head",
+      "name": "チャタヘルムβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "β",
+      "part": "chest",
+      "name": "チャタメイルβ",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "β",
+      "part": "arms",
+      "name": "チャタアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "β",
+      "part": "waist",
+      "name": "チャタコイルβ",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chatakabura",
+      "variant": "β",
+      "part": "legs",
+      "name": "チャタグリーヴβ",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bubrachika",
+      "variant": "α",
+      "part": "head",
+      "name": "ブブラチカグラスα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "昆虫標本の達人",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bubrachika",
+      "variant": "β",
+      "part": "head",
+      "name": "ブブラチカグラスβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "忍び歩き",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "talios",
+      "variant": "α",
+      "part": "arms",
+      "name": "タリオスアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "達人芸",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "talios",
+      "variant": "β",
+      "part": "arms",
+      "name": "タリオスアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "剛刃研磨",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "α",
+      "part": "head",
+      "name": "ケマトリスヘルムα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "死中に活",
+          "level": 1
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "α",
+      "part": "chest",
+      "name": "ケマトリスメイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "α",
+      "part": "arms",
+      "name": "ケマトリスアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "死中に活",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "α",
+      "part": "waist",
+      "name": "ケマトリスコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "α",
+      "part": "legs",
+      "name": "ケマトリスグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "死中に活",
+          "level": 1
+        },
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "β",
+      "part": "head",
+      "name": "ケマトリスヘルムβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "β",
+      "part": "chest",
+      "name": "ケマトリスメイルβ",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "会心撃【属性】",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "β",
+      "part": "arms",
+      "name": "ケマトリスアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "死中に活",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "β",
+      "part": "waist",
+      "name": "ケマトリスコイルβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "kematris",
+      "variant": "β",
+      "part": "legs",
+      "name": "ケマトリスグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "死中に活",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "α",
+      "part": "head",
+      "name": "コンガヘルムα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 1
+        },
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "α",
+      "part": "chest",
+      "name": "コンガメイルα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 2
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "α",
+      "part": "arms",
+      "name": "コンガアームα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        },
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "α",
+      "part": "waist",
+      "name": "コンガコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        },
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "α",
+      "part": "legs",
+      "name": "コンガグリーヴα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        },
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "β",
+      "part": "head",
+      "name": "コンガヘルムβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "β",
+      "part": "chest",
+      "name": "コンガメイルβ",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "威嚇",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "β",
+      "part": "arms",
+      "name": "コンガアームβ",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "β",
+      "part": "waist",
+      "name": "コンガコイルβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "babaconga",
+      "variant": "β",
+      "part": "legs",
+      "name": "コンガグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "α",
+      "part": "head",
+      "name": "ランゴヘルムα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "α",
+      "part": "chest",
+      "name": "ランゴメイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "α",
+      "part": "arms",
+      "name": "ランゴアームα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        },
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "α",
+      "part": "waist",
+      "name": "ランゴコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "α",
+      "part": "legs",
+      "name": "ランゴグリーヴα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        },
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "β",
+      "part": "head",
+      "name": "ランゴヘルムβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "β",
+      "part": "chest",
+      "name": "ランゴメイルβ",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "β",
+      "part": "arms",
+      "name": "ランゴアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "β",
+      "part": "waist",
+      "name": "ランゴコイルβ",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "lango",
+      "variant": "β",
+      "part": "legs",
+      "name": "ランゴグリーヴβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "piragiru",
+      "variant": "α",
+      "part": "legs",
+      "name": "ピラギルグリーヴα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "水耐性",
+          "level": 2
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "piragiru",
+      "variant": "β",
+      "part": "legs",
+      "name": "ピラギルグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "leather",
+      "variant": "α",
+      "part": "head",
+      "name": "レザーヘッドα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "leather",
+      "variant": "α",
+      "part": "chest",
+      "name": "レザーベストα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 1
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "leather",
+      "variant": "α",
+      "part": "arms",
+      "name": "レザーグラブα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 1
+        },
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "leather",
+      "variant": "α",
+      "part": "waist",
+      "name": "レザーベルトα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "leather",
+      "variant": "α",
+      "part": "legs",
+      "name": "レザーパンツα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chain",
+      "variant": "α",
+      "part": "head",
+      "name": "チェーンヘッドα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chain",
+      "variant": "α",
+      "part": "chest",
+      "name": "チェーンベストα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        },
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chain",
+      "variant": "α",
+      "part": "arms",
+      "name": "チェーングラブα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 1
+        },
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chain",
+      "variant": "α",
+      "part": "waist",
+      "name": "チェーンベルトα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        },
+        {
+          "name": "回復速度",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "chain",
+      "variant": "α",
+      "part": "legs",
+      "name": "チェーンパンツα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bone",
+      "variant": "α",
+      "part": "head",
+      "name": "ボーンヘルムα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        },
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bone",
+      "variant": "α",
+      "part": "chest",
+      "name": "ボーンメイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        },
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bone",
+      "variant": "α",
+      "part": "arms",
+      "name": "ボーンアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        },
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bone",
+      "variant": "α",
+      "part": "waist",
+      "name": "ボーンコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "bone",
+      "variant": "α",
+      "part": "legs",
+      "name": "ボーングリーヴα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "alloy",
+      "variant": "α",
+      "part": "head",
+      "name": "アロイヘルムα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "alloy",
+      "variant": "α",
+      "part": "chest",
+      "name": "アロイメイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ひるみ軽減",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "alloy",
+      "variant": "α",
+      "part": "arms",
+      "name": "アロイアームα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "alloy",
+      "variant": "α",
+      "part": "waist",
+      "name": "アロイコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "alloy",
+      "variant": "α",
+      "part": "legs",
+      "name": "アロイグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        },
+        {
+          "name": "ひるみ軽減",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "ingot",
+      "variant": "α",
+      "part": "head",
+      "name": "インゴットヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 2
+        },
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "ingot",
+      "variant": "α",
+      "part": "chest",
+      "name": "インゴットメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "ingot",
+      "variant": "α",
+      "part": "arms",
+      "name": "インゴットアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        },
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "ingot",
+      "variant": "α",
+      "part": "waist",
+      "name": "インゴットコイルα",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "精霊の加護",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "ingot",
+      "variant": "α",
+      "part": "legs",
+      "name": "インゴットグリーヴα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "hope",
+      "variant": "α",
+      "part": "head",
+      "name": "ホープマスクα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "hope",
+      "variant": "α",
+      "part": "chest",
+      "name": "ホープメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "hope",
+      "variant": "α",
+      "part": "arms",
+      "name": "ホープアームα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "hope",
+      "variant": "α",
+      "part": "waist",
+      "name": "ホープコイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 1
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "hope",
+      "variant": "α",
+      "part": "legs",
+      "name": "ホープグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "square_glasses",
+      "variant": "α",
+      "part": "head",
+      "name": "スクエアグラスα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "植生学",
+          "level": 4
+        },
+        {
+          "name": "ハンター生活",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "strategist_glasses",
+      "variant": "α",
+      "part": "head",
+      "name": "知略の眼鏡α",
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 3
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "sealed_eyepatch",
+      "variant": "α",
+      "part": "head",
+      "name": "封印の眼帯α",
+      "slots": [
+        3,
+        3,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "shadow_eye",
+      "variant": "α",
+      "part": "head",
+      "name": "シャドウアイα",
+      "slots": [
+        3,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 3
+        },
+        {
+          "name": "閃光強化",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "round_eye",
+      "variant": "α",
+      "part": "head",
+      "name": "ラウンドアイα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "属性やられ耐性",
+          "level": 3
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "felyne_fake",
+      "variant": "α",
+      "part": "head",
+      "name": "アイルーフェイクα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "オトモへの采配",
+          "level": 5
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "expedition_earring",
+      "variant": "α",
+      "part": "head",
+      "name": "調査隊の耳飾りα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "属性やられ耐性",
+          "level": 1
+        },
+        {
+          "name": "災禍転福",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "doshaguma_fake",
+      "variant": "α",
+      "part": "head",
+      "name": "ドシャグマフェイクα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "diver",
+      "variant": "α",
+      "part": "head",
+      "name": "ダイバーヘッドα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "diver",
+      "variant": "α",
+      "part": "chest",
+      "name": "ダイバースーツα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 2
+        },
+        {
+          "name": "飛び込み",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "diver",
+      "variant": "α",
+      "part": "arms",
+      "name": "ダイバーアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 2
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "diver",
+      "variant": "α",
+      "part": "waist",
+      "name": "ダイバーベルトα",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "腹減り耐性",
+          "level": 1
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "diver",
+      "variant": "α",
+      "part": "legs",
+      "name": "ダイバーフットα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        },
+        {
+          "name": "水場・油泥適応",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "arfi",
+      "variant": "α",
+      "part": "head",
+      "name": "アーフィヘッドα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火耐性",
+          "level": 2
+        },
+        {
+          "name": "ボマー",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "arfi",
+      "variant": "α",
+      "part": "chest",
+      "name": "アーフィボディα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "arfi",
+      "variant": "α",
+      "part": "arms",
+      "name": "アーフィアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 2
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "arfi",
+      "variant": "α",
+      "part": "waist",
+      "name": "アーフィウエストα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "爆破やられ耐性",
+          "level": 2
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        },
+        {
+          "name": "火耐性",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "arfi",
+      "variant": "α",
+      "part": "legs",
+      "name": "アーフィフットα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "連撃",
+          "level": 1
+        },
+        {
+          "name": "爆破やられ耐性",
+          "level": 1
+        },
+        {
+          "name": "ボマー",
+          "level": 1
+        }
+      ],
+      "materials": []
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "α",
+      "part": "head",
+      "name": "イャンクックヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 2
+        },
+        {
+          "name": "火耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "α",
+      "part": "chest",
+      "name": "イャンクックメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        },
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "α",
+      "part": "arms",
+      "name": "イャンクックアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "α",
+      "part": "waist",
+      "name": "イャンクックコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "α",
+      "part": "legs",
+      "name": "イャンクックグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "見切り",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "β",
+      "part": "head",
+      "name": "イャンクックヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "β",
+      "part": "chest",
+      "name": "イャンクックメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "β",
+      "part": "arms",
+      "name": "イャンクックアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "β",
+      "part": "waist",
+      "name": "イャンクックコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "怪鳥の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kutku",
+      "variant": "β",
+      "part": "legs",
+      "name": "イャンクックグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "α",
+      "part": "head",
+      "name": "ゲリョスヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 2
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "α",
+      "part": "chest",
+      "name": "ゲリョスメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "α",
+      "part": "arms",
+      "name": "ゲリョスアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "α",
+      "part": "waist",
+      "name": "ゲリョスコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "不屈",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "α",
+      "part": "legs",
+      "name": "ゲリョスグリーヴα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "β",
+      "part": "head",
+      "name": "ゲリョスヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "β",
+      "part": "chest",
+      "name": "ゲリョスメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "β",
+      "part": "arms",
+      "name": "ゲリョスアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "β",
+      "part": "waist",
+      "name": "ゲリョスコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "不屈",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "毒怪鳥の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gypceros",
+      "variant": "β",
+      "part": "legs",
+      "name": "ゲリョスグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "毒怪鳥の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "毒怪鳥の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "head",
+      "name": "リオレイアヘルムα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "chest",
+      "name": "リオレイアメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "arms",
+      "name": "リオレイアアームα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "waist",
+      "name": "リオレイアコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "legs",
+      "name": "リオレイアグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "head",
+      "name": "リオレイアヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "chest",
+      "name": "リオレイアメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "arms",
+      "name": "リオレイアアームβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒属性強化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "waist",
+      "name": "リオレイアコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雌火竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "legs",
+      "name": "リオレイアグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "雌火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "雌火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "α",
+      "part": "head",
+      "name": "リオレウスヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 2
+        },
+        {
+          "name": "火属性攻撃強化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "α",
+      "part": "chest",
+      "name": "リオレウスメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        },
+        {
+          "name": "攻撃",
+          "level": 1
+        },
+        {
+          "name": "風圧耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "α",
+      "part": "arms",
+      "name": "リオレウスアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        },
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "α",
+      "part": "waist",
+      "name": "リオレウスコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 1
+        },
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "α",
+      "part": "legs",
+      "name": "リオレウスグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ジャンプ鉄人",
+          "level": 1
+        },
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "β",
+      "part": "head",
+      "name": "リオレウスヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "攻撃",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "β",
+      "part": "chest",
+      "name": "リオレウスメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "見切り",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "β",
+      "part": "arms",
+      "name": "リオレウスアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "β",
+      "part": "waist",
+      "name": "リオレウスコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "火竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathalos",
+      "variant": "β",
+      "part": "legs",
+      "name": "リオレウスグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ジャンプ鉄人",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "火竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "火竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "火竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "火竜の紅玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "α",
+      "part": "head",
+      "name": "ドドブランゴヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 2
+        },
+        {
+          "name": "寒さ耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "α",
+      "part": "chest",
+      "name": "ドドブランゴメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "α",
+      "part": "arms",
+      "name": "ドドブランゴアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "α",
+      "part": "waist",
+      "name": "ドドブランゴコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "α",
+      "part": "legs",
+      "name": "ドドブランゴグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        },
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "β",
+      "part": "head",
+      "name": "ドドブランゴヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "β",
+      "part": "chest",
+      "name": "ドドブランゴメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "β",
+      "part": "arms",
+      "name": "ドドブランゴアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ランナー",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "β",
+      "part": "waist",
+      "name": "ドドブランゴコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "dodo_bran",
+      "variant": "β",
+      "part": "legs",
+      "name": "ドドブランゴグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "雪獅子の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "head",
+      "name": "グラビモスヘルムα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 2
+        },
+        {
+          "name": "防御",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "chest",
+      "name": "グラビモスメイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "砲術",
+          "level": 2
+        },
+        {
+          "name": "ガード強化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "arms",
+      "name": "グラビモスアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        },
+        {
+          "name": "砲術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "waist",
+      "name": "グラビモスコイルα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "防御",
+          "level": 2
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "legs",
+      "name": "グラビモスグリーヴα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        },
+        {
+          "name": "砲術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "head",
+      "name": "グラビモスヘルムβ",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "chest",
+      "name": "グラビモスメイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "砲術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "arms",
+      "name": "グラビモスアームβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード性能",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "waist",
+      "name": "グラビモスコイルβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "防御",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "鎧竜の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "legs",
+      "name": "グラビモスグリーヴβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "ガード強化",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "鎧竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 5
+        },
+        {
+          "name": "鎧竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gourmand_earring",
+      "variant": "α",
+      "part": "head",
+      "name": "健啖家の耳飾りα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "早食い",
+          "level": 2
+        },
+        {
+          "name": "満足感",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "チャタコイン",
+          "qty": 5
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 3
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 4
+        },
+        {
+          "name": "紅蓮石",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "seriesKey": "under_rim_glasses",
+      "variant": "α",
+      "part": "head",
+      "name": "アンダーリムグラスα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 5
+        }
+      ],
+      "materials": [
+        {
+          "name": "踊火のカタログ",
+          "qty": 2
+        },
+        {
+          "name": "歴戦狩猟の証Ⅰ",
+          "qty": 2
+        },
+        {
+          "name": "雌火竜の堅殻",
+          "qty": 4
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "seriesKey": "heart_glasses",
+      "variant": "α",
+      "part": "head",
+      "name": "ハートグラスα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "キノコ大好き",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "踊火のカタログ",
+          "qty": 2
+        },
+        {
+          "name": "歴戦狩猟の証Ⅰ",
+          "qty": 2
+        },
+        {
+          "name": "桃毛獣の剛毛",
+          "qty": 4
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "seriesKey": "single_feather_necklace",
+      "variant": "α",
+      "part": "chest",
+      "name": "一枚羽根の首飾りα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 2
+        },
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "首飾りチケット",
+          "qty": 3
+        },
+        {
+          "name": "獄焔蛸の上皮",
+          "qty": 5
+        },
+        {
+          "name": "獄焔蛸の暴触手",
+          "qty": 2
+        },
+        {
+          "name": "獄焔蛸の濃油膜",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "seriesKey": "hawk_heart",
+      "variant": "α",
+      "part": "chest",
+      "name": "旅立ちのホークハートα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 4
+        },
+        {
+          "name": "納刀術",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブブラチカの堅殻",
+          "qty": 1
+        },
+        {
+          "name": "レイアコイン",
+          "qty": 1
+        },
+        {
+          "name": "纏蛙の上鱗",
+          "qty": 1
+        },
+        {
+          "name": "ピラギルの上ヒレ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "α",
+      "part": "head",
+      "name": "クックヘルムα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 2
+        },
+        {
+          "name": "火耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 2
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "α",
+      "part": "chest",
+      "name": "クックメイルα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "火耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 1
+        },
+        {
+          "name": "獄炎石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "α",
+      "part": "arms",
+      "name": "クックアームα",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 3
+        },
+        {
+          "name": "巨大なクチバシ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "α",
+      "part": "waist",
+      "name": "クックコイルα",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        },
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "巨大なクチバシ",
+          "qty": 3
+        },
+        {
+          "name": "怪鳥の耳",
+          "qty": 1
+        },
+        {
+          "name": "爆炎袋",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "α",
+      "part": "legs",
+      "name": "クックグリーヴα",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 2
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の耳",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "β",
+      "part": "head",
+      "name": "クックヘルムβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 2
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "β",
+      "part": "chest",
+      "name": "クックメイルβ",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 1
+        },
+        {
+          "name": "獄炎石",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "β",
+      "part": "arms",
+      "name": "クックアームβ",
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 3
+        },
+        {
+          "name": "巨大なクチバシ",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "β",
+      "part": "waist",
+      "name": "クックコイルβ",
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "巨大なクチバシ",
+          "qty": 3
+        },
+        {
+          "name": "怪鳥の耳",
+          "qty": 1
+        },
+        {
+          "name": "爆炎袋",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "yian_kut_ku",
+      "variant": "β",
+      "part": "legs",
+      "name": "クックグリーヴβ",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "怪鳥の翼",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の耳",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "head",
+      "name": "レイアヘルムα",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "毒耐性", "level": 2 },
+        { "name": "耳栓", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 5 },
+        { "name": "雌火竜の堅殻", "qty": 3 },
+        { "name": "雌火竜の棘", "qty": 2 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "chest",
+      "name": "レイアメイルα",
+      "slots": [2, 0, 0],
+      "skills": [
+        { "name": "毒属性強化", "level": 2 },
+        { "name": "見切り", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の堅殻", "qty": 4 },
+        { "name": "雌火竜の上鱗", "qty": 6 },
+        { "name": "雌火竜の延髄", "qty": 1 },
+        { "name": "雌火竜の狩猟証S", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "arms",
+      "name": "レイアアームα",
+      "slots": [1, 1, 0],
+      "skills": [
+        { "name": "毒耐性", "level": 1 },
+        { "name": "攻撃", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雌火竜の鋭爪", "qty": 3 },
+        { "name": "雌火竜の上棘", "qty": 2 },
+        { "name": "雌火竜の上鱗", "qty": 4 },
+        { "name": "竜玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "waist",
+      "name": "レイアコイルα",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "耳栓", "level": 1 },
+        { "name": "見切り", "level": 1 },
+        { "name": "毒属性強化", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 5 },
+        { "name": "雌火竜の堅殻", "qty": 3 },
+        { "name": "火炎袋", "qty": 2 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "legs",
+      "name": "レイアグリーヴα",
+      "slots": [1, 0, 0],
+      "skills": [
+        { "name": "攻撃", "level": 2 },
+        { "name": "毒耐性", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 4 },
+        { "name": "雌火竜の上棘", "qty": 1 },
+        { "name": "雌火竜の尻尾", "qty": 1 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "head",
+      "name": "レイアヘルムβ",
+      "slots": [3, 1, 0],
+      "skills": [
+        { "name": "毒耐性", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 5 },
+        { "name": "雌火竜の堅殻", "qty": 3 },
+        { "name": "雌火竜の棘", "qty": 2 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "chest",
+      "name": "レイアメイルβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "見切り", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雌火竜の堅殻", "qty": 4 },
+        { "name": "雌火竜の上鱗", "qty": 6 },
+        { "name": "雌火竜の延髄", "qty": 1 },
+        { "name": "雌火竜の狩猟証S", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "arms",
+      "name": "レイアアームβ",
+      "slots": [3, 0, 0],
+      "skills": [
+        { "name": "攻撃", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雌火竜の鋭爪", "qty": 3 },
+        { "name": "雌火竜の上棘", "qty": 2 },
+        { "name": "雌火竜の上鱗", "qty": 4 },
+        { "name": "竜玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "waist",
+      "name": "レイアコイルβ",
+      "slots": [2, 1, 1],
+      "skills": [
+        { "name": "耳栓", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 5 },
+        { "name": "雌火竜の堅殻", "qty": 3 },
+        { "name": "火炎袋", "qty": 2 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "β",
+      "part": "legs",
+      "name": "レイアグリーヴβ",
+      "slots": [3, 0, 0],
+      "skills": [
+        { "name": "見切り", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雌火竜の上鱗", "qty": 4 },
+        { "name": "雌火竜の上棘", "qty": 1 },
+        { "name": "雌火竜の尻尾", "qty": 1 },
+        { "name": "雌火竜の狩猟証S", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "α",
+      "part": "head",
+      "name": "ブランゴヘルムα",
+      "slots": [1, 1, 0],
+      "skills": [
+        { "name": "広域化", "level": 2 },
+        { "name": "逆襲", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の剛毛", "qty": 3 },
+        { "name": "雪獅子の鋭牙", "qty": 4 },
+        { "name": "雪獅子の尻尾", "qty": 2 },
+        { "name": "太い獣骨", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "α",
+      "part": "chest",
+      "name": "ブランゴメイルα",
+      "slots": [0, 0, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 2 },
+        { "name": "アイテム使用強化", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 2 },
+        { "name": "雪獅子の髭", "qty": 3 },
+        { "name": "ブランゴの剛毛", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "α",
+      "part": "arms",
+      "name": "ブランゴアームα",
+      "slots": [2, 0, 0],
+      "skills": [
+        { "name": "オトモへの采配", "level": 2 },
+        { "name": "逆襲", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 1 },
+        { "name": "雪獅子の剛毛", "qty": 5 },
+        { "name": "雪獅子の尻尾", "qty": 3 },
+        { "name": "獣玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "α",
+      "part": "waist",
+      "name": "ブランゴコイルα",
+      "slots": [1, 0, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 2 },
+        { "name": "広域化", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 1 },
+        { "name": "雪獅子の鋭牙", "qty": 5 },
+        { "name": "雪獅子の髭", "qty": 2 },
+        { "name": "凍結袋", "qty": 3 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "α",
+      "part": "legs",
+      "name": "ブランゴグリーヴα",
+      "slots": [1, 1, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 1 },
+        { "name": "逆襲", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の剛毛", "qty": 3 },
+        { "name": "雪獅子の尻尾", "qty": 2 },
+        { "name": "雪獅子の髭", "qty": 2 },
+        { "name": "堅牢な巨骨", "qty": 3 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "β",
+      "part": "head",
+      "name": "ブランゴヘルムβ",
+      "slots": [2, 1, 1],
+      "skills": [
+        { "name": "広域化", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雪獅子の剛毛", "qty": 3 },
+        { "name": "雪獅子の鋭牙", "qty": 4 },
+        { "name": "雪獅子の尻尾", "qty": 2 },
+        { "name": "太い獣骨", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "β",
+      "part": "chest",
+      "name": "ブランゴメイルβ",
+      "slots": [2, 0, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 2 },
+        { "name": "雪獅子の髭", "qty": 3 },
+        { "name": "ブランゴの剛毛", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "β",
+      "part": "arms",
+      "name": "ブランゴアームβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "逆襲", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 1 },
+        { "name": "雪獅子の剛毛", "qty": 5 },
+        { "name": "雪獅子の尻尾", "qty": 3 },
+        { "name": "獣玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "β",
+      "part": "waist",
+      "name": "ブランゴコイルβ",
+      "slots": [1, 1, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 2 }
+      ],
+      "materials": [
+        { "name": "雪獅子の狩猟証S", "qty": 1 },
+        { "name": "雪獅子の鋭牙", "qty": 5 },
+        { "name": "雪獅子の髭", "qty": 2 },
+        { "name": "凍結袋", "qty": 3 }
+      ]
+    },
+    {
+      "seriesKey": "blangonga",
+      "variant": "β",
+      "part": "legs",
+      "name": "ブランゴグリーヴβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "挑戦者", "level": 1 }
+      ],
+      "materials": [
+        { "name": "雪獅子の剛毛", "qty": 3 },
+        { "name": "雪獅子の尻尾", "qty": 2 },
+        { "name": "雪獅子の髭", "qty": 2 },
+        { "name": "堅牢な巨骨", "qty": 3 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "head",
+      "name": "グラビドヘルムα",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "耐震", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "尖竜骨", "qty": 3 },
+        { "name": "鎧竜の堅胸殻", "qty": 3 },
+        { "name": "鎧竜の堅殻", "qty": 5 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "chest",
+      "name": "グラビドメイルα",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "回復速度", "level": 2 },
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "紅蓮石", "qty": 2 },
+        { "name": "鎧竜の翼", "qty": 3 },
+        { "name": "鎧竜の狩猟証S", "qty": 1 },
+        { "name": "竜玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "arms",
+      "name": "グラビドアームα",
+      "slots": [1, 0, 0],
+      "skills": [
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "フルチャージ", "level": 2 }
+      ],
+      "materials": [
+        { "name": "獄炎石", "qty": 1 },
+        { "name": "鎧竜の狩猟証S", "qty": 2 },
+        { "name": "鎧竜の堅殻", "qty": 4 },
+        { "name": "鎧竜の延髄", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "waist",
+      "name": "グラビドコイルα",
+      "slots": [2, 0, 0],
+      "skills": [
+        { "name": "ひるみ軽減", "level": 2 },
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "鎧竜の翼", "qty": 5 },
+        { "name": "鎧竜の狩猟証S", "qty": 1 },
+        { "name": "鎧竜の堅胸殻", "qty": 4 },
+        { "name": "クラノダスの堅頭殻", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "α",
+      "part": "legs",
+      "name": "グラビドグリーヴα",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "回復速度", "level": 1 },
+        { "name": "耐震", "level": 2 }
+      ],
+      "materials": [
+        { "name": "昏睡袋", "qty": 3 },
+        { "name": "鎧竜の頭殻", "qty": 2 },
+        { "name": "鎧竜の翼", "qty": 6 },
+        { "name": "鎧竜の堅殻", "qty": 6 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "head",
+      "name": "グラビドヘルムβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "尖竜骨", "qty": 3 },
+        { "name": "鎧竜の堅胸殻", "qty": 3 },
+        { "name": "鎧竜の堅殻", "qty": 5 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "chest",
+      "name": "グラビドメイルβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "回復速度", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "紅蓮石", "qty": 2 },
+        { "name": "鎧竜の翼", "qty": 3 },
+        { "name": "鎧竜の狩猟証S", "qty": 1 },
+        { "name": "竜玉", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "arms",
+      "name": "グラビドアームβ",
+      "slots": [2, 0, 0],
+      "skills": [
+        { "name": "フルチャージ", "level": 2 }
+      ],
+      "materials": [
+        { "name": "獄炎石", "qty": 1 },
+        { "name": "鎧竜の狩猟証S", "qty": 2 },
+        { "name": "鎧竜の堅殻", "qty": 4 },
+        { "name": "鎧竜の延髄", "qty": 1 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "waist",
+      "name": "グラビドコイルβ",
+      "slots": [2, 1, 0],
+      "skills": [
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
+      ],
+      "materials": [
+        { "name": "鎧竜の翼", "qty": 5 },
+        { "name": "鎧竜の狩猟証S", "qty": 1 },
+        { "name": "鎧竜の堅胸殻", "qty": 4 },
+        { "name": "クラノダスの堅頭殻", "qty": 2 }
+      ]
+    },
+    {
+      "seriesKey": "gravios",
+      "variant": "β",
+      "part": "legs",
+      "name": "グラビドグリーヴβ",
+      "slots": [2, 2, 0],
+      "skills": [
+        { "name": "回復速度", "level": 1 },
+        { "name": "耐震", "level": 1 }
+      ],
+      "materials": [
+        { "name": "昏睡袋", "qty": 3 },
+        { "name": "鎧竜の頭殻", "qty": 2 },
+        { "name": "鎧竜の翼", "qty": 6 },
+        { "name": "鎧竜の堅殻", "qty": 6 }
+      ]
     }
+
+
+
   ]
 };

@@ -1,4 +1,4 @@
-import { useMemo, useState, useCallback, useRef } from "react";
+import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Stack } from "expo-router";
 import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform } from "react-native";
 import { s } from "../../src/screens/equip.styles";
@@ -141,6 +141,27 @@ const EquipScreen = () => {
   const [tab, setTab] = useState("skills");
   const [gearSets, setGearSets] = useState([]);
 
+  // ★ スキル一覧スクロール制御
+  const skillScrollRef = useRef(null);
+  const [pendingScrollToSkillsTop, setPendingScrollToSkillsTop] = useState(false);
+  const scrollSkillsTopNow = useCallback(() => {
+    requestAnimationFrame(() => {
+      // ScrollView
+      skillScrollRef.current?.scrollTo?.({ y: 0, animated: true });
+      // FlatList の場合（使っているなら）:
+      // skillScrollRef.current?.scrollToOffset?.({ offset: 0, animated: true });
+    });
+  }, []);
+
+  // ★ skillsタブが表示された直後に一番上へスクロール
+  useEffect(() => {
+    if (tab === "skills" && pendingScrollToSkillsTop) {
+      scrollSkillsTopNow();
+      setPendingScrollToSkillsTop(false);
+    }
+  }, [tab, pendingScrollToSkillsTop, scrollSkillsTopNow]);
+
+
   // ★ 検索実行：ボタン押下 → 計算 → 結果タブへ
   const runGearSearch = useCallback(() => {
     if (selectedSkillsForCalc.length === 0) {
@@ -169,7 +190,7 @@ const EquipScreen = () => {
             selected={selected}
             skillMap={byId}
             onChange={setLevel}
-            onClearAll={() => { closeDropdown(); clearAll(); }}
+            onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
             onSearch={runGearSearch}
           />
         </View>
@@ -177,7 +198,7 @@ const EquipScreen = () => {
 
       <LevelMenu ctx={dd} onPick={(lv) => setLevel(dd.id, lv)} onClose={closeDropdown} />
 
-      <ScrollView contentContainerStyle={[s.body, { paddingTop: headerOffset }, isWide && { paddingRight: rightW + 24 }]} keyboardShouldPersistTaps="handled">
+      <ScrollView ref={skillScrollRef} contentContainerStyle={[s.body, { paddingTop: headerOffset }, isWide && { paddingRight: rightW + 24 }]} keyboardShouldPersistTaps="handled">
         {/* サブヘッダー（バッジ） */}
         <View style={s.pageHeader}>
           <View style={s.pageBadge}>
@@ -253,7 +274,7 @@ const EquipScreen = () => {
               selected={selected}
               skillMap={byId}
               onChange={setLevel}
-              onClearAll={() => { closeDropdown(); clearAll(); }}
+              onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
               onSearch={runGearSearch}
             />
           </View>
