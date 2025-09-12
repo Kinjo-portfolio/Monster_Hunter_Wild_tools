@@ -1,3 +1,4 @@
+
 // ===== helpers (detail & summarizer) =====
 (function(){
   const _addSkill = (map, name, lv) => {
@@ -192,6 +193,33 @@ const tryPlaceIntoSlots = (slots, need) => {
   return true;
 };
 
+// ===== talismans =====
+const buildTalismanCandidates = (talismansCatalog, requiredMap, { includeAppraised=false } = {}) => {
+  const list = [];
+  const craft = talismansCatalog?.craftable || [];
+  for (const c of craft) {
+    const sk = c.skill;
+    if (!sk?.name) continue;
+    const req = requiredMap.get(sk.name);
+    if (!req) continue;
+    const upto = Math.min(Number(sk.maxLevel || 1), req);
+    for (let lv=1; lv<=upto; lv++) {
+      list.push({ name: `${c.name} Lv${lv}`, slots: [], skills: [{ name: sk.name, level: lv }] });
+    }
+  }
+  if (includeAppraised) {
+    const ex = talismansCatalog?.appraised?.exampleInventory || [];
+    for (const t of ex) {
+      list.push({
+        name: t.name || "鑑定護石",
+        slots: Array.isArray(t.slots) ? t.slots.map(n => Number(n)||0).filter(Boolean) : [],
+        skills: (t.skills || []).map(sk => ({ name: sk.name, level: Number(sk.level||1)||1 })),
+      });
+    }
+  }
+  return list;
+};
+
 // ===== activations for display =====
 const summarizeActivations = (pcs, armorCatalog) => {
   const parts = pcs;
@@ -226,11 +254,11 @@ const summarizeActivations = (pcs, armorCatalog) => {
   return { series: seriesActivated.sort((a,b)=> a.name.localeCompare(b.name,'ja')), groups: groupsActivated.sort((a,b)=> b.count - a.count || a.token.localeCompare(b.token,'ja')) };
 };
 
-// ===== per-part candidates (group-aware) =====
+// ===== candidate builder (series-aware + group-aware) =====
 export const pickArmorCandidates = (
   selectedSkills,
   armorCatalog,
-  { limitPerPart = 6, weight = { skill: 10, series: 6, slot: 0.6, group: 50 } } = {}
+  { limitPerPart = 6, weight = { skill: 10, series: 22, slot: 0.6, group: 50 } } = {}
 ) => {
   if (!selectedSkills?.length)
     return { head: [], chest: [], arms: [], waist: [], legs: [] };
@@ -266,8 +294,12 @@ export const pickArmorCandidates = (
   const byPart = Object.fromEntries(parts.map(k=>[k,[]]));
   (armorCatalog.armor || []).forEach((p)=> { if (byPart[p.part]) byPart[p.part].push({ ...p, _score: score(p) }); });
 
+  // widen when series or group is requested
   const hasGroup = wantedGroupTokens.size > 0;
-  const limit = hasGroup ? Math.max(limitPerPart, 16) : limitPerPart;
+  const hasSeries = wantedSeriesKeys.size > 0;
+  let limit = limitPerPart;
+  if (hasGroup)  limit = Math.max(limit, 16);
+  if (hasSeries) limit = Math.max(limit, 14);
 
   parts.forEach((k) => { byPart[k].sort((a,b)=> b._score - a._score); byPart[k] = byPart[k].slice(0, limit); });
   return byPart;
@@ -359,7 +391,7 @@ export const computeTopSets = (
 ) => {
   if (!selectedSkills?.length) return [];
 
-  const { kPerPart = 6, topN = 20, includeWeaponSlots = [] } = options;
+  const { kPerPart = 6, topN = 20, includeWeaponSlots = [], allowAppraisedTalismans = false } = options;
 
   // Build requirement map
   const required = new Map();
@@ -403,9 +435,15 @@ export const computeTopSets = (
   const decorations = normalizeDecorations(decorationsCatalog);
   const decoBySkill = indexDecorationsBySkill(decorations);
 
-  // Per-part candidates with group boost
-  const kPerPartEff = activeGroupRules.length ? Math.max(kPerPart, 16) : kPerPart;
+  // Per-part candidates with series & group boost
+  let kPerPartEff = kPerPart;
+  if (activeGroupRules.length) kPerPartEff = Math.max(kPerPartEff, 16);
+  if (requiredSeriesGroups.length) kPerPartEff = Math.max(kPerPartEff, 14);
   const byPart = pickArmorCandidates(selectedSkills, armorCatalog, { limitPerPart: kPerPartEff });
+
+  // Talismans (craftable up to requested level)
+  const talismanCandidates = [{ name: null, slots: [], skills: [] }]
+    .concat(buildTalismanCandidates(talismansCatalog, required, { includeAppraised: allowAppraisedTalismans }));
 
   const addSkills = (map, skills = []) => {
     const out = new Map(map);
@@ -477,39 +515,55 @@ export const computeTopSets = (
               ...(includeWeaponSlots||[]),
             ].filter((n)=> Number.isFinite(n) && n>0);
 
-            const skillsMap = addSkills(new Map(), pcs.flatMap(p=>p.skills||[]));
-            const missing = new Map();
+            const baseSkills = pcs.flatMap(p=>p.skills||[]);
+            const baseMap = addSkills(new Map(), baseSkills);
+
+            const missing0 = new Map();
             for (const [nm, reqLv] of required) {
-              const have = skillsMap.get(nm) || 0;
-              if (have < reqLv) missing.set(nm, reqLv - have);
+              const have = baseMap.get(nm) || 0;
+              if (have < reqLv) missing0.set(nm, reqLv - have);
             }
 
-            const fill = tryPlace(missing, baseSlots);
-            if (!fill.ok) continue;
+            for (const T of talismanCandidates) {
+              // apply talisman skills first
+              const afterT = new Map(missing0);
+              (T?.skills || []).forEach((sk)=>{
+                const need = afterT.get(sk.name) || 0;
+                if (need <= 0) return;
+                const rest = Math.max(0, need - (sk.level || 1));
+                if (rest === 0) afterT.delete(sk.name); else afterT.set(sk.name, rest);
+              });
 
-            let reqSum = 0, haveSum = 0;
-            for (const [nm, reqLv] of required) {
-              reqSum += reqLv;
-              const got = (skillsMap.get(nm)||0);
-              const add = fill.used.filter(u=>u.skill===nm).reduce((a,b)=>a+(b.add||0),0);
-              haveSum += Math.min(reqLv, got + add);
+              const fill = (function(){
+                const slots = baseSlots.concat(T?.slots || []);
+                return tryPlace(afterT, slots);
+              })();
+              if (!fill.ok) continue;
+
+              let reqSum = 0, haveSum = 0;
+              for (const [nm, reqLv] of required) {
+                reqSum += reqLv;
+                const got = (baseMap.get(nm)||0) + ((T?.skills||[]).find(s=>s.name===nm)?.level || 0);
+                const add = fill.used.filter(u=>u.skill===nm).reduce((a,b)=>a+(b.add||0),0);
+                haveSum += Math.min(reqLv, got + add);
+              }
+
+              const piecesObj = { head:H, chest:C, arms:A, waist:W, legs:L };
+              const act = summarizeActivations(piecesObj, armorCatalog);
+
+              results.push({
+                coverageWidth: (baseSlots.length + (T?.slots?.length||0)),
+                satisfiedRatio: reqSum ? haveSum/reqSum : 1,
+                leftoverSlots: fill.leftoverSlots,
+                pieces: piecesObj,
+                talisman: T?.name ? { name: T.name, slots: T.slots, skills: T.skills } : null,
+                decorations: fill.used,
+                activatedSeries: act.series,
+                activatedGroups: act.groups,
+                allSkills: summarizeAllSkillsFromResult(piecesObj, T?.name ? { name: T.name, slots: T.slots, skills: T.skills } : null, fill.used),
+                detail: buildResultDetail(H,C,A,W,L, T?.name ? { name: T.name, slots: T.slots, skills: T.skills } : null, fill.used, act),
+              });
             }
-
-            const piecesObj = { head:H, chest:C, arms:A, waist:W, legs:L };
-            const act = summarizeActivations(piecesObj, armorCatalog);
-
-            results.push({
-              coverageWidth: baseSlots.length,
-              satisfiedRatio: reqSum ? haveSum/reqSum : 1,
-              leftoverSlots: fill.leftoverSlots,
-              pieces: piecesObj,
-              talisman: null,
-              decorations: fill.used,
-              activatedSeries: act.series,
-              activatedGroups: act.groups,
-              allSkills: summarizeAllSkillsFromResult(piecesObj, null, fill.used),
-              detail: buildResultDetail(H,C,A,W,L,null,fill.used, act),
-            });
           }
         }
       }
