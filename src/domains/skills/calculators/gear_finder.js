@@ -1,5 +1,4 @@
-
-// ====== injected helpers: all-skills & detail builder ======
+// ===== helpers (detail & summarizer) =====
 (function(){
   const _addSkill = (map, name, lv) => {
     if (!name || !lv) return;
@@ -14,7 +13,7 @@
       (decorations || []).forEach(d => _addSkill(m, d.skill || d.name, d.add || d.level || 1));
       return [...m.entries()].sort((a,b) => a[0].localeCompare(b[0], 'ja')).map(([name, level]) => ({ name, level }));
     };
-    window.buildResultDetail = function(H, C, A, W, L, T, usedDecos){
+    window.buildResultDetail = function(H, C, A, W, L, T, usedDecos, activations){
       const equipLine = [
         `頭 ${H?.name || "-"}`,
         `胴 ${C?.name || "-"}`,
@@ -43,291 +42,314 @@
       }).sort((a,b)=> b.total - a.total || a.name.localeCompare(b.name,'ja'));
       const decoCounts = new Map();
       (usedDecos||[]).forEach(d=>{
-        const key = d.name || `${d.skill||""}【${d.slot||""}】`;
-        decoCounts.set(key, (decoCounts.get(key)||0)+1);
+        const key = d.name || `${d.skill||""}【${d.slot||""}】`; decoCounts.set(key, (decoCounts.get(key)||0)+1);
       });
       const decoList = [...decoCounts.entries()].map(([name,count])=>({name,count})).sort((a,b)=> b.count-a.count || a.name.localeCompare(b.name,'ja'));
+
+      const serLine = (activations?.series && activations.series.length)
+        ? `発動シリーズ：` + activations.series.map(s => `${s.name}（${s.count}/${s.required}：${s.stageName}）`).join(' / ')
+        : '';
+      const grpLine = (activations?.groups && activations.groups.length)
+        ? `発動グループ：` + activations.groups.map(g => `${g.token} ×${g.count}`).join(' / ')
+        : '';
+
       const html = [
         `<div class="result-detail">`,
         `<div class="equip-line">${equipLine}</div>`,
+        serLine ? `<div class="activated-line series">${serLine}</div>` : ``,
+        grpLine ? `<div class="activated-line groups">${grpLine}</div>` : ``,
         `<table class="skills-table"><thead><tr><th>ポイント</th><th>武器</th><th>頭</th><th>胴</th><th>腕</th><th>腰</th><th>脚</th><th>護石</th><th>装飾品</th><th>合計</th><th>発動スキル</th></tr></thead><tbody>`,
         ...perSkill.map(r=>`<tr><td>${r.name}</td><td>${r.weapon||0}</td><td>${r.head||0}</td><td>${r.chest||0}</td><td>${r.arms||0}</td><td>${r.waist||0}</td><td>${r.legs||0}</td><td>${r.talisman||0}</td><td>${r.deco||0}</td><td>${r.total}</td><td>${r.label}</td></tr>`),
         `</tbody></table>`,
         decoList.length ? `<div class="deco-line">装飾品 ${decoList.map(d=>`${d.name} ×${d.count}`).join(' / ')}</div>` : ``,
         `</div>`
       ].join("");
-      return { equipLine, perSkill, decoList, html };
+      return { equipLine, perSkill, decoList, activations, html };
     };
   } else {
     globalThis.summarizeAllSkillsFromResult = function(){ return []; };
-    globalThis.buildResultDetail = function(){ return { equipLine:'', perSkill:[], decoList:[], html:'' }; };
+    globalThis.buildResultDetail = function(){ return { equipLine:'', perSkill:[], decoList:[], activations:null, html:'' }; };
   }
 })();
 
-// 厳密シリーズ判定 + 装飾/護石の正規化 + セット無しなら空返却
+// ===== utilities =====
 const norm = (s) =>
-  String(s || "").normalize("NFKC").replace(/[・\s　()（）]/g, "").toLowerCase();
-
-// ===== 追加: グループスキルトークン（ヌシの魂）ユーティリティ =====
-
-// ===== 追加: series.groupSkill を参照してグループトークンを判定（variant別） =====
+  String(s || "").normalize("NFKC").replace(/[・\s　()（）\[\]【】]/g, "").toLowerCase();
 const _variantKey = (v) => {
   const s = String(v || "").trim();
   if (s === "α" || /alpha/i.test(s)) return "alpha";
   if (s === "β" || /beta/i.test(s)) return "beta";
-  if (s === "γ" || s === "ｙ" || s.toLowerCase() === "y" || /gamma/i.test(s)) return "gamma";
+  if (s === "γ" || /gamma/i.test(s)) return "gamma";
   return s.toLowerCase();
 };
-const indexGroupTokenBySeriesVariant = (armorCatalog) => {
-  const map = new Map(); // seriesKey -> { alpha?:token, beta?:token, gamma?:token, ... }
+const getSeriesKeyOfPiece = (p) =>
+  p?.seriesKey ?? p?.series ?? p?.setKey ?? p?.series_key ?? null;
+
+// ===== group indices =====
+const buildGroupTokenIndices = (armorCatalog) => {
+  const tokens = new Set();
+  (armorCatalog?.series || []).forEach((s) => {
+    const gs = s?.groupSkill;
+    if (!gs) return;
+    Object.values(gs).forEach((v) => v && tokens.add(String(v)));
+  });
+  const canonicalByName = new Map();
+  tokens.forEach((n) => canonicalByName.set(norm(n), n));
+  const tokenBySeriesVariant = new Map();
   (armorCatalog?.series || []).forEach((s) => {
     const gs = s?.groupSkill;
     if (!gs) return;
     const rec = {};
     Object.entries(gs).forEach(([k, v]) => {
       if (!v) return;
-      rec[_variantKey(k)] = norm(v);
+      const canon = canonicalByName.get(norm(v)) || v;
+      rec[_variantKey(k)] = canon;
     });
-    if (Object.keys(rec).length) map.set(s.key, rec);
+    if (s?.key && Object.keys(rec).length) tokenBySeriesVariant.set(s.key, rec);
   });
-  return map;
+  return { canonicalByName, tokenBySeriesVariant };
 };
-const countGroupTokenOnPiecesUsingSeries = (pieces, groupIndex, tokenJP) => {
-  const want = norm(tokenJP);
-  let cnt = 0;
-  for (const p of pieces) {
-    const seriesKey = getSeriesKeyOfPiece(p);
-    if (!seriesKey) continue;
-    const rec = groupIndex.get(seriesKey);
-    if (!rec) continue;
-    const tok = rec[_variantKey(p?.variant)];
-    if (tok && tok === want) cnt++;
-  }
-  return cnt;
-};
-const _normJP = (s) => norm(s);
-const getGroupTokensFromPiece = (piece) => {
-  if (!piece || !piece.groupSkill) return [];
-  const g = piece.groupSkill;
-  if (typeof g === "string") return [_normJP(g)];
-  if (Array.isArray(g)) return g.filter(Boolean).map(_normJP);
-  return Object.values(g).filter(Boolean).map(_normJP); // {alpha:"",beta:"",gamma:""} 等
-};
-const countGroupTokenOnPieces = (pieces, tokenJP) => {
-  const want = _normJP(tokenJP);
-  let cnt = 0;
-  for (const p of pieces) {
-    const toks = getGroupTokensFromPiece(p);
-    if (toks.includes(want)) cnt++;
-  }
-  return cnt;
-};
-
-// 選択スキルから「ヌシの魂」必須を有効化
-const GROUP_TOKEN_RULES_MASTER = [
-  { names: ["歴戦王ヌシ", "ヌシの魂"], token: "ヌシの魂", threshold: 3 },
-];
-const pickActiveGroupTokenRules = (selectedSkills) => {
-  const names = selectedSkills
+const pickActiveGroupTokenRules = (selectedSkills, canonicalByName) => {
+  const names = (selectedSkills || [])
     .map((s) => (typeof s === "string" ? s : s?.name))
     .filter(Boolean);
-  const nset = new Set(names.map((n) => norm(n)));
-  const act = [];
-  for (const rule of GROUP_TOKEN_RULES_MASTER) {
-    for (const nm of rule.names) {
-      if (nset.has(norm(nm))) {
-        act.push(rule);
-        break;
-      }
-    }
-  }
-  return act;
+  const rulesMap = new Map();
+  names.forEach((n) => {
+    const canon = canonicalByName.get(norm(n));
+    if (!canon) return;
+    if (!rulesMap.has(canon)) rulesMap.set(canon, { token: canon, threshold: 3, names: new Set() });
+    rulesMap.get(canon).names.add(n);
+  });
+  return [...rulesMap.values()].map((r) => ({ token: r.token, threshold: r.threshold, names: [...r.names] }));
 };
 
-// ===== 装飾品 正規化 =====
-const normalizeDecorations = (decoCatalog) => {
-  const raw = decoCatalog?.decorations || [];
-  return raw
-    .map((d) => ({
-      key: d.key || d.id || d.name,
-      name: d.name || "",
-      slot: Number(d.slot ?? 1) || 1,
-      skills: (Array.isArray(d.skills) ? d.skills : []).map((sk) => ({
-        name: sk.name,
-        level: Number(sk.level ?? 1) || 1,
-      })),
-    }))
-    .filter((x) => x.name && x.slot > 0 && x.skills?.length);
-};
-
-// ===== 護石 正規化（craftable を優先。鑑定はBAN可）=====
-const BAN_APPRAISAL = true;
-const buildTalismanCandidates = (
-  tCatalog,
-  requiredMap,
-  { banAppraisal = BAN_APPRAISAL } = {}
-) => {
-  const list = [];
-
-  // 実在庫（例）… 鑑定護石は一旦禁止
-  if (!banAppraisal) {
-    const ex = tCatalog?.appraised?.exampleInventory || [];
-    for (const t of ex) {
-      list.push({
-        name: t.name || "鑑定護石",
-        slots: Array.isArray(t.slots)
-          ? t.slots.map((n) => Number(n) || 0).filter(Boolean)
-          : [],
-        skills: (t.skills || []).map((sk) => ({
-          name: sk.name,
-          level: Number(sk.level || 1) || 1,
-        })),
-      });
-    }
-  }
-
-  // 作成可能（指定スキルの Lv1..min(max, required) を候補化 / スロは無し）
-  const craft = tCatalog?.craftable || [];
-  for (const c of craft) {
-    const sk = c.skill;
-    if (!sk?.name) continue;
-    const req = requiredMap.get(sk.name);
-    if (!req) continue; // 要求されてないスキルは候補爆発を防ぐためスキップ
-    const upto = Math.min(Number(sk.maxLevel || 1), req);
-    for (let lv = 1; lv <= upto; lv++) {
-      list.push({
-        name: `${c.name} Lv${lv}`,
-        slots: [],
-        skills: [{ name: sk.name, level: lv }],
-      });
-    }
-  }
-
-  return list.length ? list : [null]; // 0件なら null 1件で探索は継続
-};
-
-// ===== 系列（シリーズ）逆引き =====
-const getSeriesKeyOfPiece = (p) =>
-  p?.seriesKey ?? p?.series ?? p?.setKey ?? p?.series_key ?? null;
-const indexSeriesBySkill = (armorCatalog) => {
+// ===== series indices =====
+const indexSeriesKeysBySeriesSkill = (armorCatalog) => {
   const m = new Map();
+  const add = (nm, key) => {
+    const k = norm(nm);
+    if (!k || !key) return;
+    if (!m.has(k)) m.set(k, new Set());
+    m.get(k).add(key);
+  };
   (armorCatalog?.series || []).forEach((s) => {
     const key = s?.key;
-    const nm = s?.seriesSkill?.name;
-    if (key && nm) m.set(norm(nm), key);
+    const nm  = s?.seriesSkill?.name;
+    if (key && nm) add(nm, key);
     const ths = s?.seriesSkill?.thresholds;
-    if (key && Array.isArray(ths))
-      ths.forEach((t) => t?.name && m.set(norm(t.name), key));
+    if (key && Array.isArray(ths)) ths.forEach((t) => t?.name && add(t.name, key));
   });
   return m;
 };
-const indexSeriesThresholds = (armorCatalog) => {
+const indexSeriesThresholds  = (armorCatalog) => {
   const m = new Map();
   (armorCatalog?.series || []).forEach((s) => {
-    const th =
-      s?.seriesSkill?.thresholds || s?.thresholds || s?.seriesSkill?.pieces || [2];
-    const arr = Array.isArray(th) ? th : [th];
-    const counts = arr
-      .map((x) => (typeof x === "number" ? x : x?.count))
-      .filter((n) => Number.isFinite(n));
-    m.set(s.key, counts.length ? counts : [2]);
+    const ths = Array.isArray(s?.seriesSkill?.thresholds) ? s.seriesSkill.thresholds : [];
+    const arr = ths.map((t)=> Number(t?.count||0)).filter(n=>n>0);
+    m.set(s.key, arr.length ? arr : [2]);
   });
+  return m;
+};
+const indexSeriesThresholdNames = (armorCatalog) => {
+  const m = new Map();
+  (armorCatalog?.series || []).forEach((s) => {
+    const ths = Array.isArray(s?.seriesSkill?.thresholds) ? s.seriesSkill.thresholds : [];
+    m.set(s.key, ths.map(t => ({ count: Number(t?.count||0)||0, name: t?.name || "" })));
+  });
+  return m;
+};
+const indexSeriesMap = (armorCatalog) => {
+  const m = new Map();
+  (armorCatalog?.series || []).forEach((s) => m.set(s.key, s));
   return m;
 };
 
-// ===== 残スロに珠を詰める・幅算出 =====
-const tryPlaceIntoSlots = (slots, needSize) => {
-  let best = -1;
-  for (let i = 0; i < slots.length; i++)
-    if (slots[i] >= needSize)
-      if (best === -1 || slots[i] < slots[best]) best = i;
-  if (best === -1) return false;
-  slots.splice(best, 1);
-  return true;
+// ===== decorations (minimal) =====
+const normalizeDecorations = (decoCatalog) => {
+  const raw = decoCatalog?.decorations || [];
+  return raw.map((d)=> ({
+    key: d.key || d.id || d.name,
+    name: d.name || "",
+    slot: Number(d.slot ?? 1) || 1,
+    skills: (Array.isArray(d.skills) ? d.skills : []).map((sk)=>({ name: sk.name, level: Number(sk.level ?? 1)||1 })),
+  })).filter(x=>x.name && x.slot>0 && x.skills?.length);
 };
 const indexDecorationsBySkill = (decorations) => {
   const map = new Map();
-  decorations.forEach((d) =>
-    (d.skills || []).forEach((sk) => {
-      const list = map.get(sk.name) || [];
-      list.push({ key: d.key, name: d.name, slot: d.slot, level: sk.level || 1 });
-      map.set(sk.name, list);
-    })
-  );
-  for (const [k, list] of map)
-    list.sort((a, b) => {
-      const ra = a.slot / Math.max(1, a.level),
-        rb = b.slot / Math.max(1, b.level);
-      if (ra !== rb) return ra - rb;
-      if (a.slot !== b.slot) return a.slot - b.slot;
-      return b.level - a.level;
-    });
+  decorations.forEach((d) => (d.skills||[]).forEach((sk)=>{
+    const list = map.get(sk.name) || [];
+    list.push({ key:d.key, name:d.name, slot:d.slot, level:sk.level||1 });
+    map.set(sk.name, list);
+  }));
+  for (const [k, list] of map) list.sort((a,b)=> (a.slot - b.slot) || (b.level - a.level));
   return map;
 };
-const computeCoverageWidth = (leftoverSlots, decoBySkill) => {
-  const needs = [];
-  for (const [, list] of decoBySkill) {
-    const m = Math.min(...list.map((j) => j.slot));
-    if (Number.isFinite(m)) needs.push(m);
-  }
-  needs.sort((a, b) => a - b);
-  const slots = [...leftoverSlots].sort((a, b) => a - b);
-  let i = 0,
-    j = 0,
-    c = 0;
-  while (i < slots.length && j < needs.length) {
-    if (slots[i] >= needs[j]) {
-      c++;
-      i++;
-      j++;
-    } else i++;
-  }
-  return c;
+const tryPlaceIntoSlots = (slots, need) => {
+  let idx = -1, best = Infinity;
+  for (let i=0;i<slots.length;i++) if (slots[i] >= need && slots[i] < best) { best = slots[i]; idx = i; }
+  if (idx === -1) return false;
+  slots.splice(idx,1);
+  return true;
 };
 
-// ===== パーツ候補 =====
+// ===== activations for display =====
+const summarizeActivations = (pcs, armorCatalog) => {
+  const parts = pcs;
+  const list = [parts.head, parts.chest, parts.arms, parts.waist, parts.legs].filter(Boolean);
+  // Series
+  const seriesMap = indexSeriesMap(armorCatalog);
+  const thNames   = indexSeriesThresholdNames(armorCatalog);
+  const countByKey = new Map();
+  list.forEach(p => { const k = getSeriesKeyOfPiece(p); if (k) countByKey.set(k, (countByKey.get(k)||0)+1); });
+  const seriesActivated = [];
+  for (const [key,cnt] of countByKey) {
+    const s = seriesMap.get(key); if (!s) continue;
+    const ths = thNames.get(key) || [];
+    let stage = null;
+    for (const t of ths) if (t.count && t.count <= cnt) stage = t;
+    if (stage) {
+      const maxNeed = Math.max(...ths.map(t=>t.count||0).filter(n=>n>0));
+      seriesActivated.push({ key, name: s.seriesSkill?.name || s.seriesName || s.key, count: cnt, required: maxNeed || 2, stageName: stage.name || "" });
+    }
+  }
+  // Groups (threshold=3)
+  const { tokenBySeriesVariant } = buildGroupTokenIndices(armorCatalog);
+  const countByToken = new Map();
+  list.forEach(p => {
+    const key = getSeriesKeyOfPiece(p); if (!key) return;
+    const rec = tokenBySeriesVariant.get(key); if (!rec) return;
+    const tok = rec[_variantKey(p?.variant)]; if (!tok) return;
+    countByToken.set(tok, (countByToken.get(tok)||0)+1);
+  });
+  const groupsActivated = [];
+  for (const [tok,cnt] of countByToken) if (cnt>=3) groupsActivated.push({ token: tok, count: cnt, threshold: 3 });
+  return { series: seriesActivated.sort((a,b)=> a.name.localeCompare(b.name,'ja')), groups: groupsActivated.sort((a,b)=> b.count - a.count || a.token.localeCompare(b.token,'ja')) };
+};
+
+// ===== per-part candidates (group-aware) =====
 export const pickArmorCandidates = (
   selectedSkills,
   armorCatalog,
-  { limitPerPart = 6, weight = { skill: 10, series: 6, slot: 0.6 } } = {}
+  { limitPerPart = 6, weight = { skill: 10, series: 6, slot: 0.6, group: 50 } } = {}
 ) => {
   if (!selectedSkills?.length)
     return { head: [], chest: [], arms: [], waist: [], legs: [] };
 
-  const names = selectedSkills
-    .map((s) => (typeof s === "string" ? s : s?.name))
-    .filter(Boolean);
+  const names = selectedSkills.map((s)=> (typeof s === "string" ? s : s?.name)).filter(Boolean);
   const wanted = new Set(names);
-  const seriesKeyBySkill = indexSeriesBySkill(armorCatalog);
-  const wantedSeriesKeys = new Set(
-    names.map((n) => seriesKeyBySkill.get(norm(n))).filter(Boolean)
-  );
+
+  const seriesKeysBySkill = indexSeriesKeysBySeriesSkill(armorCatalog);
+  const wantedSeriesKeys = new Set(names.flatMap((n)=> [...(seriesKeysBySkill.get(norm(n)) || [])]));
+
+  const { canonicalByName, tokenBySeriesVariant } = buildGroupTokenIndices(armorCatalog);
+  const activeGroupRules = pickActiveGroupTokenRules(selectedSkills, canonicalByName);
+  const wantedGroupTokens = new Set(activeGroupRules.map(r => r.token));
 
   const score = (p) => {
     let sc = 0;
-    (p.skills || []).forEach((sk) => {
-      if (wanted.has(sk.name)) sc += weight.skill * (sk.level || 1);
-    });
+    (p.skills || []).forEach((sk) => { if (wanted.has(sk.name)) sc += weight.skill * (sk.level || 1); });
     const sKey = getSeriesKeyOfPiece(p);
     if (sKey && wantedSeriesKeys.has(sKey)) sc += weight.series;
-    const slotSum = (p.slots || []).reduce((a, b) => a + (b || 0), 0);
+    if (wantedGroupTokens.size && sKey) {
+      const rec = tokenBySeriesVariant.get(sKey);
+      if (rec) {
+        const tok = rec[_variantKey(p?.variant)];
+        if (tok && wantedGroupTokens.has(tok)) sc += weight.group;
+      }
+    }
+    const slotSum = (p.slots || []).reduce((a,b)=>a+(b||0),0);
     sc += slotSum * weight.slot;
     return sc;
   };
 
-  const parts = ["head", "chest", "arms", "waist", "legs"];
-  const byPart = Object.fromEntries(parts.map((k) => [k, []]));
-  (armorCatalog.armor || []).forEach((p) => {
-    if (byPart[p.part]) byPart[p.part].push({ ...p, _score: score(p) });
-  });
-  parts.forEach((k) => {
-    byPart[k].sort((a, b) => b._score - a._score);
-    byPart[k] = byPart[k].slice(0, limitPerPart);
-  });
+  const parts = ["head","chest","arms","waist","legs"];
+  const byPart = Object.fromEntries(parts.map(k=>[k,[]]));
+  (armorCatalog.armor || []).forEach((p)=> { if (byPart[p.part]) byPart[p.part].push({ ...p, _score: score(p) }); });
+
+  const hasGroup = wantedGroupTokens.size > 0;
+  const limit = hasGroup ? Math.max(limitPerPart, 16) : limitPerPart;
+
+  parts.forEach((k) => { byPart[k].sort((a,b)=> b._score - a._score); byPart[k] = byPart[k].slice(0, limit); });
   return byPart;
 };
 
-// ===== 5部位セット探索 =====
+// ===== fast path for group only =====
+const fastGroupOnlySets = (selectedSkills, armorCatalog, options = {}) => {
+  const { topN = 20 } = options;
+  const { canonicalByName, tokenBySeriesVariant } = buildGroupTokenIndices(armorCatalog);
+  const tokens = selectedSkills.map(s => (typeof s === "string" ? s : s?.name)).filter(Boolean)
+    .map(n => canonicalByName.get(norm(n)) || null).filter(Boolean);
+  if (!tokens.length) return [];
+  if (tokens.length > 1) {
+    // ANDだと6部位相当が必要で難しいので、まずは先頭のみ
+    tokens.length = 1;
+  }
+  const token = tokens[0];
+  const pairSet = new Set();
+  for (const [key, rec] of tokenBySeriesVariant.entries()) {
+    for (const [v, t] of Object.entries(rec)) if (t === token) pairSet.add(`${key}#${v}`);
+  }
+
+  const parts = ["head","chest","arms","waist","legs"];
+  const byPartMatch = Object.fromEntries(parts.map(k=>[k,[]]));
+  const byPartAny   = Object.fromEntries(parts.map(k=>[k,[]]));
+  const score = (p) => (p.slots||[]).reduce((a,b)=>a+(b||0),0);
+  (armorCatalog.armor || []).forEach((p)=>{
+    if (!byPartAny[p.part]) return;
+    const sKey = getSeriesKeyOfPiece(p);
+    const vKey = _variantKey(p?.variant);
+    const ok   = pairSet.has(`${sKey}#${vKey}`);
+    if (ok) byPartMatch[p.part].push({ ...p, _score: score(p) });
+    byPartAny[p.part].push({ ...p, _score: score(p) });
+  });
+  parts.forEach((k)=>{
+    byPartMatch[k].sort((a,b)=> b._score - a._score); byPartMatch[k] = byPartMatch[k].slice(0, 8);
+    byPartAny[k].sort((a,b)=> b._score - a._score);   byPartAny[k]   = byPartAny[k].slice(0, 8);
+  });
+
+  const usableParts = parts.filter(k => byPartMatch[k].length > 0);
+  if (usableParts.length < 3) return [];
+
+  let combos = [];
+  const pool = usableParts.slice(0, 4);
+  for (let i=0;i<pool.length;i++) for (let j=i+1;j<pool.length;j++) for (let k=j+1;k<pool.length;k++) {
+    combos.push([pool[i], pool[j], pool[k]]);
+  }
+  if (!combos.length) combos = [usableParts.slice(0,3)];
+
+  const results = [];
+  for (const parts3 of combos) {
+    const picked = {};
+    const remaining = new Set(parts);
+    parts3.forEach((pt)=> { picked[pt] = byPartMatch[pt][0]; remaining.delete(pt); });
+    remaining.forEach((pt)=> { picked[pt] = (byPartMatch[pt][0]) || (byPartAny[pt][0]) || null; });
+
+    const H = picked.head, C = picked.chest, A = picked.arms, W = picked.waist, L = picked.legs;
+    if (!H || !C || !A || !W || !L) continue;
+
+    const piecesObj = { head:H, chest:C, arms:A, waist:W, legs:L };
+    const act = summarizeActivations(piecesObj, armorCatalog);
+    const cnt = (act.groups || []).find(g => g.token === token)?.count || 0;
+    if (cnt < 3) continue;
+
+    results.push({
+      coverageWidth: (H.slots||[]).length + (C.slots||[]).length + (A.slots||[]).length + (W.slots||[]).length + (L.slots||[]).length,
+      satisfiedRatio: 1,
+      leftoverSlots: [],
+      pieces: piecesObj,
+      talisman: null,
+      decorations: [],
+      activatedSeries: act.series,
+      activatedGroups: act.groups,
+      allSkills: summarizeAllSkillsFromResult(piecesObj, null, []),
+      detail: buildResultDetail(H, C, A, W, L, null, [], act),
+    });
+  }
+  results.sort((a,b)=> b.coverageWidth - a.coverageWidth);
+  return results.slice(0, topN);
+};
+
+// ===== main =====
 export const computeTopSets = (
   selectedSkills,
   armorCatalog,
@@ -339,7 +361,7 @@ export const computeTopSets = (
 
   const { kPerPart = 6, topN = 20, includeWeaponSlots = [] } = options;
 
-  // 必要スキル表
+  // Build requirement map
   const required = new Map();
   selectedSkills.forEach((s) => {
     const name = typeof s === "string" ? s : s?.name;
@@ -347,44 +369,53 @@ export const computeTopSets = (
     if (name) required.set(name, Math.max(lv, required.get(name) || 0));
   });
 
-  // 追加: グループトークン必須を抽出（例：歴戦王ヌシ/ヌシの魂）
-  const activeGroupRules = pickActiveGroupTokenRules(selectedSkills);
-  const groupIndex = indexGroupTokenBySeriesVariant(armorCatalog);
-  // グループ名は通常スキル要件から除外（デコで埋める対象にしない）
-  activeGroupRules.forEach((r) => r.names.forEach((nm) => required.delete(nm)));
+  // Series prep
+  const seriesKeysBySkill = indexSeriesKeysBySeriesSkill(armorCatalog);
+  const seriesThresholds  = indexSeriesThresholds(armorCatalog);
 
+  // Group prep
+  const { canonicalByName, tokenBySeriesVariant: groupIndex } = buildGroupTokenIndices(armorCatalog);
+  const activeGroupRules = pickActiveGroupTokenRules(selectedSkills, canonicalByName);
+  // Remove group tokens from required (they're not fillable by decos)
+  activeGroupRules.forEach(r => r.names.forEach(nm => required.delete(nm)));
+
+  // Series groups (aggregate across keys)
+  const requiredSeriesGroups = [];
+  for (const [nm, lv] of required) {
+    const keysSet = seriesKeysBySkill.get(norm(nm));
+    if (!keysSet || !keysSet.size) continue;
+    const keys = [...keysSet];
+    const idx  = Math.max(1, lv) - 1;
+    const need = Math.min(...keys.map((k) => {
+      const th = seriesThresholds.get(k) || [2];
+      const i  = Math.min(idx, th.length - 1);
+      return th[i];
+    }));
+    requiredSeriesGroups.push({ name: nm, keys, need });
+  }
+  requiredSeriesGroups.forEach((g) => required.delete(g.name));
+
+  // Fast path: only groups
+  const onlyGroups = (required.size === 0) && (requiredSeriesGroups.length === 0) && (activeGroupRules.length > 0);
+  if (onlyGroups) return fastGroupOnlySets(selectedSkills, armorCatalog, { topN });
+
+  // Decorations
   const decorations = normalizeDecorations(decorationsCatalog);
   const decoBySkill = indexDecorationsBySkill(decorations);
-  const seriesKeyBySkill = indexSeriesBySkill(armorCatalog);
-  const seriesThresholds = indexSeriesThresholds(armorCatalog);
-  const requiredSeriesPieces = new Map();
-  for (const [nm, lv] of required) {
-    const sKey = seriesKeyBySkill.get(norm(nm));
-    if (!sKey) continue;
-    const th = seriesThresholds.get(sKey) || [2];
-    const idx = Math.min(Math.max(1, lv) - 1, th.length - 1);
-    requiredSeriesPieces.set(sKey, th[idx]);
-  }
 
-  const byPart = pickArmorCandidates(selectedSkills, armorCatalog, {
-    limitPerPart: kPerPart,
-  });
-
-  const talismanCandidates = buildTalismanCandidates(talismansCatalog, required, {
-    banAppraisal: true, // ★ 鑑定護石を除外
-  });
+  // Per-part candidates with group boost
+  const kPerPartEff = activeGroupRules.length ? Math.max(kPerPart, 16) : kPerPart;
+  const byPart = pickArmorCandidates(selectedSkills, armorCatalog, { limitPerPart: kPerPartEff });
 
   const addSkills = (map, skills = []) => {
     const out = new Map(map);
-    skills.forEach((sk) =>
-      out.set(sk.name, (out.get(sk.name) || 0) + (sk.level || 1))
-    );
+    skills.forEach((sk) => out.set(sk.name, (out.get(sk.name) || 0) + (sk.level || 1)));
     return out;
   };
 
   const results = [];
-  const tryFillWithDecos = (missingMap, slotsArr) => {
-    const slots = [...slotsArr].sort((a, b) => b - a);
+  const tryPlace = (missingMap, slotsArr) => {
+    const slots = [...slotsArr].sort((a,b)=>b-a);
     const used = [];
     for (const [name, needLv] of missingMap) {
       let rest = needLv;
@@ -393,117 +424,105 @@ export const computeTopSets = (
       while (rest > 0 && i < list.length) {
         const j = list[i];
         if (tryPlaceIntoSlots(slots, j.slot)) {
-          used.push({ key: j.key, name: j.name, slot: j.slot, skill: name, add: j.level });
+          used.push({ key:j.key, name:j.name, slot:j.slot, skill:name, add:j.level });
           rest -= j.level;
-        } else {
-          i++;
-        }
+        } else i++;
       }
-      if (rest > 0) return { ok: false };
+      if (rest > 0) return { ok:false };
     }
-    return { ok: true, used, leftoverSlots: slots };
+    return { ok:true, used, leftoverSlots: slots };
   };
 
-  byPart.head.forEach((H) => {
-    byPart.chest.forEach((C) => {
-      byPart.arms.forEach((A) => {
-        byPart.waist.forEach((W) => {
-          byPart.legs.forEach((L) => {
-            const pcs = [H, C, A, W, L];
-            const skillsMap = addSkills(new Map(), pcs.flatMap((p) => p.skills || []));
+  const parts = ["head","chest","arms","waist","legs"];
+  const Hs = byPart.head || [], Cs = byPart.chest || [], As = byPart.arms || [], Ws = byPart.waist || [], Ls = byPart.legs || [];
+
+  for (let hi=0; hi<Hs.length; hi++) {
+    const H = Hs[hi];
+    for (let ci=0; ci<Cs.length; ci++) {
+      const C = Cs[ci];
+      for (let ai=0; ai<As.length; ai++) {
+        const A = As[ai];
+        for (let wi=0; wi<Ws.length; wi++) {
+          const W = Ws[wi];
+          for (let li=0; li<Ls.length; li++) {
+            const L = Ls[li];
+            const pcs = [H,C,A,W,L];
+
+            // Series gate: aggregate across keys
             const seriesCount = new Map();
-            pcs.forEach((p) => {
-              const k = getSeriesKeyOfPiece(p);
-              if (k) seriesCount.set(k, (seriesCount.get(k) || 0) + 1);
-            });
-
-            // --- シリーズ条件：満たさなければ棄却 ---
-            for (const [k, need] of requiredSeriesPieces) {
-              if ((seriesCount.get(k) || 0) < need) return;
+            pcs.forEach((p)=>{ const k = getSeriesKeyOfPiece(p); if (k) seriesCount.set(k, (seriesCount.get(k)||0)+1); });
+            let passSeries = true;
+            for (const g of requiredSeriesGroups) {
+              const sum = g.keys.reduce((a,k)=> a + (seriesCount.get(k)||0), 0);
+              if (sum < g.need) { passSeries = false; break; }
             }
+            if (!passSeries) continue;
 
-            // --- 追加: グループトークン（例：ヌシの魂）条件 ---
-            if (activeGroupRules.length) {
-              for (const rule of activeGroupRules) {
-                const cnt = countGroupTokenOnPiecesUsingSeries(pcs, groupIndex, rule.token);
-                if (cnt < rule.threshold) return; // この組合せは不採用
+            // Group gate (AND, threshold 3 per token)
+            let passGroups = true;
+            for (const rule of activeGroupRules) {
+              let cnt = 0;
+              for (const p of pcs) {
+                const rec = groupIndex.get(getSeriesKeyOfPiece(p));
+                if (!rec) continue;
+                const tok = rec[_variantKey(p?.variant)];
+                if (tok === rule.token) cnt++;
               }
+              if (cnt < (rule.threshold || 3)) { passGroups = false; break; }
             }
+            if (!passGroups) continue;
 
-            // --- 通常スキルの不足 ---
+            const baseSlots = [
+              ...(H?.slots||[]), ...(C?.slots||[]), ...(A?.slots||[]), ...(W?.slots||[]), ...(L?.slots||[]),
+              ...(includeWeaponSlots||[]),
+            ].filter((n)=> Number.isFinite(n) && n>0);
+
+            const skillsMap = addSkills(new Map(), pcs.flatMap(p=>p.skills||[]));
             const missing = new Map();
-            for (const [name, reqLv] of required) {
-              if (seriesKeyBySkill.has(norm(name))) continue;
-              const got = skillsMap.get(name) || 0;
-              if (got < reqLv) missing.set(name, reqLv - got);
+            for (const [nm, reqLv] of required) {
+              const have = skillsMap.get(nm) || 0;
+              if (have < reqLv) missing.set(nm, reqLv - have);
             }
 
-            const baseSlots = pcs
-              .flatMap((p) => p.slots || [])
-              .concat(includeWeaponSlots || []);
+            const fill = tryPlace(missing, baseSlots);
+            if (!fill.ok) continue;
 
-            talismanCandidates.forEach((T) => {
-              const tSlots = T?.slots || [];
-              const tSkills = T?.skills || [];
+            let reqSum = 0, haveSum = 0;
+            for (const [nm, reqLv] of required) {
+              reqSum += reqLv;
+              const got = (skillsMap.get(nm)||0);
+              const add = fill.used.filter(u=>u.skill===nm).reduce((a,b)=>a+(b.add||0),0);
+              haveSum += Math.min(reqLv, got + add);
+            }
 
-              const afterT = new Map(missing);
-              tSkills.forEach((sk) => {
-                const need = afterT.get(sk.name) || 0;
-                if (need > 0) {
-                  const left = Math.max(0, need - (sk.level || 1));
-                  if (left === 0) afterT.delete(sk.name);
-                  else afterT.set(sk.name, left);
-                }
-              });
+            const piecesObj = { head:H, chest:C, arms:A, waist:W, legs:L };
+            const act = summarizeActivations(piecesObj, armorCatalog);
 
-              const fill = tryFillWithDecos(afterT, baseSlots.concat(tSlots));
-              if (!fill.ok) return;
-
-              // 満たし度（シリーズは満たしている前提）
-              let reqSum = 0,
-                haveSum = 0;
-              for (const [name, reqLv] of required) {
-                if (seriesKeyBySkill.has(norm(name))) {
-                  reqSum += 1;
-                  haveSum += 1;
-                } else {
-                  reqSum += reqLv;
-                  const got =
-                    (skillsMap.get(name) || 0) +
-                    (tSkills.find((s) => s.name === name)?.level || 0);
-                  const add = fill.used
-                    .filter((u) => u.skill === name)
-                    .reduce((a, b) => a + (b.add || 0), 0);
-                  haveSum += Math.min(reqLv, got + add);
-                }
-              }
-
-              const coverageWidth = computeCoverageWidth(
-                fill.leftoverSlots,
-                decoBySkill
-              );
-
-              results.push({ coverageWidth, 
-                satisfiedRatio: reqSum ? haveSum / reqSum : 1,
-                leftoverSlots: fill.leftoverSlots,
-                pieces: { head: H, chest: C, arms: A, waist: W, legs: L },
-                talisman: T ? { name: T.name, slots: T.slots, skills: T.skills } : null,
-                 decorations: fill.used, allSkills: summarizeAllSkillsFromResult({ head: H, chest: C, arms: A, waist: W, legs: L }, T ? { name: T.name, slots: T.slots, skills: T.skills } : null, fill.used), detail: buildResultDetail(H, C, A, W, L, T ? { name: T.name, slots: T.slots, skills: T.skills } : null, fill.used) });
+            results.push({
+              coverageWidth: baseSlots.length,
+              satisfiedRatio: reqSum ? haveSum/reqSum : 1,
+              leftoverSlots: fill.leftoverSlots,
+              pieces: piecesObj,
+              talisman: null,
+              decorations: fill.used,
+              activatedSeries: act.series,
+              activatedGroups: act.groups,
+              allSkills: summarizeAllSkillsFromResult(piecesObj, null, fill.used),
+              detail: buildResultDetail(H,C,A,W,L,null,fill.used, act),
             });
-          });
-        });
-      });
-    });
-  });
+          }
+        }
+      }
+    }
+  }
 
-  results.sort((a, b) => {
-    if (b.coverageWidth !== a.coverageWidth) return b.coverageWidth - a.coverageWidth;
-    if (b.satisfiedRatio !== a.satisfiedRatio)
-      return b.satisfiedRatio - a.satisfiedRatio;
-    const sa = (a.leftoverSlots || []).reduce((p, c) => p + c, 0),
-      sb = (b.leftoverSlots || []).reduce((p, c) => p + c, 0);
+  results.sort((a,b)=> {
+    if (b.satisfiedRatio !== a.satisfiedRatio) return b.satisfiedRatio - a.satisfiedRatio;
+    const sa = (a.leftoverSlots||[]).reduce((p,c)=>p+c,0), sb = (b.leftoverSlots||[]).reduce((p,c)=>p+c,0);
     return sb - sa;
   });
 
   return results.slice(0, topN);
 };
+
+export default { pickArmorCandidates, computeTopSets };
