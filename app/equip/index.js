@@ -1,3 +1,4 @@
+// app/(tabs)/equip/index.js — 差し替え版（武器モーダル配線付き）
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Stack } from "expo-router";
 import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform } from "react-native";
@@ -8,7 +9,7 @@ import { filterSkills } from "../../src/domains/skills/search";
 import SkillCard from "../../src/features/equip/SkillCard";
 import TagsBar from "../../src/features/equip/TagsBar";
 import RightPanel from "../../src/features/equip/RightPanel";
-import Weaponsettings from "../equip/WeaponSettings"
+import WeaponSettings from "../equip/WeaponSettings";
 import ResultsTab from "../../src/features/equip/ResultTab";
 import { useSkillSelection } from "../../src/features/equip/useSkillSelection";
 import { useHeaderHeight } from "@react-navigation/elements";
@@ -17,6 +18,9 @@ import { computeTopSets } from "../../src/domains/skills/calculators/gear_finder
 import { catalogArmor } from "../../src/domains/skills/catalog_armor";
 import { catalogDecorations } from "../../src/domains/skills/catalog_decorations";
 import { catalogTalismans } from "../../src/domains/skills/catalog_talismans";
+
+// ★ 追加：武器ピッカーモーダル
+import WeaponPickerModal from "../../src/components/WeaponPickerModal";
 
 const ALL_CATS = ["attack", "crit", "utility"];
 const ALL_TYPES = ["normal", "series", "group"];
@@ -121,10 +125,10 @@ const EquipScreen = () => {
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
-  const headerHeight = useHeaderHeight()
-  const HEADER_GAP = 8
+  const headerHeight = useHeaderHeight();
+  const HEADER_GAP = 8;
 
-  const headerOffset = (headerHeight && headerHeight > 0 ? headerHeight : (Platform.OS === "web" ? 56 : insets.top )) + HEADER_GAP
+  const headerOffset = (headerHeight && headerHeight > 0 ? headerHeight : (Platform.OS === "web" ? 56 : insets.top )) + HEADER_GAP;
   const isWide = width >= 900;
   const rightW = 320;
 
@@ -140,6 +144,10 @@ const EquipScreen = () => {
 
   const [tab, setTab] = useState("skills");
   const [gearSets, setGearSets] = useState([]);
+
+  // ★ 追加：武器の選択状態とモーダル開閉
+  const [weapon, setWeapon] = useState(null);
+  const [pickerOpen, setPickerOpen] = useState(false);
 
   // ★ スキル一覧スクロール制御
   const skillScrollRef = useRef(null);
@@ -184,6 +192,7 @@ const EquipScreen = () => {
     <View style={s.container}>
       <Stack.Screen options={{ title: "MonsterHunterWilds" }} />
 
+      {/* 右パネル（ワイド時） */}
       {isWide && (
         <View style={[s.rightFixed, { right: 16, top: headerOffset, bottom: 16, width: rightW, zIndex: 2000 }]}>
           <RightPanel
@@ -192,6 +201,9 @@ const EquipScreen = () => {
             onChange={setLevel}
             onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
             onSearch={runGearSearch}
+            // ★ 武器関連（ここが無いとモーダルは開かない）
+            weaponName={weapon?.name || null}
+            onOpenWeaponPicker={() => setPickerOpen(true)}
           />
         </View>
       )}
@@ -217,7 +229,7 @@ const EquipScreen = () => {
         {tab === "results" ? (
             <ResultsTab selectedSkills={selectedSkillsForCalc} sets={gearSets} />
         ) : tab === "weapon" ? (
-            <Weaponsettings />
+            <WeaponSettings />
         ) : (
           <>
             <View style={s.searchRow}>
@@ -268,6 +280,7 @@ const EquipScreen = () => {
           </>
         )}
 
+        {/* モバイルでは右パネルを末尾に表示 */}
         {!isWide && (
           <View style={{ marginTop: 12 }}>
             <RightPanel
@@ -276,10 +289,21 @@ const EquipScreen = () => {
               onChange={setLevel}
               onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
               onSearch={runGearSearch}
+              weaponName={weapon?.name || null}
+              onOpenWeaponPicker={() => setPickerOpen(true)}
             />
           </View>
         )}
       </ScrollView>
+
+      {/* 武器選択モーダル */}
+      <WeaponPickerModal
+        visible={pickerOpen}
+        onClose={() => setPickerOpen(false)}
+        onPick={(w) => { setWeapon(w); setPickerOpen(false); }}
+        // 生産（最終）の一覧を表示したい場合のみ、実カタログ取得関数を渡す
+        // loadProductionCatalog={async () => (await import("../../src/domains/weapons/catalog_weapons")).default()}
+      />
     </View>
   );
 };

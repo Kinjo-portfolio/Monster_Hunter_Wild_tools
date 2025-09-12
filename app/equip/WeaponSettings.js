@@ -1,5 +1,6 @@
 import { useMemo, useState, useRef, useEffect } from "react";
-import { View, Text, Pressable, Platform } from "react-native";
+import { View, Text, Pressable, Platform, TextInput } from "react-native";
+import { addPreset, loadPresets, updatePreset, deletePreset } from "../../src/lib/weapon_presets";
 import { s } from "../../src/screens/equip.styles";
 
 export const WEAPON_TYPES = [
@@ -154,6 +155,88 @@ const WeaponSettings = ({ value, onChange }) => {
   const [prodKind, setProdKind]   = useState(value?.prodKind   ?? INIT_PROD_KIND);
 
   const [reinforce, setReinforce] = useState(value?.reinforce ?? INIT_REINF);
+  // === アーティア武器プリセット ===
+  const [presetName, setPresetName] = useState("");
+  const [presets, setPresets] = useState(() => loadPresets());
+  const [editingId, setEditingId] = useState(null);
+
+  // --- 表示ヘルパ：プリセットのサマリー（攻撃/会心/属性） ---
+  const WT_LABEL = {
+    "great-sword": "大剣","long-sword":"太刀","sword-shield":"片手剣","dual-blades":"双剣",
+    "lance":"ランス","gunlance":"ガンランス","hammer":"ハンマー","hunting-horn":"狩猟笛",
+    "switch-axe":"スラアク","charge-blade":"チャアク","insect-glaive":"操虫棍","bow":"弓",
+    "lbg":"ライトボウガン","hbg":"ヘビィボウガン",
+  };
+  // アーティア：武器種ごとのデフォルト名（なければ「アーティア＋武器種」）
+  const ARTIA_DEFAULT_NAMES = {
+    "great-sword": "ヴァリアンツァ",
+    "long-sword": "ディメンシオ",
+    "sword-shield": "ヴェルドロート",
+    "dual-blades": "ティルトクライス",
+    "lance": "マテンロウ",
+    "gunlance": "アル＝ジェネシス",
+    "hammer": "モートヴァンケル",
+    "hunting-horn": "オミリティカ",
+    "switch-axe": "アルトエレガン",
+    "charge-blade": "テンプスギア",
+    "insect-glaive": "ディプリエリカ",
+    "bow": "アンギルバイン",
+    "lbg": "アムニレーター",
+    "hbg": "グライフェン",
+  };
+  const defaultArtiaNameFor = (t) => ARTIA_DEFAULT_NAMES[t] || (WT_LABEL[t] ? `アーティア${WT_LABEL[t]}` : "アーティア武器");
+
+  const presetSummary = (p) => {
+    const d = p?.data || {};
+    const w = d.weaponType || "";
+    const lab = WT_LABEL[w] || w || "武器";
+    const der = d.derived || {};
+    const atk = der.atkDisp ?? der.atkTrue ?? "-";
+    const aff = (der.aff ?? 0);
+    const eln = der.element || "無";
+    const elv = der.elemFinal ?? 0;
+    const elemText = (eln === "無" || !eln) ? "─" : `${eln}+${elv}`;
+    return `${lab}｜攻撃${atk} / 会心${aff}% / ${elemText}`;
+  };
+
+
+  const currentData = () => ({
+    weaponType: type, inputMode: mode, atkBaseTrue,
+    partAttrs, prodKind, reinforce,
+    derived: { element, atkTrue, atkDisp, aff, elemFinal, elemFromProd, elemFromReinf, sharpAdd, ammoAdd },
+  });
+
+  const handleSaveNew = () => {
+    const base = defaultArtiaNameFor(type);
+    const name = (presetName && presetName.trim().length) ? presetName.trim() : base;
+    addPreset(name, currentData());
+    setPresets(loadPresets());
+    setPresetName("");
+  };
+
+  const handleSaveOverwrite = () => {
+    if (!editingId) return;
+    updatePreset(editingId, { data: currentData() });
+    setPresets(loadPresets());
+  };
+
+  const handleLoad = (p) => {
+    setEditingId(p.id);
+    const d = p.data;
+    if (!d) return;
+    setType(d.weaponType);
+    setMode(d.inputMode);
+    setAtkBaseTrue(d.atkBaseTrue);
+    setPartAttrs(d.partAttrs);
+    setProdKind(d.prodKind);
+    setReinforce(d.reinforce);
+  };
+
+  const handleDelete = (id) => {
+    deletePreset(id);
+    setPresets(loadPresets());
+    if (editingId === id) setEditingId(null);
+  };
 
   const bloat = BLOAT[type] ?? 1;
 
@@ -437,6 +520,53 @@ const WeaponSettings = ({ value, onChange }) => {
         {element !== "無" && <View style={s.kvRow}><Text style={s.kvKey}>　内訳</Text><Text style={s.kvVal}>{`生産 +${elemFromProd} ／ 復元 +${elemFromReinf}`}</Text></View>}
         {isMelee(type)  && <View style={s.kvRow}><Text style={s.kvKey}>斬れ味 追加</Text><Text style={s.kvVal}>+{sharpAdd}</Text></View>}
         {isBowgun(type) && <View style={s.kvRow}><Text style={s.kvKey}>装填数 追加</Text><Text style={s.kvVal}>+{ammoAdd}</Text></View>}
+      </View>
+      
+      {/* アーティア武器の保存/読込（改良版） */}
+      <View style={s.groupBox}>
+        <Text style={s.panelHeader}>アーティア武器の保存/読込</Text>
+
+        {/* 入力行：名前＋保存/上書き */}
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginTop: 6 }}>
+          <Text style={[s.kvKey, { minWidth: 120 }]}>名前を付けて保存</Text>
+          <TextInput
+            style={[s.searchInput, { flex: 1, backgroundColor: "#fff" }]}
+            placeholder={defaultArtiaNameFor(type) + "（編集可）"}
+            value={presetName}
+            onChangeText={setPresetName}
+          />
+          <Pressable style={[s.stepBtn, { backgroundColor: "#2563EB", borderColor: "#2563EB" }]} onPress={handleSaveNew}>
+            <Text style={[s.stepTxt, { color: "#fff" }]}>保存</Text>
+          </Pressable>
+          <Pressable
+            style={[s.stepBtn, !editingId && { opacity: .4 }]}
+            disabled={!editingId}
+            onPress={handleSaveOverwrite}
+          >
+            <Text style={s.stepTxt}>上書き</Text>
+          </Pressable>
+        </View>
+
+        {/* 一覧：名前＋要約（攻撃/会心/属性）＋削除 */}
+        <View style={{ marginTop: 8, borderTopWidth: 1, borderColor: "#eee" }}>
+          {presets.length === 0 ? (
+            <View style={[s.rowThin, { paddingVertical: 12 }]}>
+              <Text style={s.rowThinText}>（保存されたアーティア武器はありません）</Text>
+            </View>
+          ) : (
+            presets.map(p => (
+              <View key={p.id} style={{ flexDirection: "row", alignItems: "center", paddingVertical: 8, paddingHorizontal: 8, borderBottomWidth: 1, borderColor: "#f2f2f2" }}>
+                <Pressable style={{ flex: 1, gap: 2 }} onPress={() => handleLoad(p)}>
+                  <Text style={[s.selOptText, { fontWeight: "600" }]} numberOfLines={1}>{p.name}</Text>
+                  <Text style={[s.kvVal, { color: "#666" }]} numberOfLines={1}>{presetSummary(p)}</Text>
+                </Pressable>
+                <Pressable style={[s.selOpt, { paddingVertical: 6 }]} onPress={() => handleDelete(p.id)}>
+                  <Text style={[s.selOptText, { color: "#e11d48" }]}>削除</Text>
+                </Pressable>
+              </View>
+            ))
+          )}
+        </View>
       </View>
     </View>
   );
