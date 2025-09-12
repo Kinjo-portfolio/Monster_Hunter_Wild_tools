@@ -291,7 +291,8 @@ export const catalogArmor = {
         "name": null,
         "thresholds": []
       },
-      "groupSkill": {}
+      "groupSkill": { "alpha": "革細工の柔性", "beta": "革細工の滑性" }
+
     },
     {
       "key": "yian_kut_ku",
@@ -305,7 +306,8 @@ export const catalogArmor = {
         "name": null,
         "thresholds": []
       },
-      "groupSkill": {}
+      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+
     },
     {
       "key": "rathian",
@@ -545,7 +547,40 @@ export const catalogArmor = {
       "seriesName": "アワウタイズク",
       "seriesSkill": { "name": null, "thresholds": [] },
       "groupSkill": { "alpha": "革細工の滑性" }
+    },
+    {
+      "key": "sakura_nami",
+      "monster": null,
+      "variants": ["α"],
+      "seriesName": "桜波",
+      "seriesSkill": {
+        "name": "花舞の祈り",
+        "thresholds": [
+          { "count": 2, "name": "地の恵み【花舞】Ⅰ" },
+          { "count": 4, "name": "地の恵み【花舞】Ⅱ" }
+        ]
+      },
+      "groupSkill": { "alpha": "祝祭の巡り (α防具)" }
+    },
+    {
+      "key": "nuegudra",
+      "monster": "ヌ・エグドラ",
+      "variants": ["α", "β"],
+      "seriesName": "エグゾルス",
+      "seriesSkill": {
+        "name": "獄焔蛸の反逆",
+        "thresholds": [
+          { "count": 2, "name": "恨撃Ⅰ" },
+          { "count": 4, "name": "恨撃Ⅱ" }
+        ]
+      },
+      "groupSkill": {
+        "alpha": "ヌシの誇り",
+        "beta": "ヌシの憤激"
+      }
     }
+
+
   ],
   "armor": [
     {
