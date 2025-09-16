@@ -535,7 +535,7 @@ const WeaponSettings = ({ value, onChange }) => {
             value={presetName}
             onChangeText={setPresetName}
           />
-          <Pressable style={[s.stepBtn, { backgroundColor: "#2563EB", borderColor: "#2563EB" }]} onPress={handleSaveNew}>
+          <Pressable style={[s.stepBtn, { backgroundColor: "#56809fff", borderColor: "#56809fff" }]} onPress={handleSaveNew}>
             <Text style={[s.stepTxt, { color: "#fff" }]}>保存</Text>
           </Pressable>
           <Pressable
@@ -561,7 +561,7 @@ const WeaponSettings = ({ value, onChange }) => {
                   <Text style={[s.kvVal, { color: "#666" }]} numberOfLines={1}>{presetSummary(p)}</Text>
                 </Pressable>
                 <Pressable style={[s.selOpt, { paddingVertical: 6 }]} onPress={() => handleDelete(p.id)}>
-                  <Text style={[s.selOptText, { color: "#e11d48" }]}>削除</Text>
+                  <Text style={[s.selOptText, { color: "#c1536bff" }]}>削除</Text>
                 </Pressable>
               </View>
             ))

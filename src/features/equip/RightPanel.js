@@ -1,5 +1,5 @@
 // src/features/equip/RightPanel.js — 差し替え版（武器セクション＋モーダル起動）
-import React from "react";
+
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { s } from "../../screens/equip.styles";
 
