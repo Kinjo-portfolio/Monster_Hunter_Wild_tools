@@ -3,7 +3,23 @@ import React, { useEffect, useState } from "react";
 import { View, Text, Pressable, ScrollView, TextInput, Platform, StyleSheet } from "react-native";
 
 import { loadPresets } from "../lib/weapon_presets";
+
 import { catalog_weapons as swordShieldCatalog } from "../domains/skills/weapons/catalog_sword_and_shield";
+import { catalog_weapons as greatSwordCatalog } from "../domains/skills/weapons/catalog_great_sword";
+import { catalog_weapons as longSwordCatalog } from "../domains/skills/weapons/catalog_long_sword"
+import { catalog_weapons as dualBladesCatalog } from "../domains/skills/weapons/catalog_dual_blades"
+import { catalog_weapons as hummerCatalog } from "../domains/skills/weapons/catalog_hammer";
+import { catalog_weapons as lanceCatalog } from "../domains/skills/weapons/catalog_lance";
+import { catalog_weapons as gunlanceCatalog } from "../domains/skills/weapons/catalog_gunlance";
+import { catalog_weapons as switchAxeCatalog } from "../domains/skills/weapons/catalog_switchaxe";
+import { catalog_weapons as huntingHornCatalog } from "../domains/skills/weapons/catalog_hunting_horn";
+import { catalog_weapons as insectGlaiveCatalog } from "../domains/skills/weapons/catalog_insect_glaive";
+import { catalog_weapons as chargeBladeCatalog } from "../domains/skills/weapons/catalog_charge_blade";
+import { catalog_weapons as bowCatalog } from "../domains/skills/weapons/catalog_bow";
+import { catalog_weapons as lightBowgunCatalog } from "../domains/skills/weapons/catalog_light_bowgun";
+import { catalog_weapons as heavyBowgunCatalog } from "../domains/skills/weapons/catalog_heavy_bowgun"
+
+
 
 const palette = {
   panel: "#FFFFFF",
@@ -11,7 +27,7 @@ const palette = {
   border: "#E5E7EB",
   text: "#111827",
   sub: "#6B7280",
-  primary: "#588f9dff",
+  primary: "#90bdc8ff",
   recentBg: "#FAFAFA",
   danger: "#ac5b5bff",
 };
@@ -100,13 +116,13 @@ const WT = [
 const WT_LABEL = Object.fromEntries(WT.map(w => [w.id, w.label]));
 
 // split rows and indent second row
-const WT_ROW1_IDS = ["all","great-sword","long-sword","sword-shield","dual-blades","lance","gunlance","hammer","hunting-horn"];
+const WT_ROW1_IDS = ["all", "great-sword", "long-sword", "sword-shield", "dual-blades", "lance", "gunlance", "hammer", "hunting-horn"];
 const WT_ROW1 = WT.filter(w => WT_ROW1_IDS.includes(w.id));
 const WT_ROW2 = WT.filter(w => !WT_ROW1_IDS.includes(w.id));
 // 調整値：2段目のインデント（px）
 const INDENT_WT_SECOND_ROW = 67;
 
-const ELEMENTS = ["火","水","雷","氷","龍","毒","麻痺","睡眠","爆破","無"];
+const ELEMENTS = ["火", "水", "雷", "氷", "龍", "毒", "麻痺", "睡眠", "爆破", "無"];
 const SORTS = [
   { key: "attack", label: "攻撃力" },
   { key: "element", label: "属性値" },
@@ -117,14 +133,14 @@ const RECENT_KEY = "mhwlds_weapon_recent_v1";
 let RECENT_MEMO = [];
 const recentStore = {
   get() {
-    try { if (Platform.OS === "web") return JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); } catch {}
+    try { if (Platform.OS === "web") return JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); } catch { }
     return RECENT_MEMO;
   },
   set(list) {
     try {
       if (Platform.OS === "web") localStorage.setItem(RECENT_KEY, JSON.stringify(list));
       else RECENT_MEMO = list;
-    } catch {}
+    } catch { }
   },
   add(item) {
     try {
@@ -132,16 +148,16 @@ const recentStore = {
       list.unshift(item);
       const cut = list.slice(0, 10);
       recentStore.set(cut);
-    } catch {}
+    } catch { }
   },
   remove(key) {
     try {
       const list = recentStore.get().filter(x => x.key !== key);
       recentStore.set(list);
-    } catch {}
+    } catch { }
   },
   clear() {
-    try { if (Platform.OS === "web") localStorage.removeItem(RECENT_KEY); else RECENT_MEMO = []; } catch {}
+    try { if (Platform.OS === "web") localStorage.removeItem(RECENT_KEY); else RECENT_MEMO = []; } catch { }
   }
 };
 
@@ -155,6 +171,7 @@ const slotText = (arr) => {
   if (!a.length) return "－";
   return a.map((n) => (n === 3 ? "③" : n === 2 ? "②" : n === 1 ? "①" : "-")).join("");
 };
+
 const Summary = ({ data, forceArtia = false }) => {
   const atk = getAtk(data);
   const aff = getAff(data);
@@ -164,6 +181,7 @@ const Summary = ({ data, forceArtia = false }) => {
   const slots = forceArtia ? "③③③" : slotText(getSlotsArr(data));
   return <Text style={k.itemSub} numberOfLines={1}>{`攻撃${atk} / 会心${aff}% / ${elem} / スロ${slots}`}</Text>;
 };
+
 const dataOf = (it, source) => (source === "artia" ? it.data : it);
 
 export default function WeaponPickerModal({
@@ -189,7 +207,7 @@ export default function WeaponPickerModal({
     try {
       setPresets(loadPresets());
       setRecent(recentStore.get());
-    } catch {}
+    } catch { }
 
     (async () => {
       try {
@@ -202,8 +220,91 @@ export default function WeaponPickerModal({
       } catch (e) {
         console.warn("weapon catalog load failed", e);
       }
-      const arr = (swordShieldCatalog?.["片手剣"] || []);
-      const mapped = arr.map(w => ({
+
+      const ssArr = (swordShieldCatalog?.["片手剣"] || []);
+      const gsArr = (greatSwordCatalog?.["大剣"] || []);
+      const lsArr = (longSwordCatalog?.["太刀"] || [])
+      const dbArr = (dualBladesCatalog?.["双剣"] || [])
+      const haArr = (hummerCatalog?.["ハンマー"] || [])
+      const lnArr = (lanceCatalog?.["ランス"] || []);
+      const glArr = (gunlanceCatalog?.["ガンランス"] || []);
+      const saArr = (switchAxeCatalog?.["スラッシュアックス"] || []);
+      const HHArr = (huntingHornCatalog?.["狩猟笛"] || [])
+      const IGArr = (insectGlaiveCatalog?.["操虫棍"] || [])
+      const CBArr = (chargeBladeCatalog?.["チャージアックス"] || [])
+      const BoArr = (bowCatalog?.["弓"] || [])
+      const LBArr = (lightBowgunCatalog?.["ライトボウガン"] || [])
+      const HBArr = (heavyBowgunCatalog?.["ヘビィボウガン"] || [])
+
+
+
+      const mappedHB = HBArr.map(w => ({
+        name: w.名前,
+        weaponType: "hbg",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedLB = LBArr.map(w => ({
+        name: w.名前,
+        weaponType: "lbg",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedBo = BoArr.map(w => ({
+        name: w.名前,
+        weaponType: "bow",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedCB = CBArr.map(w => ({
+        name: w.名前,
+        weaponType: "charge-blade",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedIG = IGArr.map(w => ({
+        name: w.名前,
+        weaponType: "insect-glaive",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedHH = HHArr.map(w => ({
+        name: w.名前,
+        weaponType: "hunting-horn",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedSS = ssArr.map(w => ({
         name: w.名前,
         weaponType: "sword-shield",
         derived: {
@@ -214,7 +315,86 @@ export default function WeaponPickerModal({
         },
         ...w,
       }));
-      setProd(mapped);
+      const mappedGS = gsArr.map(w => ({
+        name: w.名前,
+        weaponType: "great-sword",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }));
+      const mappedLS = lsArr.map(w => ({
+        name: w.名前,
+        weaponType: "long-sword",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      const mappedDB = dbArr.map(w => ({
+        name: w.名前,
+        weaponType: "dual-blades",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      const mappedH = haArr.map(w => ({
+        name: w.名前,
+        weaponType: "hammer",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      const mappedLn = lnArr.map(w => ({
+        name: w.名前,
+        weaponType: "lance",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      const mappedGl = glArr.map(w => ({
+        name: w.名前,
+        weaponType: "gunlance",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      const mappedSA = saArr.map(w => ({
+        name: w.名前,
+        weaponType: "switch-axe",
+        derived: {
+          atkDisp: w.攻撃力,
+          aff: w.会心 ?? 0,
+          element: w.属性?.種別 ?? "無",
+          elemFinal: w.属性?.値 ?? 0,
+        },
+        ...w,
+      }))
+      
+      setProd([...mappedHB, ...mappedLB, ...mappedBo, ...mappedCB, ...mappedIG, ...mappedHH, ...mappedSS, ...mappedGS, ...mappedLS, ...mappedDB, ...mappedH, ...mappedLn, ...mappedGl, ...mappedSA]);
+
     })();
   }, [visible, loadProductionCatalog]);
 
@@ -258,7 +438,7 @@ export default function WeaponPickerModal({
       const title = out.name || out.名前 || "武器";
       recentStore.add({ key, title, payload: out });
       setRecent(recentStore.get());
-    } catch {}
+    } catch { }
     onPick?.(out);
     onClose?.();
   };
@@ -362,7 +542,7 @@ export default function WeaponPickerModal({
 
           return (
             <Pressable
-              key={(it.id)||`${source}:${idx}`}
+              key={(it.id) || `${source}:${idx}`}
               style={k.item}
               onPress={() => pick(craftPayload())}
             >
@@ -404,11 +584,11 @@ export default function WeaponPickerModal({
 
           {/* Tabs */}
           <View style={k.tabs}>
-            <Pressable onPress={() => setTab("artia")} style={[k.tab, tab==="artia" && k.tabActive]}>
-              <Text style={[k.tabTxt, tab==="artia" && k.tabTxtActive]}>アーティア</Text>
+            <Pressable onPress={() => setTab("artia")} style={[k.tab, tab === "artia" && k.tabActive]}>
+              <Text style={[k.tabTxt, tab === "artia" && k.tabTxtActive]}>アーティア</Text>
             </Pressable>
-            <Pressable onPress={() => setTab("prod")} style={[k.tab, tab==="prod" && k.tabActive]}>
-              <Text style={[k.tabTxt, tab==="prod" && k.tabTxtActive]}>生産（最終）</Text>
+            <Pressable onPress={() => setTab("prod")} style={[k.tab, tab === "prod" && k.tabActive]}>
+              <Text style={[k.tabTxt, tab === "prod" && k.tabTxtActive]}>生産（最終）</Text>
             </Pressable>
           </View>
 
@@ -418,15 +598,15 @@ export default function WeaponPickerModal({
             <View style={k.chipsRowWrap}>
               <View style={k.chipsRow}>
                 {WT_ROW1.map(w => (
-                  <Pressable key={w.id} onPress={() => setType(w.id)} style={[k.chip, type===w.id && k.chipActive]}>
-                    <Text style={[k.chipTxt, type===w.id && k.chipTxtActive]}>{w.label}</Text>
+                  <Pressable key={w.id} onPress={() => setType(w.id)} style={[k.chip, type === w.id && k.chipActive]}>
+                    <Text style={[k.chipTxt, type === w.id && k.chipTxtActive]}>{w.label}</Text>
                   </Pressable>
                 ))}
               </View>
               <View style={[k.chipsRow, { marginLeft: INDENT_WT_SECOND_ROW }]}>
                 {WT_ROW2.map(w => (
-                  <Pressable key={w.id} onPress={() => setType(w.id)} style={[k.chip, type===w.id && k.chipActive]}>
-                    <Text style={[k.chipTxt, type===w.id && k.chipTxtActive]}>{w.label}</Text>
+                  <Pressable key={w.id} onPress={() => setType(w.id)} style={[k.chip, type === w.id && k.chipActive]}>
+                    <Text style={[k.chipTxt, type === w.id && k.chipTxtActive]}>{w.label}</Text>
                   </Pressable>
                 ))}
               </View>
