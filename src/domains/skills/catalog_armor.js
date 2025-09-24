@@ -195,8 +195,14 @@ export const catalogArmor = {
       "seriesSkill": {
         "name": "白熾龍の脈動",
         "thresholds": [
-          { "count": 2, "name": "超回復力Ⅰ" },
-          { "count": 4, "name": "超回復力Ⅱ" }
+          {
+            "count": 2,
+            "name": "超回復力Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "超回復力Ⅱ"
+          }
         ]
       },
       "groupSkill": {
@@ -277,8 +283,7 @@ export const catalogArmor = {
       "groupSkill": {
         "gamma": "ヌシの魂"
       }
-    }
-    ,
+    },
     {
       "key": "gypceros",
       "monster": "ゲリョス",
@@ -291,8 +296,10 @@ export const catalogArmor = {
         "name": null,
         "thresholds": []
       },
-      "groupSkill": { "alpha": "革細工の柔性", "beta": "革細工の滑性" }
-
+      "groupSkill": {
+        "alpha": "革細工の柔性",
+        "beta": "革細工の滑性"
+      }
     },
     {
       "key": "yian_kut_ku",
@@ -306,272 +313,520 @@ export const catalogArmor = {
         "name": null,
         "thresholds": []
       },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
-
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "rathian",
       "monster": "リオレイア",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "リオレイア",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "blangonga",
       "monster": "ドドブランゴ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ドドブランゴ",
       "seriesSkill": {
         "name": "雪獅子の闘志",
         "thresholds": [
-          { "count": 2, "name": "ウォークライⅠ" },
-          { "count": 4, "name": "ウォークライⅡ" }
+          {
+            "count": 2,
+            "name": "ウォークライⅠ"
+          },
+          {
+            "count": 4,
+            "name": "ウォークライⅡ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "毛皮の昂揚", "beta": "毛皮の誘惑" }
+      "groupSkill": {
+        "alpha": "毛皮の昂揚",
+        "beta": "毛皮の誘惑"
+      }
     },
     {
       "key": "gravios",
       "monster": "グラビモス",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "グラビモス",
       "seriesSkill": {
         "name": "鎧竜の守護",
         "thresholds": [
-          { "count": 2, "name": "無傷の重装Ⅰ" },
-          { "count": 4, "name": "無傷の重装Ⅱ" }
+          {
+            "count": 2,
+            "name": "無傷の重装Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "無傷の重装Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "rathalos",
       "monster": "リオレウス",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "リオレウス",
       "seriesSkill": {
         "name": "火竜の力",
         "thresholds": [
-          { "count": 2, "name": "灼熱化Ⅰ" },
-          { "count": 4, "name": "灼熱化Ⅱ" }
+          {
+            "count": 2,
+            "name": "灼熱化Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "灼熱化Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "mizutsune",
       "monster": "タマミツネ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ミツネ",
       "seriesSkill": {
         "name": "泡狐竜の力",
         "thresholds": [
-          { "count": 2, "name": "泡沫の舞Ⅰ" },
-          { "count": 4, "name": "泡沫の舞Ⅱ" }
+          {
+            "count": 2,
+            "name": "泡沫の舞Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "泡沫の舞Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "毛皮の昂揚", "beta": "毛皮の誘惑" }
+      "groupSkill": {
+        "alpha": "毛皮の昂揚",
+        "beta": "毛皮の誘惑"
+      }
     },
     {
       "key": "guild_cross",
       "monster": "ギルドクロス",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "ギルドクロス",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "栄光の誉れ" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "栄光の誉れ"
+      }
     },
     {
       "key": "azzu",
       "monster": "アズズ",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "アズズ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "先達の導き" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "先達の導き"
+      }
     },
     {
       "key": "suja",
       "monster": "スージャ",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "スージャ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "先達の導き" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "先達の導き"
+      }
     },
     {
       "key": "doshaguma",
       "monster": "ドシャグマ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ドシャグマ",
       "seriesSkill": {
         "name": "闢獣の力",
         "thresholds": [
-          { "count": 2, "name": "力自慢Ⅰ" },
-          { "count": 4, "name": "力自慢Ⅱ" }
+          {
+            "count": 2,
+            "name": "力自慢Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "力自慢Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "毛皮の昂揚", "beta": "毛皮の誘惑" }
+      "groupSkill": {
+        "alpha": "毛皮の昂揚",
+        "beta": "毛皮の誘惑"
+      }
     },
     {
       "key": "rabarabarina",
       "monster": "ラバラバリナ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ラバラバリナ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "甲虫の知らせ", "beta": "甲虫の擬態" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "甲虫の知らせ",
+        "beta": "甲虫の擬態"
+      }
     },
     {
       "key": "barahara",
       "monster": "バーラハーラ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "バーラハーラ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "pupropor",
       "monster": "ププロポル",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ププロポル",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "革細工の柔性", "beta": "革細工の滑性" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "革細工の柔性",
+        "beta": "革細工の滑性"
+      }
     },
     {
       "key": "nerscylla",
       "monster": "ネルスキュラ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ネルスキュラ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "甲虫の知らせ", "beta": "甲虫の擬態" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "甲虫の知らせ",
+        "beta": "甲虫の擬態"
+      }
     },
     {
       "key": "guardian_secreto",
       "monster": "護竜セクレト",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "護竜セクレト",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "護竜の脈動", "beta": "護竜の守り" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "護竜の脈動",
+        "beta": "護竜の守り"
+      }
     },
     {
       "key": "guardian_doshaguma",
       "monster": "護竜ドシャグマ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "護竜ドシャグマ",
       "seriesSkill": {
         "name": "闢獣の力",
         "thresholds": [
-          { "count": 2, "name": "力自慢Ⅰ" },
-          { "count": 4, "name": "力自慢Ⅱ" }
+          {
+            "count": 2,
+            "name": "力自慢Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "力自慢Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "護竜の脈動", "beta": "護竜の守り" }
+      "groupSkill": {
+        "alpha": "護竜の脈動",
+        "beta": "護竜の守り"
+      }
     },
     {
       "key": "guardian_rathalos",
       "monster": "護竜リオレウス",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "護竜リオレウス",
       "seriesSkill": {
         "name": "火竜の力",
         "thresholds": [
-          { "count": 2, "name": "灼熱化Ⅰ" },
-          { "count": 4, "name": "灼熱化Ⅱ" }
+          {
+            "count": 2,
+            "name": "灼熱化Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "灼熱化Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "護竜の脈動", "beta": "護竜の守り" }
+      "groupSkill": {
+        "alpha": "護竜の脈動",
+        "beta": "護竜の守り"
+      }
     },
     {
       "key": "xiwu",
       "monster": "シーウー",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "シーウー",
       "seriesSkill": {
         "name": "暗器蛸の力",
         "thresholds": [
-          { "count": 2, "name": "蛮勇の食卓Ⅰ" },
-          { "count": 4, "name": "蛮勇の食卓Ⅱ" }
+          {
+            "count": 2,
+            "name": "蛮勇の食卓Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "蛮勇の食卓Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "革細工の柔性", "beta": "革細工の滑性" }
+      "groupSkill": {
+        "alpha": "革細工の柔性",
+        "beta": "革細工の滑性"
+      }
     },
     {
       "key": "garaiba",
       "monster": "ガライーバ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ガライーバ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "kranodath",
       "monster": "クラノダス",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "クラノダス",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "鱗張りの技法", "beta": "鱗重ねの工夫" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "鱗張りの技法",
+        "beta": "鱗重ねの工夫"
+      }
     },
     {
       "key": "nemarachika",
       "monster": "ネマラチカ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "ネマラチカ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "甲虫の知らせ", "beta": "甲虫の擬態" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "甲虫の知らせ",
+        "beta": "甲虫の擬態"
+      }
     },
     {
       "key": "hanashoujou",
       "monster": "ハナショウジョウ",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "ハナショウジョウ",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "毛皮の昂揚" }
-    }, {
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "毛皮の昂揚"
+      }
+    },
+    {
       "key": "creek",
       "monster": "クリーク",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "クリーク",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "栄光の誉れ" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "栄光の誉れ"
+      }
     },
     {
       "key": "kenshin_pierce",
       "monster": "献身のピアス",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "献身のピアス",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "栄光の誉れ" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "栄光の誉れ"
+      }
     },
     {
       "key": "awautaisuku",
       "monster": "アワウタイズク",
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "アワウタイズク",
-      "seriesSkill": { "name": null, "thresholds": [] },
-      "groupSkill": { "alpha": "革細工の滑性" }
+      "seriesSkill": {
+        "name": null,
+        "thresholds": []
+      },
+      "groupSkill": {
+        "alpha": "革細工の滑性"
+      }
     },
     {
       "key": "sakura_nami",
       "monster": null,
-      "variants": ["α"],
+      "variants": [
+        "α"
+      ],
       "seriesName": "桜波",
       "seriesSkill": {
         "name": "花舞の祈り",
         "thresholds": [
-          { "count": 2, "name": "地の恵み【花舞】Ⅰ" },
-          { "count": 4, "name": "地の恵み【花舞】Ⅱ" }
+          {
+            "count": 2,
+            "name": "地の恵み【花舞】Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "地の恵み【花舞】Ⅱ"
+          }
         ]
       },
-      "groupSkill": { "alpha": "祝祭の巡り (α防具)" }
+      "groupSkill": {
+        "alpha": "祝祭の巡り (α防具)"
+      }
     },
     {
       "key": "nuegudra",
       "monster": "ヌ・エグドラ",
-      "variants": ["α", "β"],
+      "variants": [
+        "α",
+        "β"
+      ],
       "seriesName": "エグゾルス",
       "seriesSkill": {
         "name": "獄焔蛸の反逆",
         "thresholds": [
-          { "count": 2, "name": "恨撃Ⅰ" },
-          { "count": 4, "name": "恨撃Ⅱ" }
+          {
+            "count": 2,
+            "name": "恨撃Ⅰ"
+          },
+          {
+            "count": 4,
+            "name": "恨撃Ⅱ"
+          }
         ]
       },
       "groupSkill": {
@@ -579,8 +834,6 @@ export const catalogArmor = {
         "beta": "ヌシの憤激"
       }
     }
-
-
   ],
   "armor": [
     {
@@ -11006,16 +11259,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ブランゴヘルムα",
-      "slots": [1, 1, 0],
+      "slots": [
+        1,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "広域化", "level": 2 },
-        { "name": "逆襲", "level": 1 }
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の剛毛", "qty": 3 },
-        { "name": "雪獅子の鋭牙", "qty": 4 },
-        { "name": "雪獅子の尻尾", "qty": 2 },
-        { "name": "太い獣骨", "qty": 2 }
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "雪獅子の鋭牙",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11023,15 +11298,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ブランゴメイルα",
-      "slots": [0, 0, 0],
+      "slots": [
+        0,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 2 },
-        { "name": "アイテム使用強化", "level": 2 }
+        {
+          "name": "挑戦者",
+          "level": 2
+        },
+        {
+          "name": "アイテム使用強化",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 2 },
-        { "name": "雪獅子の髭", "qty": 3 },
-        { "name": "ブランゴの剛毛", "qty": 2 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 3
+        },
+        {
+          "name": "ブランゴの剛毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11039,16 +11333,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ブランゴアームα",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "オトモへの采配", "level": 2 },
-        { "name": "逆襲", "level": 1 }
+        {
+          "name": "オトモへの采配",
+          "level": 2
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 1 },
-        { "name": "雪獅子の剛毛", "qty": 5 },
-        { "name": "雪獅子の尻尾", "qty": 3 },
-        { "name": "獣玉", "qty": 1 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11056,16 +11372,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ブランゴコイルα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 2 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "挑戦者",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 1 },
-        { "name": "雪獅子の鋭牙", "qty": 5 },
-        { "name": "雪獅子の髭", "qty": 2 },
-        { "name": "凍結袋", "qty": 3 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "雪獅子の鋭牙",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 2
+        },
+        {
+          "name": "凍結袋",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11073,16 +11411,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ブランゴグリーヴα",
-      "slots": [1, 1, 0],
+      "slots": [
+        1,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 1 },
-        { "name": "逆襲", "level": 1 }
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "逆襲",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の剛毛", "qty": 3 },
-        { "name": "雪獅子の尻尾", "qty": 2 },
-        { "name": "雪獅子の髭", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11090,15 +11450,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ブランゴヘルムβ",
-      "slots": [2, 1, 1],
+      "slots": [
+        2,
+        1,
+        1
+      ],
       "skills": [
-        { "name": "広域化", "level": 2 }
+        {
+          "name": "広域化",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "雪獅子の剛毛", "qty": 3 },
-        { "name": "雪獅子の鋭牙", "qty": 4 },
-        { "name": "雪獅子の尻尾", "qty": 2 },
-        { "name": "太い獣骨", "qty": 2 }
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "雪獅子の鋭牙",
+          "qty": 4
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11106,14 +11485,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "ブランゴメイルβ",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 2 }
+        {
+          "name": "挑戦者",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 2 },
-        { "name": "雪獅子の髭", "qty": 3 },
-        { "name": "ブランゴの剛毛", "qty": 2 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 3
+        },
+        {
+          "name": "ブランゴの剛毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11121,15 +11516,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "ブランゴアームβ",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "逆襲", "level": 1 }
+        {
+          "name": "逆襲",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 1 },
-        { "name": "雪獅子の剛毛", "qty": 5 },
-        { "name": "雪獅子の尻尾", "qty": 3 },
-        { "name": "獣玉", "qty": 1 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11137,15 +11551,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "ブランゴコイルβ",
-      "slots": [1, 1, 0],
+      "slots": [
+        1,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 2 }
+        {
+          "name": "挑戦者",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "雪獅子の狩猟証S", "qty": 1 },
-        { "name": "雪獅子の鋭牙", "qty": 5 },
-        { "name": "雪獅子の髭", "qty": 2 },
-        { "name": "凍結袋", "qty": 3 }
+        {
+          "name": "雪獅子の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "雪獅子の鋭牙",
+          "qty": 5
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 2
+        },
+        {
+          "name": "凍結袋",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11153,15 +11586,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "ブランゴグリーヴβ",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "挑戦者", "level": 1 }
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "雪獅子の剛毛", "qty": 3 },
-        { "name": "雪獅子の尻尾", "qty": 2 },
-        { "name": "雪獅子の髭", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "雪獅子の尻尾",
+          "qty": 2
+        },
+        {
+          "name": "雪獅子の髭",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11169,15 +11621,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ドーベルヘルムα",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "体術", "level": 1 },
-        { "name": "スタミナ急速回復", "level": 1 }
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "堅竜骨", "qty": 3 },
-        { "name": "太い獣骨", "qty": 4 },
-        { "name": "黒ずんだ油骨", "qty": 3 }
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 4
+        },
+        {
+          "name": "黒ずんだ油骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11185,15 +11656,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ドーベルメイルα",
-      "slots": [3, 2, 0],
+      "slots": [
+        3,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "体術", "level": 1 },
-        { "name": "ランナー", "level": 1 }
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "ランナー",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "堅竜骨", "qty": 3 },
-        { "name": "太い獣骨", "qty": 4 },
-        { "name": "いにしえの龍骨", "qty": 1 }
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        },
+        {
+          "name": "太い獣骨",
+          "qty": 4
+        },
+        {
+          "name": "いにしえの龍骨",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11201,16 +11691,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ドーベルアームα",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "スタミナ急速回復", "level": 2 },
-        { "name": "体術", "level": 1 }
+        {
+          "name": "スタミナ急速回復",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "堅竜骨", "qty": 4 },
-        { "name": "堅牢な骨", "qty": 4 },
-        { "name": "たくましい護骨", "qty": 3 },
-        { "name": "火竜の延髄", "qty": 1 }
+        {
+          "name": "堅竜骨",
+          "qty": 4
+        },
+        {
+          "name": "堅牢な骨",
+          "qty": 4
+        },
+        {
+          "name": "たくましい護骨",
+          "qty": 3
+        },
+        {
+          "name": "火竜の延髄",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11218,16 +11730,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ドーベルコイルα",
-      "slots": [3, 1, 0],
+      "slots": [
+        3,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "ランナー", "level": 2 },
-        { "name": "体術", "level": 1 }
+        {
+          "name": "ランナー",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "堅竜骨", "qty": 4 },
-        { "name": "尖竜骨", "qty": 4 },
-        { "name": "凍てついた氷骨", "qty": 3 },
-        { "name": "赫猿獣の延髄", "qty": 1 }
+        {
+          "name": "堅竜骨",
+          "qty": 4
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 4
+        },
+        {
+          "name": "凍てついた氷骨",
+          "qty": 3
+        },
+        {
+          "name": "赫猿獣の延髄",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11235,16 +11769,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ドーベルグリーヴα",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "キノコ大好き", "level": 2 },
-        { "name": "体術", "level": 1 }
+        {
+          "name": "キノコ大好き",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "堅竜骨", "qty": 5 },
-        { "name": "堅牢な巨骨", "qty": 4 },
-        { "name": "上質な堅骨", "qty": 3 },
-        { "name": "鎧竜の延髄", "qty": 1 }
+        {
+          "name": "堅竜骨",
+          "qty": 5
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 4
+        },
+        {
+          "name": "上質な堅骨",
+          "qty": 3
+        },
+        {
+          "name": "鎧竜の延髄",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11252,16 +11808,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ダマスクヘルムα",
-      "slots": [3, 1, 0],
+      "slots": [
+        3,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "精霊の加護", "level": 2 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "精霊の加護",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ユニオン鉱石", "qty": 4 },
-        { "name": "護竜の上毛皮", "qty": 3 },
-        { "name": "狂竜結晶の欠片", "qty": 3 },
-        { "name": "鳥竜玉", "qty": 1 }
+        {
+          "name": "ユニオン鉱石",
+          "qty": 4
+        },
+        {
+          "name": "護竜の上毛皮",
+          "qty": 3
+        },
+        {
+          "name": "狂竜結晶の欠片",
+          "qty": 3
+        },
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11269,16 +11847,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ダマスクメイルα",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "体力回復量UP", "level": 2 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ユニオン鉱石", "qty": 5 },
-        { "name": "護竜の浄血", "qty": 2 },
-        { "name": "カブレライト鉱石", "qty": 5 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "ユニオン鉱石",
+          "qty": 5
+        },
+        {
+          "name": "護竜の浄血",
+          "qty": 2
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 5
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11286,16 +11886,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ダマスクアームα",
-      "slots": [3, 1, 0],
+      "slots": [
+        3,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "精霊の加護", "level": 1 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "精霊の加護",
+          "level": 1
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ユニオン鉱石", "qty": 4 },
-        { "name": "護竜の上毛皮", "qty": 4 },
-        { "name": "グラシスメタル", "qty": 4 },
-        { "name": "獣玉", "qty": 1 }
+        {
+          "name": "ユニオン鉱石",
+          "qty": 4
+        },
+        {
+          "name": "護竜の上毛皮",
+          "qty": 4
+        },
+        {
+          "name": "グラシスメタル",
+          "qty": 4
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11303,15 +11925,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ダマスクコイルα",
-      "slots": [3, 2, 0],
+      "slots": [
+        3,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "体力回復量UP", "level": 1 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ユニオン鉱石", "qty": 3 },
-        { "name": "護竜の上鱗", "qty": 4 },
-        { "name": "ノヴァクリスタル", "qty": 1 }
+        {
+          "name": "ユニオン鉱石",
+          "qty": 3
+        },
+        {
+          "name": "護竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "ノヴァクリスタル",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11319,15 +11960,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ダマスクグリーヴα",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "アイテム使用強化", "level": 2 },
-        { "name": "広域化", "level": 1 }
+        {
+          "name": "アイテム使用強化",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ユニオン鉱石", "qty": 3 },
-        { "name": "護竜の上鱗", "qty": 3 },
-        { "name": "獄炎石", "qty": 1 }
+        {
+          "name": "ユニオン鉱石",
+          "qty": 3
+        },
+        {
+          "name": "護竜の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "獄炎石",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11335,15 +11995,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ミツネヘルムα",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "水場・油泥適応", "level": 2 },
-        { "name": "回避距離UP", "level": 1 }
+        {
+          "name": "水場・油泥適応",
+          "level": 2
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の上鱗", "qty": 5 },
-        { "name": "泡立つ上滑液", "qty": 3 },
-        { "name": "ピラギルの上ヒレ", "qty": 2 }
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 3
+        },
+        {
+          "name": "ピラギルの上ヒレ",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11351,16 +12030,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ミツネメイルα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "連撃", "level": 2 },
-        { "name": "体術", "level": 1 }
+        {
+          "name": "連撃",
+          "level": 2
+        },
+        {
+          "name": "体術",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 2 },
-        { "name": "泡狐竜の尖爪", "qty": 3 },
-        { "name": "泡狐竜の上錦ヒレ", "qty": 5 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "泡狐竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "泡狐竜の上錦ヒレ",
+          "qty": 5
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11368,16 +12069,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ミツネアームα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "回避性能", "level": 2 },
-        { "name": "回避距離UP", "level": 2 }
+        {
+          "name": "回避性能",
+          "level": 2
+        },
+        {
+          "name": "回避距離UP",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の上鱗", "qty": 6 },
-        { "name": "泡狐竜の紫上毛", "qty": 6 },
-        { "name": "泡立つ上滑液", "qty": 3 },
-        { "name": "泡狐竜の上錦ヒレ", "qty": 3 }
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "泡狐竜の紫上毛",
+          "qty": 6
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 3
+        },
+        {
+          "name": "泡狐竜の上錦ヒレ",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11385,16 +12108,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ミツネコイルα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "体術", "level": 2 },
-        { "name": "連撃", "level": 1 }
+        {
+          "name": "体術",
+          "level": 2
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 1 },
-        { "name": "泡狐竜の紫上毛", "qty": 5 },
-        { "name": "泡狐竜の尖爪", "qty": 3 },
-        { "name": "大水袋", "qty": 2 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "泡狐竜の紫上毛",
+          "qty": 5
+        },
+        {
+          "name": "泡狐竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "大水袋",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11402,16 +12147,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ミツネグリーヴα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "連撃", "level": 2 },
-        { "name": "フルチャージ", "level": 1 }
+        {
+          "name": "連撃",
+          "level": 2
+        },
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 1 },
-        { "name": "泡狐竜の上鱗", "qty": 4 },
-        { "name": "泡立つ上滑液", "qty": 4 },
-        { "name": "泡狐竜の水玉", "qty": 1 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 4
+        },
+        {
+          "name": "泡狐竜の水玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11419,14 +12186,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ミツネヘルムβ",
-      "slots": [3, 2, 0],
+      "slots": [
+        3,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "水場・油泥適応", "level": 2 }
+        {
+          "name": "水場・油泥適応",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の上鱗", "qty": 5 },
-        { "name": "泡立つ上滑液", "qty": 3 },
-        { "name": "ピラギルの上ヒレ", "qty": 2 }
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 5
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 3
+        },
+        {
+          "name": "ピラギルの上ヒレ",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11434,16 +12217,38 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "ミツネメイルβ",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "体術", "level": 1 },
-        { "name": "連撃", "level": 1 }
+        {
+          "name": "体術",
+          "level": 1
+        },
+        {
+          "name": "連撃",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 2 },
-        { "name": "泡狐竜の尖爪", "qty": 3 },
-        { "name": "泡狐竜の上錦ヒレ", "qty": 5 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "泡狐竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "泡狐竜の上錦ヒレ",
+          "qty": 5
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11451,16 +12256,38 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "ミツネアームβ",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "回避性能", "level": 2 },
-        { "name": "回避距離UP", "level": 1 }
+        {
+          "name": "回避性能",
+          "level": 2
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の上鱗", "qty": 6 },
-        { "name": "泡狐竜の紫上毛", "qty": 6 },
-        { "name": "泡立つ上滑液", "qty": 3 },
-        { "name": "泡狐竜の上錦ヒレ", "qty": 3 }
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 6
+        },
+        {
+          "name": "泡狐竜の紫上毛",
+          "qty": 6
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 3
+        },
+        {
+          "name": "泡狐竜の上錦ヒレ",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11468,15 +12295,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "ミツネコイルβ",
-      "slots": [3, 2, 1],
+      "slots": [
+        3,
+        2,
+        1
+      ],
       "skills": [
-        { "name": "体術", "level": 2 }
+        {
+          "name": "体術",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 1 },
-        { "name": "泡狐竜の紫上毛", "qty": 5 },
-        { "name": "泡狐竜の尖爪", "qty": 3 },
-        { "name": "大水袋", "qty": 2 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "泡狐竜の紫上毛",
+          "qty": 5
+        },
+        {
+          "name": "泡狐竜の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "大水袋",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11484,15 +12330,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "ミツネグリーヴβ",
-      "slots": [3, 0, 0],
+      "slots": [
+        3,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "連撃", "level": 2 }
+        {
+          "name": "連撃",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "泡狐竜の狩猟証S", "qty": 1 },
-        { "name": "泡狐竜の上鱗", "qty": 4 },
-        { "name": "泡立つ上滑液", "qty": 4 },
-        { "name": "泡狐竜の水玉", "qty": 1 }
+        {
+          "name": "泡狐竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "泡狐竜の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "泡立つ上滑液",
+          "qty": 4
+        },
+        {
+          "name": "泡狐竜の水玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11500,16 +12365,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ギルドクロスアクセα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "拘束耐性", "level": 2 },
-        { "name": "耳栓", "level": 1 },
-        { "name": "ひるみ軽減", "level": 1 }
+        {
+          "name": "拘束耐性",
+          "level": 2
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        },
+        {
+          "name": "ひるみ軽減",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "チャタコイン", "qty": 3 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "影蜘蛛の堅殻", "qty": 2 }
+        {
+          "name": "チャタコイン",
+          "qty": 3
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11517,15 +12404,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ギルドクロススーツα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "耳栓", "level": 1 },
-        { "name": "耐震", "level": 1 }
+        {
+          "name": "耳栓",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "チャタコイン", "qty": 3 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "桃毛獣の剛毛", "qty": 2 }
+        {
+          "name": "チャタコイン",
+          "qty": 3
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "桃毛獣の剛毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11533,16 +12439,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ギルドクロスアームα",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "ひるみ軽減", "level": 2 },
-        { "name": "拘束耐性", "level": 1 },
-        { "name": "耐震", "level": 1 }
+        {
+          "name": "ひるみ軽減",
+          "level": 2
+        },
+        {
+          "name": "拘束耐性",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "チャタコイン", "qty": 3 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "ゴム質の上皮", "qty": 2 }
+        {
+          "name": "チャタコイン",
+          "qty": 3
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "ゴム質の上皮",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11550,15 +12478,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ギルドクロスコイルα",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "風圧耐性", "level": 2 },
-        { "name": "耳栓", "level": 1 }
+        {
+          "name": "風圧耐性",
+          "level": 2
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "チャタコイン", "qty": 3 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "雌火竜の上鱗", "qty": 2 }
+        {
+          "name": "チャタコイン",
+          "qty": 3
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "雌火竜の上鱗",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11566,15 +12513,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ギルドクロスブーツα",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "風圧耐性", "level": 1 },
-        { "name": "耐震", "level": 1 }
+        {
+          "name": "風圧耐性",
+          "level": 1
+        },
+        {
+          "name": "耐震",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "チャタコイン", "qty": 3 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "怪鳥の上鱗", "qty": 2 }
+        {
+          "name": "チャタコイン",
+          "qty": 3
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11582,11 +12548,26 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "アズズヘッドα",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "渾身", "level": 2 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "渾身",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "アズズのなめし革", "qty": 1 },
-        { "name": "黒ずんだ油骨", "qty": 2 }
+        {
+          "name": "アズズのなめし革",
+          "qty": 1
+        },
+        {
+          "name": "黒ずんだ油骨",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11594,11 +12575,26 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "アズズエプロンα",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "火事場力", "level": 3 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 3
+        }
+      ],
       "materials": [
-        { "name": "アズズのなめし革", "qty": 1 },
-        { "name": "獄炎石", "qty": 1 }
+        {
+          "name": "アズズのなめし革",
+          "qty": 1
+        },
+        {
+          "name": "獄炎石",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11606,11 +12602,26 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "アズズパンツα",
-      "slots": [2, 1, 1],
-      "skills": [{ "name": "地質学", "level": 3 }],
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 3
+        }
+      ],
       "materials": [
-        { "name": "アズズのなめし革", "qty": 1 },
-        { "name": "紅蓮石", "qty": 2 }
+        {
+          "name": "アズズのなめし革",
+          "qty": 1
+        },
+        {
+          "name": "紅蓮石",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11618,12 +12629,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "調査団ヘルムα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "挑戦者", "level": 1 }, { "name": "渾身", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "渾身",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "調査団チケット", "qty": 1 },
-        { "name": "カブレライト鉱石", "qty": 2 },
-        { "name": "纏蛙の上鱗", "qty": 5 }
+        {
+          "name": "調査団チケット",
+          "qty": 1
+        },
+        {
+          "name": "カブレライト鉱石",
+          "qty": 2
+        },
+        {
+          "name": "纏蛙の上鱗",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11631,12 +12664,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "調査団メイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "精霊の加護", "level": 2 }, { "name": "挑戦者", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 2
+        },
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "調査団チケット", "qty": 1 },
-        { "name": "グラシスメタル", "qty": 2 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 5 }
+        {
+          "name": "調査団チケット",
+          "qty": 1
+        },
+        {
+          "name": "グラシスメタル",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11644,12 +12699,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "調査団アームα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "納刀術", "level": 2 }, { "name": "挑戦者", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 2
+        },
+        {
+          "name": "挑戦者",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "調査団チケット", "qty": 1 },
-        { "name": "尖竜骨", "qty": 2 },
-        { "name": "沙海竜の上鱗", "qty": 5 }
+        {
+          "name": "調査団チケット",
+          "qty": 1
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11657,12 +12734,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "調査団コイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "挑戦者", "level": 1 }, { "name": "整備", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "整備",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "調査団チケット", "qty": 1 },
-        { "name": "堅牢な骨", "qty": 2 },
-        { "name": "闢獣の剛毛", "qty": 5 }
+        {
+          "name": "調査団チケット",
+          "qty": 1
+        },
+        {
+          "name": "堅牢な骨",
+          "qty": 2
+        },
+        {
+          "name": "闢獣の剛毛",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11670,12 +12769,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "調査団グリーヴα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "挑戦者", "level": 1 }, { "name": "耳栓", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "挑戦者",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "調査団チケット", "qty": 1 },
-        { "name": "上質な堅骨", "qty": 2 },
-        { "name": "炎尾竜の上鱗", "qty": 5 }
+        {
+          "name": "調査団チケット",
+          "qty": 1
+        },
+        {
+          "name": "上質な堅骨",
+          "qty": 2
+        },
+        {
+          "name": "炎尾竜の上鱗",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11683,11 +12804,26 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "スージャの腰帯α",
-      "slots": [2, 1, 1],
-      "skills": [{ "name": "精霊の加護", "level": 3 }],
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "精霊の加護",
+          "level": 3
+        }
+      ],
       "materials": [
-        { "name": "スージャ反物", "qty": 3 },
-        { "name": "ユニオン鉱石", "qty": 5 }
+        {
+          "name": "スージャ反物",
+          "qty": 3
+        },
+        {
+          "name": "ユニオン鉱石",
+          "qty": 5
+        }
       ]
     },
     {
@@ -11695,12 +12831,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ドシャグマヘルムα",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "満足感", "level": 2 }, { "name": "気絶耐性", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "満足感",
+          "level": 2
+        },
+        {
+          "name": "気絶耐性",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 2 },
-        { "name": "闢獣の鋭牙", "qty": 3 },
-        { "name": "上質な堅骨", "qty": 2 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 3
+        },
+        {
+          "name": "上質な堅骨",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11708,13 +12866,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ドシャグマメイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "力の解放", "level": 1 }, { "name": "スタミナ急速回復", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 1 },
-        { "name": "闢獣の上皮", "qty": 5 },
-        { "name": "闢獣の鋭牙", "qty": 2 },
-        { "name": "草食種の堅殻", "qty": 2 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "闢獣の上皮",
+          "qty": 5
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 2
+        },
+        {
+          "name": "草食種の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11722,13 +12905,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ドシャグマアームα",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "気絶耐性", "level": 2 }, { "name": "スタミナ急速回復", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 2
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の剛毛", "qty": 3 },
-        { "name": "闢獣の鋭爪", "qty": 2 },
-        { "name": "闢獣の鋭牙", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "闢獣の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11736,13 +12944,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ドシャグマコイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "力の解放", "level": 2 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 1 },
-        { "name": "闢獣の剛毛", "qty": 5 },
-        { "name": "闢獣の鋭爪", "qty": 3 },
-        { "name": "獣玉", "qty": 1 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "闢獣の剛毛",
+          "qty": 5
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11750,13 +12979,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ドシャグマグリーヴα",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "体力回復量UP", "level": 2 }, { "name": "満足感", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        },
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の剛毛", "qty": 3 },
-        { "name": "闢獣の上皮", "qty": 4 },
-        { "name": "闢獣の鋭爪", "qty": 2 },
-        { "name": "鋭利な牙", "qty": 2 }
+        {
+          "name": "闢獣の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "闢獣の上皮",
+          "qty": 4
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "鋭利な牙",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11764,12 +13018,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ドシャグマヘルムβ",
-      "slots": [2, 1, 1],
-      "skills": [{ "name": "気絶耐性", "level": 1 }, { "name": "満足感", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        },
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 2 },
-        { "name": "闢獣の鋭牙", "qty": 3 },
-        { "name": "上質な堅骨", "qty": 2 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 2
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 3
+        },
+        {
+          "name": "上質な堅骨",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11777,13 +13053,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "ドシャグマメイルβ",
-      "slots": [1, 1, 1],
-      "skills": [{ "name": "力の解放", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 1 },
-        { "name": "闢獣の上皮", "qty": 5 },
-        { "name": "闢獣の鋭牙", "qty": 2 },
-        { "name": "草食種の堅殻", "qty": 2 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "闢獣の上皮",
+          "qty": 5
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 2
+        },
+        {
+          "name": "草食種の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11791,13 +13088,38 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "ドシャグマアームβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "気絶耐性", "level": 1 }, { "name": "スタミナ急速回復", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "気絶耐性",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の剛毛", "qty": 3 },
-        { "name": "闢獣の鋭爪", "qty": 2 },
-        { "name": "闢獣の鋭牙", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "闢獣の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "闢獣の鋭牙",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11805,13 +13127,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "ドシャグマコイルβ",
-      "slots": [2, 2, 0],
-      "skills": [{ "name": "力の解放", "level": 1 }],
+      "slots": [
+        2,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "力の解放",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の狩猟証S", "qty": 1 },
-        { "name": "闢獣の剛毛", "qty": 5 },
-        { "name": "闢獣の鋭爪", "qty": 3 },
-        { "name": "獣玉", "qty": 1 }
+        {
+          "name": "闢獣の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "闢獣の剛毛",
+          "qty": 5
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "獣玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11819,13 +13162,38 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "ドシャグマグリーヴβ",
-      "slots": [2, 1, 1],
-      "skills": [{ "name": "体力回復量UP", "level": 1 }, { "name": "満足感", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "満足感",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "闢獣の剛毛", "qty": 3 },
-        { "name": "闢獣の上皮", "qty": 4 },
-        { "name": "闢獣の鋭爪", "qty": 2 },
-        { "name": "鋭利な牙", "qty": 2 }
+        {
+          "name": "闢獣の剛毛",
+          "qty": 3
+        },
+        {
+          "name": "闢獣の上皮",
+          "qty": 4
+        },
+        {
+          "name": "闢獣の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "鋭利な牙",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11833,12 +13201,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ラバラヘルムα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "麻痺耐性", "level": 1 }, { "name": "攻勢", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の鋭爪", "qty": 2 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の堅殻", "qty": 3 }
+        {
+          "name": "刺花蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の堅殻",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11846,13 +13236,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ラバラメイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "体力回復量UP", "level": 2 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の濃粘液", "qty": 1 },
-        { "name": "刺花蜘蛛の上尾棘", "qty": 1 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 },
-        { "name": "刺花蜘蛛の堅殻", "qty": 2 }
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上尾棘",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11860,13 +13275,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ラバラアームα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "体力回復量UP", "level": 1 }, { "name": "攻勢", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の鋭爪", "qty": 1 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の上尾棘", "qty": 1 },
-        { "name": "モンスターの濃汁", "qty": 1 }
+        {
+          "name": "刺花蜘蛛の鋭爪",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上尾棘",
+          "qty": 1
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11874,12 +13314,30 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ラバラコイルα",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "麻痺耐性", "level": 2 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "カブレライト鉱石", "qty": 2 },
-        { "name": "刺花蜘蛛の濃粘液", "qty": 2 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 }
+        {
+          "name": "カブレライト鉱石",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11887,13 +13345,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ラバラグリーヴα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }, { "name": "攻勢", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "ノヴァクリスタル", "qty": 1 },
-        { "name": "刺花蜘蛛の濃粘液", "qty": 1 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 }
+        {
+          "name": "ノヴァクリスタル",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11901,12 +13384,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ラバラヘルムβ",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "攻勢", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の鋭爪", "qty": 2 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の堅殻", "qty": 3 }
+        {
+          "name": "刺花蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の堅殻",
+          "qty": 3
+        }
       ]
     },
     {
@@ -11914,13 +13415,38 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "ラバラメイルβ",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "体力回復量UP", "level": 1 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の濃粘液", "qty": 1 },
-        { "name": "刺花蜘蛛の上尾棘", "qty": 1 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 },
-        { "name": "刺花蜘蛛の堅殻", "qty": 2 }
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上尾棘",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11928,13 +13454,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "ラバラアームβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "体力回復量UP", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "刺花蜘蛛の鋭爪", "qty": 1 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の上尾棘", "qty": 1 },
-        { "name": "モンスターの濃汁", "qty": 1 }
+        {
+          "name": "刺花蜘蛛の鋭爪",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上尾棘",
+          "qty": 1
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11942,12 +13489,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "ラバラコイルβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "麻痺耐性", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "カブレライト鉱石", "qty": 2 },
-        { "name": "刺花蜘蛛の濃粘液", "qty": 2 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 }
+        {
+          "name": "カブレライト鉱石",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 2
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11955,13 +13520,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "ラバラグリーヴβ",
-      "slots": [1, 1, 1],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "ノヴァクリスタル", "qty": 1 },
-        { "name": "刺花蜘蛛の濃粘液", "qty": 1 },
-        { "name": "刺花蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "刺花蜘蛛の上綿毛", "qty": 2 }
+        {
+          "name": "ノヴァクリスタル",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -11969,12 +13555,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "バーラヘルムα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "地質学", "level": 1 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11982,12 +13590,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "バーラメイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "地質学", "level": 1 }, { "name": "スタミナ急速回復", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "尖竜骨", "qty": 1 }
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
       ]
     },
     {
@@ -11995,13 +13625,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "バーラアームα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避距離UP", "level": 1 }, { "name": "スタミナ急速回復", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        },
+        {
+          "name": "スタミナ急速回復",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "沙海竜の尻尾", "qty": 1 }
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の尻尾",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12009,12 +13664,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "バーラコイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避距離UP", "level": 1 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "大水袋", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "大水袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12022,13 +13699,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "バーラグリーヴα",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "回避距離UP", "level": 1 }, { "name": "地質学", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        },
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の黒真珠", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の黒真珠",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12036,12 +13738,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "バーラヘルムβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12049,12 +13769,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "バーラメイルβ",
-      "slots": [1, 1, 1],
-      "skills": [{ "name": "地質学", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "地質学",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "尖竜骨", "qty": 1 }
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12062,13 +13800,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "バーラアームβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "回避距離UP", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "沙海竜の尻尾", "qty": 1 }
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の尻尾",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12076,12 +13835,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "バーラコイルβ",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の尖頭殻", "qty": 1 },
-        { "name": "大水袋", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の尖頭殻",
+          "qty": 1
+        },
+        {
+          "name": "大水袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12089,13 +13866,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "バーラグリーヴβ",
-      "slots": [1, 1, 1],
-      "skills": [{ "name": "回避距離UP", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沙海竜の狩猟証S", "qty": 1 },
-        { "name": "沙海竜の上鱗", "qty": 2 },
-        { "name": "沙海竜の堅殻", "qty": 2 },
-        { "name": "沙海竜の黒真珠", "qty": 1 }
+        {
+          "name": "沙海竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沙海竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "沙海竜の黒真珠",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12103,12 +13901,30 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "プポルヘルムα",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "広域化", "level": 2 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の鋭爪", "qty": 3 },
-        { "name": "沼噴竜の大クチバシ", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "沼噴竜の大クチバシ",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12116,12 +13932,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "プポルメイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "毒耐性", "level": 2 }, { "name": "広域化", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 2
+        },
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "尖竜骨", "qty": 1 }
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12129,13 +13967,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "プポルアームα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "毒耐性", "level": 1 }, { "name": "耳栓", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "沼噴竜の鋭爪", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 1 },
-        { "name": "沼噴竜の大クチバシ", "qty": 1 }
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "沼噴竜の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の大クチバシ",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12143,13 +14006,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "プポルコイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "広域化", "level": 1 }, { "name": "攻勢", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12157,13 +14045,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "プポルグリーヴα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "広域化", "level": 2 }, { "name": "耳栓", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12171,12 +14084,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "プポルヘルムβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "広域化", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の鋭爪", "qty": 3 },
-        { "name": "沼噴竜の大クチバシ", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "沼噴竜の大クチバシ",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12184,12 +14115,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "プポルメイルβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "毒耐性", "level": 2 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "尖竜骨", "qty": 1 }
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12197,13 +14146,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "プポルアームβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "耳栓", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "沼噴竜の鋭爪", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 1 },
-        { "name": "沼噴竜の大クチバシ", "qty": 1 }
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "沼噴竜の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の大クチバシ",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12211,13 +14181,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "プポルコイルβ",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "攻勢", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12225,13 +14216,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "プポルグリーヴβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "広域化", "level": 2 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "広域化",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "沼噴竜の狩猟証S", "qty": 1 },
-        { "name": "沼噴竜の上皮", "qty": 2 },
-        { "name": "まだらの猛毒皮", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 1 }
+        {
+          "name": "沼噴竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "沼噴竜の上皮",
+          "qty": 2
+        },
+        {
+          "name": "まだらの猛毒皮",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12239,12 +14251,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "スキュラヘルムα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "拘束耐性", "level": 1 }, { "name": "毒耐性", "level": 2 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        },
+        {
+          "name": "毒耐性",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 },
-        { "name": "影蜘蛛の堅殻", "qty": 2 },
-        { "name": "モンスターの濃汁", "qty": 2 }
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12252,13 +14286,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "スキュラメイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "急襲", "level": 1 }, { "name": "弱点特効", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        },
+        {
+          "name": "弱点特効",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "鳥竜玉", "qty": 1 },
-        { "name": "影蜘蛛の鋭爪", "qty": 2 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 }
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12266,13 +14325,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "スキュラアームα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "毒耐性", "level": 1 }, { "name": "急襲", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の上棘", "qty": 1 },
-        { "name": "影蜘蛛の鋭爪", "qty": 3 },
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 },
-        { "name": "影蜘蛛の堅殻", "qty": 3 }
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅殻",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12280,13 +14364,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "スキュラコイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "拘束耐性", "level": 1 }, { "name": "睡眠耐性", "level": 2 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        },
+        {
+          "name": "睡眠耐性",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の上棘", "qty": 2 },
-        { "name": "影蜘蛛の鋭爪", "qty": 2 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "ネマラチカの堅殻", "qty": 2 }
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "ネマラチカの堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12294,13 +14403,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "スキュラグリーヴα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "睡眠耐性", "level": 1 }, { "name": "急襲", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "ゴム質の上皮", "qty": 2 },
-        { "name": "影蜘蛛の上棘", "qty": 1 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "昏睡袋", "qty": 1 }
+        {
+          "name": "ゴム質の上皮",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "昏睡袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12308,12 +14442,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "スキュラヘルムβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "拘束耐性", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 },
-        { "name": "影蜘蛛の堅殻", "qty": 2 },
-        { "name": "モンスターの濃汁", "qty": 2 }
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅殻",
+          "qty": 2
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12321,13 +14473,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "スキュラメイルβ",
-      "slots": [1, 1, 1],
-      "skills": [{ "name": "急襲", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "鳥竜玉", "qty": 1 },
-        { "name": "影蜘蛛の鋭爪", "qty": 2 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 }
+        {
+          "name": "鳥竜玉",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12335,13 +14508,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "スキュラアームβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "急襲", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の上棘", "qty": 1 },
-        { "name": "影蜘蛛の鋭爪", "qty": 3 },
-        { "name": "影蜘蛛の堅鋏角", "qty": 1 },
-        { "name": "影蜘蛛の堅殻", "qty": 3 }
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 3
+        },
+        {
+          "name": "影蜘蛛の堅鋏角",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の堅殻",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12349,13 +14543,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "スキュラコイルβ",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "拘束耐性", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "拘束耐性",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "影蜘蛛の上棘", "qty": 2 },
-        { "name": "影蜘蛛の鋭爪", "qty": 2 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "ネマラチカの堅殻", "qty": 2 }
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "ネマラチカの堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12363,13 +14578,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "スキュラグリーヴβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "睡眠耐性", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "睡眠耐性",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "ゴム質の上皮", "qty": 2 },
-        { "name": "影蜘蛛の上棘", "qty": 1 },
-        { "name": "影蜘蛛の狩猟証S", "qty": 1 },
-        { "name": "昏睡袋", "qty": 1 }
+        {
+          "name": "ゴム質の上皮",
+          "qty": 2
+        },
+        {
+          "name": "影蜘蛛の上棘",
+          "qty": 1
+        },
+        {
+          "name": "影蜘蛛の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "昏睡袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12377,12 +14613,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ヒラバミヘルムα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避距離UP", "level": 1 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避距離UP",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上尾爪", "qty": 2 },
-        { "name": "風鋏竜の上皮", "qty": 3 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 }
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上皮",
+          "qty": 3
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12390,12 +14648,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "ヒラバミメイルα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "氷耐性", "level": 2 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 2
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上尾爪", "qty": 1 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 },
-        { "name": "凍結袋", "qty": 1 }
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "凍結袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12403,13 +14683,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "ヒラバミアームα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }, { "name": "フルチャージ", "level": 1 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        },
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上飛膜", "qty": 1 },
-        { "name": "風鋏竜の上鱗", "qty": 2 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12417,12 +14722,30 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "ヒラバミコイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "回避性能", "level": 2 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "尖竜骨", "qty": 1 },
-        { "name": "風鋏竜の上飛膜", "qty": 1 },
-        { "name": "風鋏竜の上鱗", "qty": 2 }
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12430,13 +14753,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ヒラバミグリーヴα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "氷耐性", "level": 1 }, { "name": "フルチャージ", "level": 1 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        },
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上飛膜", "qty": 2 },
-        { "name": "風鋏竜の上鱗", "qty": 2 },
-        { "name": "風鋏竜の上尾爪", "qty": 1 },
-        { "name": "風鋏竜の上皮", "qty": 2 }
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上皮",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12444,12 +14792,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ヒラバミヘルムβ",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上尾爪", "qty": 2 },
-        { "name": "風鋏竜の上皮", "qty": 3 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 }
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上皮",
+          "qty": 3
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12457,12 +14823,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "ヒラバミメイルβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "氷耐性", "level": 1 }, { "name": "回避性能", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "氷耐性",
+          "level": 1
+        },
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上尾爪", "qty": 1 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 },
-        { "name": "凍結袋", "qty": 1 }
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "凍結袋",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12470,13 +14858,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "ヒラバミアームβ",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上飛膜", "qty": 1 },
-        { "name": "風鋏竜の上鱗", "qty": 2 },
-        { "name": "風鋏竜の狩猟証S", "qty": 1 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の狩猟証S",
+          "qty": 1
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12484,12 +14893,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "ヒラバミコイルβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "回避性能", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "尖竜骨", "qty": 1 },
-        { "name": "風鋏竜の上飛膜", "qty": 1 },
-        { "name": "風鋏竜の上鱗", "qty": 2 }
+        {
+          "name": "尖竜骨",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12497,13 +14924,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "ヒラバミグリーヴβ",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "フルチャージ", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "フルチャージ",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "風鋏竜の上飛膜", "qty": 2 },
-        { "name": "風鋏竜の上鱗", "qty": 2 },
-        { "name": "風鋏竜の上尾爪", "qty": 1 },
-        { "name": "風鋏竜の上皮", "qty": 2 }
+        {
+          "name": "風鋏竜の上飛膜",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上鱗",
+          "qty": 2
+        },
+        {
+          "name": "風鋏竜の上尾爪",
+          "qty": 1
+        },
+        {
+          "name": "風鋏竜の上皮",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12511,15 +14959,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "アジャラヘルムα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "風圧耐性", "level": 2 },
-        { "name": "回避距離UP", "level": 1 }
+        {
+          "name": "逆恨み",
+          "level": 2
+        },
+        {
+          "name": "ボマー",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの上鱗", "qty": 5 },
-        { "name": "アジャラカンの堅殻", "qty": 3 },
-        { "name": "アジャラカンの鋭爪", "qty": 2 }
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 3
+        },
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12527,15 +14994,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "アジャラメイルα",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "見切り", "level": 2 },
-        { "name": "攻撃", "level": 1 }
+        {
+          "name": "逆恨み",
+          "level": 2
+        },
+        {
+          "name": "爆破やられ耐性",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの堅殻", "qty": 4 },
-        { "name": "アジャラカンの上鱗", "qty": 6 },
-        { "name": "大水袋", "qty": 2 }
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 4
+        },
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 6
+        },
+        {
+          "name": "大水袋",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12543,15 +15029,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "アジャラアームα",
-      "slots": [1, 1, 0],
+      "slots": [
+        1,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "回避性能", "level": 2 },
-        { "name": "攻撃", "level": 1 }
+        {
+          "name": "ボマー",
+          "level": 2
+        },
+        {
+          "name": "破壊王",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの鋭爪", "qty": 4 },
-        { "name": "アジャラカンの上鱗", "qty": 4 },
-        { "name": "竜玉", "qty": 1 }
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 4
+        },
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 4
+        },
+        {
+          "name": "竜玉",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12559,15 +15064,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "アジャラコイルα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "見切り", "level": 1 },
-        { "name": "風圧耐性", "level": 1 }
+        {
+          "name": "爆破やられ耐性",
+          "level": 2
+        },
+        {
+          "name": "破壊王",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの堅殻", "qty": 5 },
-        { "name": "アジャラカンの尾", "qty": 1 },
-        { "name": "堅竜骨", "qty": 3 }
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの尾",
+          "qty": 1
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12575,15 +15099,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "アジャラグリーヴα",
-      "slots": [1, 1, 0],
+      "slots": [
+        1,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "回避性能", "level": 1 },
-        { "name": "攻撃", "level": 2 }
+        {
+          "name": "破壊王",
+          "level": 2
+        },
+        {
+          "name": "逆恨み",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの上鱗", "qty": 5 },
-        { "name": "アジャラカンの鋭爪", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12591,14 +15134,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "アジャラヘルムβ",
-      "slots": [3, 1, 0],
+      "slots": [
+        3,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "風圧耐性", "level": 1 }
+        {
+          "name": "逆恨み",
+          "level": 1
+        },
+        {
+          "name": "ボマー",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの上鱗", "qty": 5 },
-        { "name": "アジャラカンの堅殻", "qty": 3 },
-        { "name": "アジャラカンの鋭爪", "qty": 2 }
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 3
+        },
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12606,14 +15169,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "アジャラメイルβ",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "見切り", "level": 1 }
+        {
+          "name": "逆恨み",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの堅殻", "qty": 4 },
-        { "name": "アジャラカンの上鱗", "qty": 6 },
-        { "name": "大水袋", "qty": 2 }
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 4
+        },
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 6
+        },
+        {
+          "name": "大水袋",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12621,14 +15200,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "アジャラアームβ",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "回避性能", "level": 1 }
+        {
+          "name": "破壊王",
+          "level": 1
+        },
+        {
+          "name": "ボマー",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの鋭爪", "qty": 4 },
-        { "name": "アジャラカンの上鱗", "qty": 4 },
-        { "name": "堅竜骨", "qty": 4 }
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 4
+        },
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 4
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 4
+        }
       ]
     },
     {
@@ -12636,14 +15235,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "アジャラコイルβ",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "風圧耐性", "level": 1 }
+        {
+          "name": "破壊王",
+          "level": 2
+        },
+        {
+          "name": "爆破やられ耐性",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの堅殻", "qty": 5 },
-        { "name": "アジャラカンの尾", "qty": 1 },
-        { "name": "堅竜骨", "qty": 3 }
+        {
+          "name": "アジャラカンの堅殻",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの尾",
+          "qty": 1
+        },
+        {
+          "name": "堅竜骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12651,14 +15270,30 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "アジャラグリーヴβ",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "攻撃", "level": 1 }
+        {
+          "name": "破壊王",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "アジャラカンの上鱗", "qty": 5 },
-        { "name": "アジャラカンの鋭爪", "qty": 2 },
-        { "name": "堅牢な巨骨", "qty": 3 }
+        {
+          "name": "アジャラカンの上鱗",
+          "qty": 5
+        },
+        {
+          "name": "アジャラカンの鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "堅牢な巨骨",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12666,13 +15301,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "シーウーヘルムα",
-      "slots": [1, 0, 0],
-      "skills": [{ "name": "急襲", "level": 1 }, { "name": "巧撃", "level": 2 }],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        },
+        {
+          "name": "巧撃",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "暗器蛸の髄液", "qty": 1 },
-        { "name": "暗器蛸の鋭牙", "qty": 5 },
-        { "name": "暗器蛸の上触手", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 2 }
+        {
+          "name": "暗器蛸の髄液",
+          "qty": 1
+        },
+        {
+          "name": "暗器蛸の鋭牙",
+          "qty": 5
+        },
+        {
+          "name": "暗器蛸の上触手",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12680,13 +15340,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "シーウーメイルα",
-      "slots": [0, 0, 0],
-      "skills": [{ "name": "急襲", "level": 1 }, { "name": "火事場力", "level": 3 }],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        },
+        {
+          "name": "火事場力",
+          "level": 3
+        }
+      ],
       "materials": [
-        { "name": "暗器蛸の暗玉", "qty": 1 },
-        { "name": "暗器蛸の尖爪", "qty": 4 },
-        { "name": "暗器蛸の上皮", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 1 }
+        {
+          "name": "暗器蛸の暗玉",
+          "qty": 1
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12694,13 +15379,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "シーウーアームα",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "耳栓", "level": 2 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "黄金の硬角質", "qty": 6 },
-        { "name": "暗器蛸の尖爪", "qty": 3 },
-        { "name": "暗器蛸の上皮", "qty": 6 },
-        { "name": "暗器蛸の鋭牙", "qty": 3 }
+        {
+          "name": "黄金の硬角質",
+          "qty": 6
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 6
+        },
+        {
+          "name": "暗器蛸の鋭牙",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12708,12 +15414,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "シーウーコイルα",
-      "slots": [2, 0, 0],
-      "skills": [{ "name": "火事場力", "level": 2 }, { "name": "耳栓", "level": 1 }],
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 2
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "護竜セクレトの上羽", "qty": 2 },
-        { "name": "暗器蛸の尖爪", "qty": 3 },
-        { "name": "暗器蛸の上皮", "qty": 5 }
+        {
+          "name": "護竜セクレトの上羽",
+          "qty": 2
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 5
+        }
       ]
     },
     {
@@ -12721,13 +15449,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "シーウーグリーヴα",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "急襲", "level": 1 }, { "name": "巧撃", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "急襲",
+          "level": 1
+        },
+        {
+          "name": "巧撃",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "大水袋", "qty": 2 },
-        { "name": "黄金の硬角質", "qty": 5 },
-        { "name": "暗器蛸の上触手", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 1 }
+        {
+          "name": "大水袋",
+          "qty": 2
+        },
+        {
+          "name": "黄金の硬角質",
+          "qty": 5
+        },
+        {
+          "name": "暗器蛸の上触手",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12735,13 +15488,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "シーウーヘルムβ",
-      "slots": [2, 1, 0],
-      "skills": [{ "name": "巧撃", "level": 2 }],
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 2
+        }
+      ],
       "materials": [
-        { "name": "暗器蛸の髄液", "qty": 1 },
-        { "name": "暗器蛸の鋭牙", "qty": 5 },
-        { "name": "暗器蛸の上触手", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 2 }
+        {
+          "name": "暗器蛸の髄液",
+          "qty": 1
+        },
+        {
+          "name": "暗器蛸の鋭牙",
+          "qty": 5
+        },
+        {
+          "name": "暗器蛸の上触手",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12749,13 +15523,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "シーウーメイルβ",
-      "slots": [1, 1, 0],
-      "skills": [{ "name": "火事場力", "level": 3 }],
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 3
+        }
+      ],
       "materials": [
-        { "name": "暗器蛸の暗玉", "qty": 1 },
-        { "name": "暗器蛸の尖爪", "qty": 4 },
-        { "name": "暗器蛸の上皮", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 1 }
+        {
+          "name": "暗器蛸の暗玉",
+          "qty": 1
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12763,13 +15558,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "シーウーアームβ",
-      "slots": [2, 2, 1],
-      "skills": [{ "name": "耳栓", "level": 1 }],
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "skills": [
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "黄金の硬角質", "qty": 6 },
-        { "name": "暗器蛸の尖爪", "qty": 3 },
-        { "name": "暗器蛸の上皮", "qty": 6 },
-        { "name": "暗器蛸の鋭牙", "qty": 3 }
+        {
+          "name": "黄金の硬角質",
+          "qty": 6
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 6
+        },
+        {
+          "name": "暗器蛸の鋭牙",
+          "qty": 3
+        }
       ]
     },
     {
@@ -12777,12 +15593,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "シーウーコイルβ",
-      "slots": [2, 1, 1],
-      "skills": [{ "name": "火事場力", "level": 1 }, { "name": "耳栓", "level": 1 }],
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 1
+        },
+        {
+          "name": "耳栓",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "護竜セクレトの上羽", "qty": 2 },
-        { "name": "暗器蛸の尖爪", "qty": 3 },
-        { "name": "暗器蛸の上皮", "qty": 5 }
+        {
+          "name": "護竜セクレトの上羽",
+          "qty": 2
+        },
+        {
+          "name": "暗器蛸の尖爪",
+          "qty": 3
+        },
+        {
+          "name": "暗器蛸の上皮",
+          "qty": 5
+        }
       ]
     },
     {
@@ -12790,13 +15628,34 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "シーウーグリーヴβ",
-      "slots": [2, 2, 1],
-      "skills": [{ "name": "巧撃", "level": 1 }],
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "skills": [
+        {
+          "name": "巧撃",
+          "level": 1
+        }
+      ],
       "materials": [
-        { "name": "大水袋", "qty": 2 },
-        { "name": "黄金の硬角質", "qty": 5 },
-        { "name": "暗器蛸の上触手", "qty": 4 },
-        { "name": "暗器蛸の狩猟証S", "qty": 1 }
+        {
+          "name": "大水袋",
+          "qty": 2
+        },
+        {
+          "name": "黄金の硬角質",
+          "qty": 5
+        },
+        {
+          "name": "暗器蛸の上触手",
+          "qty": 4
+        },
+        {
+          "name": "暗器蛸の狩猟証S",
+          "qty": 1
+        }
       ]
     },
     {
@@ -12804,14 +15663,30 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "ガライーブーツα",
-      "slots": [1, 1, 1],
+      "slots": [
+        1,
+        1,
+        1
+      ],
       "skills": [
-        { "name": "水耐性", "level": 1 },
-        { "name": "ハンター生活", "level": 1 }
+        {
+          "name": "水耐性",
+          "level": 1
+        },
+        {
+          "name": "ハンター生活",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "咬魚の皮", "qty": 3 },
-        { "name": "モンスターの濃汁", "qty": 5 }
+        {
+          "name": "咬魚の皮",
+          "qty": 3
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 5
+        }
       ]
     },
     {
@@ -12819,14 +15694,30 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "クラノダスメイルα",
-      "slots": [0, 0, 0],
+      "slots": [
+        0,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "ひるみ軽減", "level": 2 },
-        { "name": "破壊王", "level": 1 }
+        {
+          "name": "ひるみ軽減",
+          "level": 2
+        },
+        {
+          "name": "破壊王",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "獄炎石", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 4 }
+        {
+          "name": "獄炎石",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 4
+        }
       ]
     },
     {
@@ -12834,13 +15725,26 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "クラノダスメイルβ",
-      "slots": [2, 0, 0],
+      "slots": [
+        2,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "ひるみ軽減", "level": 2 }
+        {
+          "name": "ひるみ軽減",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "獄炎石", "qty": 2 },
-        { "name": "クラノダスの堅頭殻", "qty": 4 }
+        {
+          "name": "獄炎石",
+          "qty": 2
+        },
+        {
+          "name": "クラノダスの堅頭殻",
+          "qty": 4
+        }
       ]
     },
     {
@@ -12848,13 +15752,26 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ネラチカアクセサリα",
-      "slots": [0, 0, 0],
+      "slots": [
+        0,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "睡眠耐性", "level": 2 },
-        { "name": "攻勢", "level": 1 }
+        {
+          "name": "睡眠耐性",
+          "level": 2
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "ネマラチカの堅殻", "qty": 5 }
+        {
+          "name": "ネマラチカの堅殻",
+          "qty": 5
+        }
       ]
     },
     {
@@ -12862,12 +15779,22 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "ネラチカアクセサリβ",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "睡眠耐性", "level": 2 }
+        {
+          "name": "睡眠耐性",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "ネマラチカの堅殻", "qty": 5 }
+        {
+          "name": "ネマラチカの堅殻",
+          "qty": 5
+        }
       ]
     },
     {
@@ -12875,15 +15802,34 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "ハナショウジョウα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "昆虫標本の達人", "level": 1 },
-        { "name": "急襲", "level": 1 }
+        {
+          "name": "昆虫標本の達人",
+          "level": 1
+        },
+        {
+          "name": "急襲",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "怪鳥の上鱗", "qty": 4 },
-        { "name": "桃毛獣の剛毛", "qty": 2 },
-        { "name": "ハナショウチケット", "qty": 2 }
+        {
+          "name": "怪鳥の上鱗",
+          "qty": 4
+        },
+        {
+          "name": "桃毛獣の剛毛",
+          "qty": 2
+        },
+        {
+          "name": "ハナショウチケット",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12891,17 +15837,42 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "クリークバイザーα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "オトモへの采配", "level": 2 },
-        { "name": "精霊の加護", "level": 2 },
-        { "name": "体力回復量UP", "level": 1 }
+        {
+          "name": "オトモへの采配",
+          "level": 2
+        },
+        {
+          "name": "精霊の加護",
+          "level": 2
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "レイアコイン", "qty": 2 },
-        { "name": "チャタコイン", "qty": 1 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "闢獣の上皮", "qty": 2 }
+        {
+          "name": "レイアコイン",
+          "qty": 2
+        },
+        {
+          "name": "チャタコイン",
+          "qty": 1
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "闢獣の上皮",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12909,16 +15880,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "クリークスーツα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "環境利用の知識", "level": 2 },
-        { "name": "精霊の加護", "level": 1 }
+        {
+          "name": "環境利用の知識",
+          "level": 2
+        },
+        {
+          "name": "精霊の加護",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "レイアコイン", "qty": 2 },
-        { "name": "チャタコイン", "qty": 1 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "鎧竜の堅殻", "qty": 2 }
+        {
+          "name": "レイアコイン",
+          "qty": 2
+        },
+        {
+          "name": "チャタコイン",
+          "qty": 1
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "鎧竜の堅殻",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12926,17 +15919,42 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "クリークアームα",
-      "slots": [2, 1, 0],
+      "slots": [
+        2,
+        1,
+        0
+      ],
       "skills": [
-        { "name": "整備", "level": 2 },
-        { "name": "オトモへの采配", "level": 1 },
-        { "name": "環境利用の知識", "level": 1 }
+        {
+          "name": "整備",
+          "level": 2
+        },
+        {
+          "name": "オトモへの采配",
+          "level": 1
+        },
+        {
+          "name": "環境利用の知識",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "レイアコイン", "qty": 2 },
-        { "name": "チャタコイン", "qty": 1 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "雪獅子の剛毛", "qty": 2 }
+        {
+          "name": "レイアコイン",
+          "qty": 2
+        },
+        {
+          "name": "チャタコイン",
+          "qty": 1
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "雪獅子の剛毛",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12944,16 +15962,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "クリークベルトα",
-      "slots": [1, 0, 0],
+      "slots": [
+        1,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "整備", "level": 2 },
-        { "name": "体力回復量UP", "level": 2 }
+        {
+          "name": "整備",
+          "level": 2
+        },
+        {
+          "name": "体力回復量UP",
+          "level": 2
+        }
       ],
       "materials": [
-        { "name": "レイアコイン", "qty": 2 },
-        { "name": "チャタコイン", "qty": 1 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "護雷顎竜の上毛皮", "qty": 2 }
+        {
+          "name": "レイアコイン",
+          "qty": 2
+        },
+        {
+          "name": "チャタコイン",
+          "qty": 1
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "護雷顎竜の上毛皮",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12961,16 +16001,38 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "クリークシューズα",
-      "slots": [2, 2, 0],
+      "slots": [
+        2,
+        2,
+        0
+      ],
       "skills": [
-        { "name": "オトモへの采配", "level": 2 },
-        { "name": "整備", "level": 1 }
+        {
+          "name": "オトモへの采配",
+          "level": 2
+        },
+        {
+          "name": "整備",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "レイアコイン", "qty": 2 },
-        { "name": "チャタコイン", "qty": 1 },
-        { "name": "闘技王のコイン", "qty": 1 },
-        { "name": "火竜の上鱗", "qty": 2 }
+        {
+          "name": "レイアコイン",
+          "qty": 2
+        },
+        {
+          "name": "チャタコイン",
+          "qty": 1
+        },
+        {
+          "name": "闘技王のコイン",
+          "qty": 1
+        },
+        {
+          "name": "火竜の上鱗",
+          "qty": 2
+        }
       ]
     },
     {
@@ -12978,276 +16040,568 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "アワウタイズクα",
-      "slots": [0, 0, 0],
+      "slots": [
+        0,
+        0,
+        0
+      ],
       "skills": [
-        { "name": "広域化", "level": 2 },
-        { "name": "回避距離UP", "level": 1 }
+        {
+          "name": "広域化",
+          "level": 2
+        },
+        {
+          "name": "回避距離UP",
+          "level": 1
+        }
       ],
       "materials": [
-        { "name": "アワウタチケット", "qty": 3 },
-        { "name": "炎尾竜の大トサカ", "qty": 3 },
-        { "name": "尖竜骨", "qty": 5 }
+        {
+          "name": "アワウタチケット",
+          "qty": 3
+        },
+        {
+          "name": "炎尾竜の大トサカ",
+          "qty": 3
+        },
+        {
+          "name": "尖竜骨",
+          "qty": 5
+        }
       ]
     },
-    // === armor: additions ===
-    [
-      // 桜波 α
-      {
-        "seriesKey": "sakura_nami",
-        "variant": "α",
-        "part": "head",
-        "name": "桜波【御頭】α",
-        "slots": [0, 0, 0],
-        "skills": [
-          { "name": "攻勢", "level": 2 },
-          { "name": "環境適応", "level": 1 }
-        ],
-        "materials": [
-          { "name": "カブレライト鉱石", "qty": 3 },
-          { "name": "祭事チケット【花舞】", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "sakura_nami",
-        "variant": "α",
-        "part": "chest",
-        "name": "桜波【直垂】α",
-        "slots": [2, 0, 0],
-        "skills": [
-          { "name": "納刀術", "level": 1 },
-          { "name": "攻勢", "level": 1 }
-        ],
-        "materials": [
-          { "name": "カブレライト鉱石", "qty": 1 },
-          { "name": "祭事チケット【花舞】", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "sakura_nami",
-        "variant": "α",
-        "part": "arms",
-        "name": "桜波【籠手】α",
-        "slots": [2, 1, 0],
-        "skills": [
-          { "name": "アイテム使用強化", "level": 1 },
-          { "name": "攻勢", "level": 1 }
-        ],
-        "materials": [
-          { "name": "カブレライト鉱石", "qty": 2 },
-          { "name": "祭事チケット【花舞】", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "sakura_nami",
-        "variant": "α",
-        "part": "waist",
-        "name": "桜波【帯】α",
-        "slots": [2, 1, 0],
-        "skills": [
-          { "name": "納刀術", "level": 2 },
-          { "name": "環境適応", "level": 1 }
-        ],
-        "materials": [
-          { "name": "カブレライト鉱石", "qty": 1 },
-          { "name": "祭事チケット【花舞】", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "sakura_nami",
-        "variant": "α",
-        "part": "legs",
-        "name": "桜波【袴】α",
-        "slots": [2, 0, 0],
-        "skills": [
-          { "name": "アイテム使用強化", "level": 2 },
-          { "name": "攻勢", "level": 1 }
-        ],
-        "materials": [
-          { "name": "カブレライト鉱石", "qty": 2 },
-          { "name": "祭事チケット【花舞】", "qty": 1 }
-        ]
-      },
-
-      // ブロッサム α
-      {
-        "seriesKey": "blossom",
-        "variant": "α",
-        "part": "head",
-        "name": "ブロッサムヘッドα",
-        "slots": [2, 1, 0],
-        "skills": [
-          { "name": "麻痺耐性", "level": 2 }
-        ],
-        "materials": [
-          { "name": "ブロッサムチケット", "qty": 1 },
-          { "name": "刺花蜘蛛の濃粘液", "qty": 3 },
-          { "name": "ブブラチカの堅殻", "qty": 4 },
-          { "name": "モンスターの濃汁", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "blossom",
-        "variant": "α",
-        "part": "chest",
-        "name": "ブロッサムベストα",
-        "slots": [2, 1, 1],
-        "skills": [
-          { "name": "麻痺耐性", "level": 1 }
-        ],
-        "materials": [
-          { "name": "ブロッサムチケット", "qty": 1 },
-          { "name": "刺花蜘蛛の鋭爪", "qty": 2 },
-          { "name": "ランゴスタの薄羽", "qty": 3 },
-          { "name": "モンスターの濃汁", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "blossom",
-        "variant": "α",
-        "part": "arms",
-        "name": "ブロッサムカフスα",
-        "slots": [1, 1, 1],
-        "skills": [
-          { "name": "毒耐性", "level": 2 }
-        ],
-        "materials": [
-          { "name": "ブロッサムチケット", "qty": 1 },
-          { "name": "刺花蜘蛛の堅殻", "qty": 3 },
-          { "name": "ランゴスタの堅殻", "qty": 4 },
-          { "name": "モンスターの濃汁", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "blossom",
-        "variant": "α",
-        "part": "waist",
-        "name": "ブロッサムコートα",
-        "slots": [2, 2, 0],
-        "skills": [
-          { "name": "回復速度", "level": 1 },
-          { "name": "昆虫標本の達人", "level": 1 }
-        ],
-        "materials": [
-          { "name": "ブロッサムチケット", "qty": 1 },
-          { "name": "刺花蜘蛛の上尾棘", "qty": 2 },
-          { "name": "オオツノアゲハ", "qty": 3 },
-          { "name": "モンスターの濃汁", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "blossom",
-        "variant": "α",
-        "part": "legs",
-        "name": "ブロッサムブーツα",
-        "slots": [1, 1, 0],
-        "skills": [
-          { "name": "回復速度", "level": 2 },
-          { "name": "毒耐性", "level": 1 }
-        ],
-        "materials": [
-          { "name": "ブロッサムチケット", "qty": 1 },
-          { "name": "刺花蜘蛛の上綿毛", "qty": 3 },
-          { "name": "ネマラチカの堅殻", "qty": 4 },
-          { "name": "モンスターの濃汁", "qty": 1 }
-        ]
-      },
-
-      // 封印の龍骸布 α（頭のみ）
-      {
-        "seriesKey": "sealed_dragon_shroud",
-        "variant": "α",
-        "part": "head",
-        "name": "封印の龍骸布α",
-        "slots": [0, 0, 0],
-        "skills": [
-          { "name": "逆恨み", "level": 2 },
-          { "name": "龍耐性", "level": 3 }
-        ],
-        "materials": [
-          { "name": "封印の龍骸布", "qty": 3 },
-          { "name": "護雷顎竜の上鼻骨", "qty": 3 },
-          { "name": "護竜の浄血", "qty": 2 },
-          { "name": "たくましい護骨", "qty": 5 }
-        ]
-      },
-
-      // 豪鬼 α
-      {
-        "seriesKey": "gouki",
-        "variant": "α",
-        "part": "head",
-        "name": "鬼の数珠α",
-        "slots": [2, 2, 1],
-        "skills": [
-          { "name": "破壊王", "level": 1 }
-        ],
-        "materials": [
-          { "name": "SF6チケット", "qty": 1 },
-          { "name": "赫猿獣の上鱗", "qty": 3 },
-          { "name": "大赫炎結晶", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "gouki",
-        "variant": "α",
-        "part": "chest",
-        "name": "鬼の外衣α",
-        "slots": [3, 1, 0],
-        "skills": [
-          { "name": "火事場力", "level": 3 }
-        ],
-        "materials": [
-          { "name": "SF6チケット", "qty": 1 },
-          { "name": "赫猿獣の上鱗", "qty": 3 },
-          { "name": "大赫炎結晶", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "gouki",
-        "variant": "α",
-        "part": "arms",
-        "name": "鬼の荒縄α",
-        "slots": [2, 2, 1],
-        "skills": [
-          { "name": "破壊王", "level": 1 }
-        ],
-        "materials": [
-          { "name": "SF6チケット", "qty": 1 },
-          { "name": "赫猿獣の上鱗", "qty": 3 },
-          { "name": "大赫炎結晶", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "gouki",
-        "variant": "α",
-        "part": "waist",
-        "name": "鬼の腰巻α",
-        "slots": [3, 1, 0],
-        "skills": [
-          { "name": "回避性能", "level": 2 }
-        ],
-        "materials": [
-          { "name": "SF6チケット", "qty": 1 },
-          { "name": "赫猿獣の上鱗", "qty": 3 },
-          { "name": "大赫炎結晶", "qty": 1 }
-        ]
-      },
-      {
-        "seriesKey": "gouki",
-        "variant": "α",
-        "part": "legs",
-        "name": "鬼の下穿α",
-        "slots": [2, 2, 1],
-        "skills": [
-          { "name": "破壊王", "level": 1 }
-        ],
-        "materials": [
-          { "name": "SF6チケット", "qty": 1 },
-          { "name": "赫猿獣の上鱗", "qty": 3 },
-          { "name": "大赫炎結晶", "qty": 1 }
-        ]
-      }
-    ]
-
+    {
+      "seriesKey": "sakura_nami",
+      "variant": "α",
+      "part": "head",
+      "name": "桜波【御頭】α",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "攻勢",
+          "level": 2
+        },
+        {
+          "name": "環境適応",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 3
+        },
+        {
+          "name": "祭事チケット【花舞】",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sakura_nami",
+      "variant": "α",
+      "part": "chest",
+      "name": "桜波【直垂】α",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        },
+        {
+          "name": "祭事チケット【花舞】",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sakura_nami",
+      "variant": "α",
+      "part": "arms",
+      "name": "桜波【籠手】α",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 1
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 2
+        },
+        {
+          "name": "祭事チケット【花舞】",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sakura_nami",
+      "variant": "α",
+      "part": "waist",
+      "name": "桜波【帯】α",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "納刀術",
+          "level": 2
+        },
+        {
+          "name": "環境適応",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 1
+        },
+        {
+          "name": "祭事チケット【花舞】",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sakura_nami",
+      "variant": "α",
+      "part": "legs",
+      "name": "桜波【袴】α",
+      "slots": [
+        2,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "アイテム使用強化",
+          "level": 2
+        },
+        {
+          "name": "攻勢",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "カブレライト鉱石",
+          "qty": 2
+        },
+        {
+          "name": "祭事チケット【花舞】",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "blossom",
+      "variant": "α",
+      "part": "head",
+      "name": "ブロッサムヘッドα",
+      "slots": [
+        2,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブロッサムチケット",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の濃粘液",
+          "qty": 3
+        },
+        {
+          "name": "ブブラチカの堅殻",
+          "qty": 4
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "blossom",
+      "variant": "α",
+      "part": "chest",
+      "name": "ブロッサムベストα",
+      "slots": [
+        2,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "麻痺耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブロッサムチケット",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の鋭爪",
+          "qty": 2
+        },
+        {
+          "name": "ランゴスタの薄羽",
+          "qty": 3
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "blossom",
+      "variant": "α",
+      "part": "arms",
+      "name": "ブロッサムカフスα",
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "skills": [
+        {
+          "name": "毒耐性",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブロッサムチケット",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の堅殻",
+          "qty": 3
+        },
+        {
+          "name": "ランゴスタの堅殻",
+          "qty": 4
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "blossom",
+      "variant": "α",
+      "part": "waist",
+      "name": "ブロッサムコートα",
+      "slots": [
+        2,
+        2,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 1
+        },
+        {
+          "name": "昆虫標本の達人",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブロッサムチケット",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上尾棘",
+          "qty": 2
+        },
+        {
+          "name": "オオツノアゲハ",
+          "qty": 3
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "blossom",
+      "variant": "α",
+      "part": "legs",
+      "name": "ブロッサムブーツα",
+      "slots": [
+        1,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回復速度",
+          "level": 2
+        },
+        {
+          "name": "毒耐性",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "ブロッサムチケット",
+          "qty": 1
+        },
+        {
+          "name": "刺花蜘蛛の上綿毛",
+          "qty": 3
+        },
+        {
+          "name": "ネマラチカの堅殻",
+          "qty": 4
+        },
+        {
+          "name": "モンスターの濃汁",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "sealed_dragon_shroud",
+      "variant": "α",
+      "part": "head",
+      "name": "封印の龍骸布α",
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "skills": [
+        {
+          "name": "逆恨み",
+          "level": 2
+        },
+        {
+          "name": "龍耐性",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "封印の龍骸布",
+          "qty": 3
+        },
+        {
+          "name": "護雷顎竜の上鼻骨",
+          "qty": 3
+        },
+        {
+          "name": "護竜の浄血",
+          "qty": 2
+        },
+        {
+          "name": "たくましい護骨",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "seriesKey": "gouki",
+      "variant": "α",
+      "part": "head",
+      "name": "鬼の数珠α",
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "SF6チケット",
+          "qty": 1
+        },
+        {
+          "name": "赫猿獣の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "大赫炎結晶",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gouki",
+      "variant": "α",
+      "part": "chest",
+      "name": "鬼の外衣α",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "火事場力",
+          "level": 3
+        }
+      ],
+      "materials": [
+        {
+          "name": "SF6チケット",
+          "qty": 1
+        },
+        {
+          "name": "赫猿獣の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "大赫炎結晶",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gouki",
+      "variant": "α",
+      "part": "arms",
+      "name": "鬼の荒縄α",
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "SF6チケット",
+          "qty": 1
+        },
+        {
+          "name": "赫猿獣の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "大赫炎結晶",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gouki",
+      "variant": "α",
+      "part": "waist",
+      "name": "鬼の腰巻α",
+      "slots": [
+        3,
+        1,
+        0
+      ],
+      "skills": [
+        {
+          "name": "回避性能",
+          "level": 2
+        }
+      ],
+      "materials": [
+        {
+          "name": "SF6チケット",
+          "qty": 1
+        },
+        {
+          "name": "赫猿獣の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "大赫炎結晶",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "seriesKey": "gouki",
+      "variant": "α",
+      "part": "legs",
+      "name": "鬼の下穿α",
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "skills": [
+        {
+          "name": "破壊王",
+          "level": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "SF6チケット",
+          "qty": 1
+        },
+        {
+          "name": "赫猿獣の上鱗",
+          "qty": 3
+        },
+        {
+          "name": "大赫炎結晶",
+          "qty": 1
+        }
+      ]
+    }
   ]
 };
+export default catalogArmor;

@@ -1,5 +1,4 @@
-// src/features/equip/RightPanel.js — 差し替え版（武器セクション＋モーダル起動）
-
+// src/features/equip/RightPanel.js — オプション撤廃版（GearFinderで完結）
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { s } from "../../screens/equip.styles";
 
@@ -26,10 +25,11 @@ export default function RightPanel({
 
   const canSearch = rows.length > 0;
   const openPicker = () => { if (typeof onOpenWeaponPicker === "function") onOpenWeaponPicker(); };
+  const handleSearch = () => { if (!canSearch) return; onSearch?.(); };
 
   return (
     <View style={s.rightPanel}>
-      {/* ① 武器セクション */}
+      {/* 武器セクション */}
       <View style={s.panelSection}>
         <Text style={s.panelHeader}>武器</Text>
         <View style={[s.rowThin, { flexDirection: "row", alignItems: "center", gap: 8 }]}>
@@ -42,7 +42,7 @@ export default function RightPanel({
         </View>
       </View>
 
-      {/* ② 選択中スキル */}
+      {/* 選択中スキル */}
       <View style={[s.panelSection, { flex: 1 }]}>
         <Text style={s.panelHeader}>選択中スキル</Text>
         {rows.length === 0 ? (
@@ -64,9 +64,9 @@ export default function RightPanel({
         )}
       </View>
 
-      {/* ③ アクション */}
+      {/* アクション */}
       <Pressable
-        onPress={() => canSearch && onSearch?.()}
+        onPress={handleSearch}
         disabled={!canSearch}
         style={[
           s.clearAllBtn,

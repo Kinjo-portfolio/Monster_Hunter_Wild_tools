@@ -2376,7 +2376,7 @@ export const normalSkills = [
       "攻撃力", "通常スキル"]
   },
   {
-    "name": "弱点特攻",
+    "name": "弱点特効",
     "type": "normal",
     "category": "crit",
     "info": "弱点部位で会心率が上昇。傷口があればさらに加算。",
