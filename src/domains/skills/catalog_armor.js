@@ -7554,236 +7554,127 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "タリオスアームα",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "達人芸",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "ジャンプ鉄人", "level": 1 }
+      ]
     },
     {
       "seriesKey": "talios",
       "variant": "β",
       "part": "arms",
       "name": "タリオスアームβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "剛刃研磨",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "ジャンプ鉄人", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "α",
       "part": "head",
       "name": "ケマトリスヘルムα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "死中に活",
-          "level": 1
-        },
-        {
-          "name": "気絶耐性",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "力の解放", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "α",
       "part": "chest",
       "name": "ケマトリスメイルα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "会心撃【属性】",
-          "level": 1
-        },
-        {
-          "name": "気絶耐性",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "火耐性", "level": 1 },
+        { "name": "力の解放", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "α",
       "part": "arms",
       "name": "ケマトリスアームα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [1, 1, 0],
       "skills": [
-        {
-          "name": "死中に活",
-          "level": 1
-        },
-        {
-          "name": "会心撃【属性】",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "火耐性", "level": 1 },
+        { "name": "ひるみ軽減", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "α",
       "part": "waist",
       "name": "ケマトリスコイルα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "気絶耐性",
-          "level": 1
-        },
-        {
-          "name": "会心撃【属性】",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "火耐性", "level": 1 },
+        { "name": "力の解放", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "α",
       "part": "legs",
       "name": "ケマトリスグリーヴα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "死中に活",
-          "level": 1
-        },
-        {
-          "name": "会心撃【属性】",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "回避距離UP", "level": 1 }
+      ]
     },
+
+    /* ===== ケマトリス（Quematrice） 下位 β ===== */
     {
       "seriesKey": "kematris",
       "variant": "β",
       "part": "head",
       "name": "ケマトリスヘルムβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "気絶耐性",
-          "level": 2
-        }
-      ],
-      "materials": []
+        { "name": "力の解放", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "β",
       "part": "chest",
       "name": "ケマトリスメイルβ",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "会心撃【属性】",
-          "level": 1
-        }
-      ],
-      "materials": []
+        { "name": "力の解放", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "β",
       "part": "arms",
       "name": "ケマトリスアームβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "死中に活",
-          "level": 2
-        }
-      ],
-      "materials": []
+        { "name": "ひるみ軽減", "level": 1 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "β",
       "part": "waist",
       "name": "ケマトリスコイルβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "気絶耐性",
-          "level": 2
-        }
-      ],
-      "materials": []
+        { "name": "火耐性", "level": 2 }
+      ]
     },
     {
       "seriesKey": "kematris",
       "variant": "β",
       "part": "legs",
       "name": "ケマトリスグリーヴβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [1, 1, 1],
       "skills": [
-        {
-          "name": "死中に活",
-          "level": 2
-        }
-      ],
-      "materials": []
+        { "name": "ひるみ軽減", "level": 1 }
+      ]
     },
     {
       "seriesKey": "babaconga",
@@ -9221,366 +9112,109 @@ export const catalogArmor = {
       "seriesKey": "yian_kutku",
       "variant": "α",
       "part": "head",
-      "name": "イャンクックヘルムα",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "クックヘルムα",
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "耳栓",
-          "level": 2
-        },
-        {
-          "name": "火耐性",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "火耐性", "level": 2 },
+        { "name": "体術", "level": 2 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "α",
       "part": "chest",
-      "name": "イャンクックメイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "name": "クックメイルα",
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 1
-        },
-        {
-          "name": "耳栓",
-          "level": 1
-        },
-        {
-          "name": "早食い",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "火耐性", "level": 1 },
+        { "name": "挑戦者", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "α",
       "part": "arms",
-      "name": "イャンクックアームα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "name": "クックアームα",
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 2
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体術", "level": 1 },
+        { "name": "挑戦者", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "α",
       "part": "waist",
-      "name": "イャンクックコイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "name": "クックコイルα",
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "体術",
-          "level": 2
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体力回復量UP", "level": 2 },
+        { "name": "挑戦者", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "α",
       "part": "legs",
-      "name": "イャンクックグリーヴα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "name": "クックグリーヴα",
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "回避性能",
-          "level": 1
-        },
-        {
-          "name": "見切り",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体力回復量UP", "level": 1 },
+        { "name": "体術", "level": 2 }
       ]
     },
+
+    /* ===== イャンクック（Yian Kut-Ku） 上位 β ===== */
     {
       "seriesKey": "yian_kutku",
       "variant": "β",
       "part": "head",
-      "name": "イャンクックヘルムβ",
-      "slots": [
-        3,
-        1,
-        0
-      ],
+      "name": "クックヘルムβ",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "耳栓",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体術", "level": 2 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "β",
       "part": "chest",
-      "name": "イャンクックメイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "name": "クックメイルβ",
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "挑戦者", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "β",
       "part": "arms",
-      "name": "イャンクックアームβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "クックアームβ",
+      "slots": [2, 1, 1],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体術", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "β",
       "part": "waist",
-      "name": "イャンクックコイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "name": "クックコイルβ",
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "体術",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "怪鳥の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体力回復量UP", "level": 1 },
+        { "name": "挑戦者", "level": 1 }
       ]
     },
     {
       "seriesKey": "yian_kutku",
       "variant": "β",
       "part": "legs",
-      "name": "イャンクックグリーヴβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "クックグリーヴβ",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "回避性能",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "怪鳥の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "怪鳥の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鳥竜玉",
-          "qty": 1
-        }
+        { "name": "体力回復量UP", "level": 1 },
+        { "name": "体術", "level": 1 }
       ]
     },
     {
@@ -10112,75 +9746,67 @@ export const catalogArmor = {
     {
       "seriesKey": "rathian",
       "variant": "α",
-      "part": "legs",
-      "name": "リオレイアグリーヴα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "part": "head",
+      "name": "リオレイアヘルムα",
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "毒属性強化",
-          "level": 1
-        },
-        {
-          "name": "回避性能",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "精霊の加護", "level": 1 },
+        { "name": "回復速度", "level": 1 }
       ]
     },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "chest",
+      "name": "リオレイアメイルα",
+      "slots": [0, 0, 0],
+      "skills": [
+        { "name": "攻勢", "level": 2 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "arms",
+      "name": "リオレイアアームα",
+      "slots": [0, 0, 0],
+      "skills": [
+        { "name": "精霊の加護", "level": 2 },
+        { "name": "攻勢", "level": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "waist",
+      "name": "リオレイアコイルα",
+      "slots": [0, 0, 0],
+      "skills": [
+        { "name": "整備", "level": 1 },
+        { "name": "攻勢", "level": 1 }
+      ]
+    },
+    {
+      "seriesKey": "rathian",
+      "variant": "α",
+      "part": "legs",
+      "name": "リオレイアグリーヴα",
+      "slots": [0, 0, 0],
+      "skills": [
+        { "name": "回復速度", "level": 2 },
+        { "name": "攻勢", "level": 1 }
+      ]
+    },
+
+    /* ===== リオレイア（Rathian） 上位 β ===== */
     {
       "seriesKey": "rathian",
       "variant": "β",
       "part": "head",
       "name": "リオレイアヘルムβ",
-      "slots": [
-        3,
-        1,
-        0
-      ],
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "毒耐性",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "雌火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "精霊の加護", "level": 1 }
       ]
     },
     {
@@ -10188,34 +9814,9 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "リオレイアメイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "slots": [1, 1, 1],
       "skills": [
-        {
-          "name": "広域化",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "雌火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "攻勢", "level": 1 }
       ]
     },
     {
@@ -10223,34 +9824,10 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "リオレイアアームβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "毒属性強化",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "雌火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "精霊の加護", "level": 1 },
+        { "name": "攻勢", "level": 1 }
       ]
     },
     {
@@ -10258,34 +9835,9 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "リオレイアコイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "体力回復量UP",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "雌火竜の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "攻勢", "level": 1 }
       ]
     },
     {
@@ -10293,34 +9845,10 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "リオレイアグリーヴβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "回避性能",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "雌火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "雌火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "雌火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "回復速度", "level": 1 },
+        { "name": "攻勢", "level": 1 }
       ]
     },
     {
@@ -10328,38 +9856,16 @@ export const catalogArmor = {
       "variant": "α",
       "part": "head",
       "name": "リオレウスヘルムα",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [1, 1, 0],
       "skills": [
-        {
-          "name": "攻撃",
-          "level": 2
-        },
-        {
-          "name": "火属性攻撃強化",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 2 },
+        { "name": "体術", "level": 1 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10367,42 +9873,16 @@ export const catalogArmor = {
       "variant": "α",
       "part": "chest",
       "name": "リオレウスメイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 1
-        },
-        {
-          "name": "攻撃",
-          "level": 1
-        },
-        {
-          "name": "風圧耐性",
-          "level": 1
-        }
+        { "name": "体術", "level": 1 },
+        { "name": "巧撃", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 6 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10410,38 +9890,16 @@ export const catalogArmor = {
       "variant": "α",
       "part": "arms",
       "name": "リオレウスアームα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [1, 1, 0],
       "skills": [
-        {
-          "name": "弱点特効",
-          "level": 1
-        },
-        {
-          "name": "攻撃",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 1 },
+        { "name": "体術", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10449,38 +9907,16 @@ export const catalogArmor = {
       "variant": "α",
       "part": "waist",
       "name": "リオレウスコイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "slots": [0, 0, 0],
       "skills": [
-        {
-          "name": "渾身",
-          "level": 1
-        },
-        {
-          "name": "攻撃",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 1 },
+        { "name": "巧撃", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尻尾", "qty": 2 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10488,38 +9924,16 @@ export const catalogArmor = {
       "variant": "α",
       "part": "legs",
       "name": "リオレウスグリーヴα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "ジャンプ鉄人",
-          "level": 1
-        },
-        {
-          "name": "弱点特効",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 2 },
+        { "name": "巧撃", "level": 1 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 5 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10527,34 +9941,16 @@ export const catalogArmor = {
       "variant": "β",
       "part": "head",
       "name": "リオレウスヘルムβ",
-      "slots": [
-        3,
-        1,
-        0
-      ],
+      "slots": [2, 2, 0],
       "skills": [
-        {
-          "name": "攻撃",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 1 },
+        { "name": "体術", "level": 1 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10562,34 +9958,15 @@ export const catalogArmor = {
       "variant": "β",
       "part": "chest",
       "name": "リオレウスメイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "slots": [1, 1, 0],
       "skills": [
-        {
-          "name": "見切り",
-          "level": 1
-        }
+        { "name": "巧撃", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 6 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10597,34 +9974,15 @@ export const catalogArmor = {
       "variant": "β",
       "part": "arms",
       "name": "リオレウスアームβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [2, 1, 1],
       "skills": [
-        {
-          "name": "弱点特効",
-          "level": 1
-        }
+        { "name": "体術", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10632,34 +9990,15 @@ export const catalogArmor = {
       "variant": "β",
       "part": "waist",
       "name": "リオレウスコイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "渾身",
-          "level": 1
-        }
+        { "name": "巧撃", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "火竜の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 4 },
+        { "name": "火竜の尻尾", "qty": 2 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
     },
     {
@@ -10667,404 +10006,126 @@ export const catalogArmor = {
       "variant": "β",
       "part": "legs",
       "name": "リオレウスグリーヴβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "slots": [2, 2, 1],
       "skills": [
-        {
-          "name": "ジャンプ鉄人",
-          "level": 1
-        }
+        { "name": "回避性能", "level": 2 }
       ],
       "materials": [
-        {
-          "name": "火竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "火竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "火竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "火竜の紅玉",
-          "qty": 1
-        }
+        { "name": "火竜の上鱗", "qty": 5 },
+        { "name": "火竜の堅殻", "qty": 5 },
+        { "name": "火竜の尖爪", "qty": 3 },
+        { "name": "火竜の紅玉", "qty": 1 }
       ]
-    },
+    }
+    ,
     {
       "seriesKey": "gravios",
       "variant": "α",
       "part": "head",
-      "name": "グラビモスヘルムα",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "グラビドヘルムα",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "ガード性能",
-          "level": 2
-        },
-        {
-          "name": "防御",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "耐震", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "α",
       "part": "chest",
-      "name": "グラビモスメイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "name": "グラビドメイルα",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "砲術",
-          "level": 2
-        },
-        {
-          "name": "ガード強化",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "回復速度", "level": 2 },
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "α",
       "part": "arms",
-      "name": "グラビモスアームα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "name": "グラビドアームα",
+      "slots": [1, 0, 0],
       "skills": [
-        {
-          "name": "ガード性能",
-          "level": 1
-        },
-        {
-          "name": "砲術",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "フルチャージ", "level": 2 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "α",
       "part": "waist",
-      "name": "グラビモスコイルα",
-      "slots": [
-        1,
-        1,
-        0
-      ],
+      "name": "グラビドコイルα",
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "防御",
-          "level": 2
-        },
-        {
-          "name": "耐震",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "ひるみ軽減", "level": 2 },
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "α",
       "part": "legs",
-      "name": "グラビモスグリーヴα",
-      "slots": [
-        1,
-        0,
-        0
-      ],
+      "name": "グラビドグリーヴα",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "ガード強化",
-          "level": 1
-        },
-        {
-          "name": "砲術",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "回復速度", "level": 1 },
+        { "name": "耐震", "level": 2 }
       ]
     },
+
+    /* ===== グラビモス（Gravios） 上位 β ===== */
     {
       "seriesKey": "gravios",
       "variant": "β",
       "part": "head",
-      "name": "グラビモスヘルムβ",
-      "slots": [
-        3,
-        1,
-        0
-      ],
+      "name": "グラビドヘルムβ",
+      "slots": [2, 2, 0],
       "skills": [
-        {
-          "name": "ガード性能",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "β",
       "part": "chest",
-      "name": "グラビモスメイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "name": "グラビドメイルβ",
+      "slots": [2, 2, 0],
       "skills": [
-        {
-          "name": "砲術",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 6
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "回復速度", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "β",
       "part": "arms",
-      "name": "グラビモスアームβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "グラビドアームβ",
+      "slots": [2, 0, 0],
       "skills": [
-        {
-          "name": "ガード性能",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "フルチャージ", "level": 2 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "β",
       "part": "waist",
-      "name": "グラビモスコイルβ",
-      "slots": [
-        2,
-        1,
-        0
-      ],
+      "name": "グラビドコイルβ",
+      "slots": [2, 1, 0],
       "skills": [
-        {
-          "name": "防御",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 4
-        },
-        {
-          "name": "鎧竜の尻尾",
-          "qty": 2
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "ひるみ軽減", "level": 1 },
+        { "name": "フルチャージ", "level": 1 }
       ]
     },
     {
       "seriesKey": "gravios",
       "variant": "β",
       "part": "legs",
-      "name": "グラビモスグリーヴβ",
-      "slots": [
-        2,
-        0,
-        0
-      ],
+      "name": "グラビドグリーヴβ",
+      "slots": [2, 2, 0],
       "skills": [
-        {
-          "name": "ガード強化",
-          "level": 1
-        }
-      ],
-      "materials": [
-        {
-          "name": "鎧竜の上鱗",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の堅殻",
-          "qty": 5
-        },
-        {
-          "name": "鎧竜の尖爪",
-          "qty": 3
-        },
-        {
-          "name": "鎧竜の延髄",
-          "qty": 1
-        }
+        { "name": "回復速度", "level": 1 },
+        { "name": "耐震", "level": 1 }
       ]
     },
     {

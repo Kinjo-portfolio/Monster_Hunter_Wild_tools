@@ -1,4 +1,4 @@
-// app/(tabs)/equip/index.js — 差し替え版（武器モーダル配線付き）
+// app/(tabs)/equip/index.js — 親（RightPanel.super と整合）
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Stack } from "expo-router";
 import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform } from "react-native";
@@ -8,18 +8,17 @@ import catalog from "../../src/domains/skills/catalog";
 import { filterSkills } from "../../src/domains/skills/search";
 import SkillCard from "../../src/features/equip/SkillCard";
 import TagsBar from "../../src/features/equip/TagsBar";
+// ★ パスは実プロジェクトに合わせてください（例は features_equip 配下）
 import RightPanel from "../../src/features/equip/RightPanel";
 import WeaponSettings from "../equip/WeaponSettings";
 import ResultsTab from "../../src/features/equip/ResultTab";
 import { useSkillSelection } from "../../src/features/equip/useSkillSelection";
 import { useHeaderHeight } from "@react-navigation/elements";
-// 装備探索ロジックとカタログ
 import { computeTopSets } from "../../src/domains/skills/calculators/gear_finder";
 import { catalogArmor } from "../../src/domains/skills/catalog_armor";
 import { catalogDecorations } from "../../src/domains/skills/catalog_decorations";
 import { catalogTalismans } from "../../src/domains/skills/catalog_talismans";
 
-// ★ 追加：武器ピッカーモーダル
 import WeaponPickerModal from "../../src/components/WeaponPickerModal";
 
 const ALL_CATS = ["attack", "crit", "utility"];
@@ -49,7 +48,6 @@ const LevelMenu = ({ ctx, onPick, onClose }) => {
     web: { position: "fixed", left: x, top: y },
     default: { position: "absolute", left: x, top: y }
   });
-
   return (
     <>
       <Pressable style={s.backdrop} onPress={onClose} />
@@ -62,6 +60,19 @@ const LevelMenu = ({ ctx, onPick, onClose }) => {
       </View>
     </>
   );
+};
+
+const circled = { "①":1, "②":2, "③":3, "④":4, "⑤":5, "⑥":6, "⑦":7 };
+const parseSlotsString = (s) => {
+  if (!s || typeof s !== "string") return [];
+  const arr = [];
+  for (const ch of s) {
+    if (/\d/.test(ch)) arr.push(parseInt(ch, 10));
+    else if (circled[ch]) arr.push(circled[ch]);
+  }
+  if (arr.length) return arr.filter(n => n>0).slice(0, 3);
+  const nums = s.replace(/[^\d]/g, " ").trim().split(/\s+/).map(n=>parseInt(n,10)).filter(n=>n>0);
+  return nums.slice(0,3);
 };
 
 const EquipScreen = () => {
@@ -78,7 +89,6 @@ const EquipScreen = () => {
   const getMaxLevel = useCallback((id) => byId.get(id)?.maxLevel ?? 1, [byId]);
   const { selected, setLevel, inc, dec, clearAll } = useSkillSelection(getMaxLevel);
 
-  // 装備計算用: 選択スキルを { name, requiredLevel } に正規化
   const selectedSkillsForCalc = useMemo(() => {
     return Object.entries(selected)
       .filter(([, lv]) => lv > 0)
@@ -127,11 +137,9 @@ const EquipScreen = () => {
 
   const headerHeight = useHeaderHeight();
   const HEADER_GAP = 8;
-
   const headerOffset = (headerHeight && headerHeight > 0 ? headerHeight : (Platform.OS === "web" ? 56 : insets.top )) + HEADER_GAP;
   const isWide = width >= 900;
   const rightW = 320;
-
   const leftW = width - (isWide ? rightW + 24 : 0) - 32;
   const base = isWide ? 220 : 250;
   let calc = Math.floor(leftW / base);
@@ -145,8 +153,10 @@ const EquipScreen = () => {
   const [tab, setTab] = useState("skills");
   const [gearSets, setGearSets] = useState([]);
 
-  // ★ 追加：武器の選択状態とモーダル開閉
+  // ★ 武器状態とモーダル
   const [weapon, setWeapon] = useState(null);
+  const [weaponSlots, setWeaponSlots] = useState([]);
+  const [weaponSkills, setWeaponSkills] = useState([]);
   const [pickerOpen, setPickerOpen] = useState(false);
 
   // ★ スキル一覧スクロール制御
@@ -154,14 +164,9 @@ const EquipScreen = () => {
   const [pendingScrollToSkillsTop, setPendingScrollToSkillsTop] = useState(false);
   const scrollSkillsTopNow = useCallback(() => {
     requestAnimationFrame(() => {
-      // ScrollView
       skillScrollRef.current?.scrollTo?.({ y: 0, animated: true });
-      // FlatList の場合（使っているなら）:
-      // skillScrollRef.current?.scrollToOffset?.({ offset: 0, animated: true });
     });
   }, []);
-
-  // ★ skillsタブが表示された直後に一番上へスクロール
   useEffect(() => {
     if (tab === "skills" && pendingScrollToSkillsTop) {
       scrollSkillsTopNow();
@@ -169,30 +174,38 @@ const EquipScreen = () => {
     }
   }, [tab, pendingScrollToSkillsTop, scrollSkillsTopNow]);
 
+  // 検索実行：payload（武器情報）も受けられるように
+  const runGearSearch = useCallback((payload) => {
+    const opts = { kPerPart: 6, 
+      topN: 20 ,
+      includeWeaponSlots: payload?.weaponSlots ?? [], 
+      weaponSkills: payload?.weaponSkills ?? [],
+      weaponName: payload?.weapon?.name ?? payload?.weapon?.["名前"] ?? null,
+    };
+    
 
-  // ★ 検索実行：ボタン押下 → 計算 → 結果タブへ
-  const runGearSearch = useCallback(() => {
-    if (selectedSkillsForCalc.length === 0) {
-      setGearSets([]);
-      setTab("results"); // 空の状態でもタブに遷移してガイド表示
-      return;
-    }
+    
     const sets = computeTopSets(
-      selectedSkillsForCalc,
+      Object.entries(selected)
+        .filter(([, lv]) => lv > 0)
+        .map(([id, lv]) => ({ name: byId.get(id)?.name || id, requiredLevel: lv })),
       catalogArmor,
       catalogDecorations,
       catalogTalismans,
-      { kPerPart: 6, topN: 20 }
+      opts
     );
     setGearSets(sets);
     setTab("results");
-  }, [selectedSkillsForCalc]);
+  }, [selected, byId]);
+
+  // リセット
+  const clearWeapon = () => { setWeapon(null); setWeaponSlots([]); setWeaponSkills([]); };
+  const clearSkills = () => { clearAll(); };
 
   return (
     <View style={s.container}>
       <Stack.Screen options={{ title: "MonsterHunterWilds" }} />
 
-      {/* 右パネル（ワイド時） */}
       {isWide && (
         <View style={[s.rightFixed, { right: 16, top: headerOffset, bottom: 16, width: rightW, zIndex: 2000 }]}>
           <RightPanel
@@ -200,10 +213,15 @@ const EquipScreen = () => {
             skillMap={byId}
             onChange={setLevel}
             onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
-            onSearch={runGearSearch}
-            // ★ 武器関連（ここが無いとモーダルは開かない）
-            weaponName={weapon?.name || null}
+            onSearch={(payload) => runGearSearch(payload)}
+
+            // ★ 武器連携（パネルが正規化するので、そのまま渡せばOK）
+            weapon={weapon}
+            weaponSlots={weaponSlots}
+            weaponSkills={weaponSkills}
             onOpenWeaponPicker={() => setPickerOpen(true)}
+            onClearWeapon={clearWeapon}
+            onClearSkills={clearSkills}
           />
         </View>
       )}
@@ -211,7 +229,6 @@ const EquipScreen = () => {
       <LevelMenu ctx={dd} onPick={(lv) => setLevel(dd.id, lv)} onClose={closeDropdown} />
 
       <ScrollView ref={skillScrollRef} contentContainerStyle={[s.body, { paddingTop: headerOffset }, isWide && { paddingRight: rightW + 24 }]} keyboardShouldPersistTaps="handled">
-        {/* サブヘッダー（バッジ） */}
         <View style={s.pageHeader}>
           <View style={s.pageBadge}>
             <Text style={s.pageBadgeIcon}>🛡️</Text>
@@ -219,7 +236,6 @@ const EquipScreen = () => {
           </View>
         </View>
 
-        {/* タブ */}
         <View style={s.tabsRow}>
           <Pressable style={[s.tabBtn, tab === "skills" && s.tabBtnActive]} onPress={() => setTab("skills")}><Text style={[s.tabBtnText, tab === "skills" && s.tabBtnTextActive]}>スキル一覧</Text></Pressable>
           <Pressable style={[s.tabBtn, tab === "weapon" && s.tabBtnActive]} onPress={() => setTab("weapon")}><Text style={[s.tabBtnText, tab === "weapon" && s.tabBtnTextActive]}>武器設定</Text></Pressable>
@@ -227,7 +243,7 @@ const EquipScreen = () => {
         </View>
 
         {tab === "results" ? (
-            <ResultsTab selectedSkills={selectedSkillsForCalc} sets={gearSets} />
+            <ResultsTab selectedSkills={Object.entries(selected).filter(([,lv])=>lv>0).map(([id,lv])=>({name: byId.get(id)?.name||id, requiredLevel: lv }))} sets={gearSets} />
         ) : tab === "weapon" ? (
             <WeaponSettings />
         ) : (
@@ -250,7 +266,7 @@ const EquipScreen = () => {
               <TagsBar tags={allTags} active={activeTags} onToggle={toggleTag} />
             </View>
 
-            {tagsToShow.map(tag => {
+            {([...tagsToShow]).map(tag => {
               const items = groupsByTag.get(tag) ?? [];
               if (items.length === 0) return null;
               return (
@@ -280,7 +296,6 @@ const EquipScreen = () => {
           </>
         )}
 
-        {/* モバイルでは右パネルを末尾に表示 */}
         {!isWide && (
           <View style={{ marginTop: 12 }}>
             <RightPanel
@@ -288,21 +303,36 @@ const EquipScreen = () => {
               skillMap={byId}
               onChange={setLevel}
               onClearAll={() => { closeDropdown(); clearAll(); setTab("skills"); setPendingScrollToSkillsTop(true); }}
-              onSearch={runGearSearch}
-              weaponName={weapon?.name || null}
+              onSearch={(payload) => runGearSearch(payload)}
+              weapon={weapon}
+              weaponSlots={weaponSlots}
+              weaponSkills={weaponSkills}
               onOpenWeaponPicker={() => setPickerOpen(true)}
+              onClearWeapon={clearWeapon}
+              onClearSkills={clearSkills}
             />
           </View>
         )}
       </ScrollView>
 
-      {/* 武器選択モーダル */}
       <WeaponPickerModal
         visible={pickerOpen}
         onClose={() => setPickerOpen(false)}
-        onPick={(w) => { setWeapon(w); setPickerOpen(false); }}
-        // 生産（最終）の一覧を表示したい場合のみ、実カタログ取得関数を渡す
-        // loadProductionCatalog={async () => (await import("../../src/domains/weapons/catalog_weapons")).default()}
+        onPick={(w) => {
+          setWeapon(w);
+          // slots
+          const slots = Array.isArray(w?.slots) ? w.slots :
+                        Array.isArray(w?.["スロット"]) ? w["スロット"] :
+                        typeof w?.slotString === "string" ? parseSlotsString(w.slotString) :
+                        typeof w?.["空きスロット"] === "string" ? parseSlotsString(w["空きスロット"]) :
+                        [];
+          setWeaponSlots(slots);
+          // skills
+          const ws = Array.isArray(w?.skills) ? w.skills :
+                     Array.isArray(w?.["スキル"]) ? w["スキル"] : [];
+          setWeaponSkills(ws);
+          setPickerOpen(false);
+        }}
       />
     </View>
   );
