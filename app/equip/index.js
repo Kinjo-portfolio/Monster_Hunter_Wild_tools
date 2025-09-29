@@ -1,7 +1,7 @@
 // app/(tabs)/equip/index.js — 親（RightPanel.super と整合）
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Stack } from "expo-router";
-import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform } from "react-native";
+import { View, Text, ScrollView, TextInput, Pressable, useWindowDimensions, Platform ,Image} from "react-native";
 import { s } from "../../src/screens/equip.styles";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import catalog from "../../src/domains/skills/catalog";
@@ -23,6 +23,8 @@ import WeaponPickerModal from "../../src/components/WeaponPickerModal";
 
 const ALL_CATS = ["attack", "crit", "utility"];
 const ALL_TYPES = ["normal", "series", "group"];
+
+const EquipIcon = require("../../assets/icons/icon_frame_transparent_256.png")
 
 const normalizeList = (arr, type) =>
   (arr ?? []).map(sk => ({
@@ -231,7 +233,14 @@ const EquipScreen = () => {
       <ScrollView ref={skillScrollRef} contentContainerStyle={[s.body, { paddingTop: headerOffset }, isWide && { paddingRight: rightW + 24 }]} keyboardShouldPersistTaps="handled">
         <View style={s.pageHeader}>
           <View style={s.pageBadge}>
-            <Text style={s.pageBadgeIcon}>🛡️</Text>
+            <Image
+              source={EquipIcon}
+              style={{ width: 20, height: 20, marginRight: 6 }}
+              resizeMode="contain"
+              accessible
+              accessibilityLabel="装備アイコン"
+            />
+            {/* <Text style={s.pageBadgeIcon}>🛡️</Text> */}
             <Text style={s.pageBadgeText}>装備シミュレータ</Text>
           </View>
         </View>

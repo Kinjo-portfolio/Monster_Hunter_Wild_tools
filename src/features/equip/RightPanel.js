@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { s } from "../../screens/equip.styles";
+import { totalAffinityRange } from "../../domains/skills/calculators/affinity";
 
 export default function RightPanel(props) {
   const {
